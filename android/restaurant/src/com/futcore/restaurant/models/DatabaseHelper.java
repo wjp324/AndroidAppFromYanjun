@@ -32,6 +32,10 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 	private Dao<ManUser, Integer> userDao = null;
 	private RuntimeExceptionDao<ManUser, Integer> userRuntimeDao = null;
 
+	private Dao<ManWish, Integer> wishDao = null;
+	private RuntimeExceptionDao<ManWish, Integer> wishRuntimeDao = null;
+    
+
 	private Dao<ManEvent, String> eventDao = null;
 	private RuntimeExceptionDao<ManEvent, String> eventRuntimeDao = null;
 
@@ -57,6 +61,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 			Log.i(DatabaseHelper.class.getName(), "onCreate");
             System.out.println("crrrrrrrrrrrrrrrrrrreate");
 			TableUtils.createTable(connectionSource, ManUser.class);
+			TableUtils.createTable(connectionSource, ManWish.class);
 			TableUtils.createTable(connectionSource, ManItem.class);
 			TableUtils.createTable(connectionSource, ManRecoItem.class);
 			TableUtils.createTable(connectionSource, ManEvent.class);
@@ -113,6 +118,13 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 		return userDao;
 	}
 
+	public Dao<ManWish, Integer> getWishDao() throws SQLException {
+		if (wishDao == null) {
+			wishDao = getDao(ManWish.class);
+		}
+		return wishDao;
+	}
+
 	public Dao<ManItem, String> getItemDao() throws SQLException {
 		if (itemDao == null) {
 			itemDao = getDao(ManItem.class);
@@ -138,6 +150,12 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     {
         return TableUtils.clearTable(connectionSource, ManUser.class);
     }
+
+    public int clearAllWish() throws SQLException
+    {
+        return TableUtils.clearTable(connectionSource, ManWish.class);
+    }
+    
 
     public int clearAllPlace() throws SQLException
     {
@@ -178,6 +196,14 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 		return userRuntimeDao;
 	}
 
+	public RuntimeExceptionDao<ManWish, Integer> getManWishDao() {
+		if (wishRuntimeDao == null) {
+			wishRuntimeDao = getRuntimeExceptionDao(ManWish.class);
+		}
+		return wishRuntimeDao;
+	}
+    
+
 	public RuntimeExceptionDao<ManItem, String> getManItemDao() {
 		if (itemRuntimeDao == null) {
 			itemRuntimeDao = getRuntimeExceptionDao(ManItem.class);
@@ -208,11 +234,13 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 		super.close();
 		placeDao = null;
         userDao = null;
+        wishDao = null;
         eventDao = null;
         itemDao = null;
         recoItemDao = null;
 		simpleRuntimeDao = null;
         userRuntimeDao = null;
+        wishRuntimeDao = null;
         eventRuntimeDao = null;
         itemRuntimeDao = null;
         recoItemRuntimeDao = null;

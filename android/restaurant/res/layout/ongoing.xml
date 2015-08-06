@@ -6,43 +6,20 @@
     android:orientation="vertical"
     >
 
-  <TextView
-      android:id="@+id/l_section1"
-      style="@style/formTitle"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:padding="8dp"
-      android:textSize="32sp"
-      android:text="@string/iwant" />
-
-  <EditText
-      android:id="@+id/itemname"
-      style="@style/formEdit"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="0dp"
-      android:hint="@string/item_name"
-      android:inputType="textCapSentences|textAutoCorrect"/>
-
   <LinearLayout
-      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/currentEventsFragmentContainer"
       android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal"
-      >
-
-    <Button
-	android:id="@+id/saveWish"
+      android:layout_height="fill_parent"
+      android:orientation="vertical">
+    <fragment
+	android:name="com.futcore.restaurant.ui.CurrentEventsListFragment"
+	android:id="@+id/currentEventsList"
+	android:layout_weight="1"
 	android:layout_width="fill_parent"
-	android:layout_height="wrap_content"
-	android:singleLine="true"
-	android:textStyle="bold"
-	android:layout_marginRight ="0dp"
-	android:layout_weight="1" 
-	android:background="@color/g_g"
-	style="@style/formButton"
-	android:text="@string/save" />
+	android:layout_height="fill_parent"
+	android:background="#00FF00" />
 
   </LinearLayout>
+
   
 </LinearLayout>
