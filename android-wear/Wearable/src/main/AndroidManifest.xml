@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	  package="com.futcore.restaurant"
+	  android:versionCode="1"
+	  android:versionName="1.0" >
+
+  <uses-sdk
+      android:minSdkVersion="20"
+      android:targetSdkVersion="20" />
+
+  <uses-permission android:name="android.permission.VIBRATE"/>
+
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <!--uses-permission android:name="com.android.alarm.permission.SET_ALARM"/-->
+
+  <application
+      android:allowBackup="true"
+      android:icon="@drawable/ic_launcher"
+      android:label="@string/app_name"
+      android:theme="@android:style/Theme.DeviceDefault.Light" >
+
+    <receiver 
+        android:enabled="true" 
+        android:name=".AlertReceiver">
+
+    </receiver>
+
+    <receiver
+        android:enabled="true"
+        android:name=".RecoGeneReceiver">
+    </receiver>
+
+    <receiver 
+        android:enabled="true" 
+        android:name=".WakeRecoReceiver">
+    </receiver>
+
+    <receiver 
+        android:enabled="true" 
+        android:name=".WakeAlertReceiver">
+    </receiver>
+
+    <receiver 
+        android:enabled="true" 
+        android:name=".WakeAlertReceiverActSim">
+    </receiver>
+
+    <receiver 
+        android:enabled="true" 
+        android:name=".WakeAlertReceiverSim">
+    </receiver>
+
+    <receiver 
+        android:enabled="true" 
+        android:name=".WakeAlertReceiverActSimp">
+    </receiver>
+
+    <receiver 
+        android:enabled="true" 
+        android:name=".WakeAlertReceiverSimp">
+    </receiver>
+
+
+
+    <receiver android:name="com.commonsware.cwac.wakeful.AlarmReceiver">
+      <intent-filter>
+	<action android:name="android.intent.action.BOOT_COMPLETED"/>
+      </intent-filter>
+      
+      <meta-data
+	  android:name="com.commonsware.cwac.wakeful"
+	  android:resource="@xml/wakeful"/>
+    </receiver>
+
+    <!--activity
+        android:name=".MainActivity"
+        android:label="@string/app_name" >
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+      </activity-->
+
+    <activity
+        android:name=".CMainActivity"
+        android:label="@string/app_name" >
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+
+
+    <activity android:name=".testsensor.TestSensorActivity" android:exported="true" />
+
+    <activity android:name=".FinishEventActivity" android:exported="true" />
+
+    <activity android:name=".UploadFinishActivity" android:exported="true" />
+
+    <activity android:name=".AllRecosActivity" android:exported="true" />
+
+    <activity android:name=".CfmFinishActivity" android:exported="true"/>
+
+    <activity android:name=".JustFinishActivity" android:exported="true"/>
+
+    <activity android:name=".ConfirmRecoActivity" android:exported="true" />
+
+    <activity android:name=".HistoryEventsActivity" android:exported="true" />
+
+    <activity android:name=".HistoryDetailActivity" android:exported="true" />
+
+    <activity android:name=".ChooseRecoActivity" android:exported="true" android:launchMode="singleTask"  />
+
+    <activity android:name=".ConfirmForceRecoActivity" android:exported="true" />
+
+    <activity android:name=".ConfirmPlanActivity" android:exported="true" />
+
+    <service android:name=".AlarmHolderService" android:exported="true"  />
+
+    <service android:name=".EventStatusService" android:exported="true"  />
+
+    <service android:name=".SyncFinishEveService" android:exported="true"  />
+
+    <service android:name=".AlertService" android:exported="true"  />
+
+    <service android:name=".RecoGeneService" android:exported="true"  />
+
+    <service android:name=".WakeAlertService" android:exported="true"  />
+
+    <service android:name=".WakeAlertServiceSim" android:exported="true"  />
+
+    <service android:name=".WakeAlertServiceSimp" android:exported="true"  />
+
+    <service android:name=".FinishEventService" android:exported="true"  />
+
+    <service android:name=".LongMonitorService" android:exported="true"  />
+
+    <service android:name=".RecoLongService" android:exported="true"  />
+    
+    <service android:name=".RecoLongCancelService" android:exported="true"  />
+
+    <service android:name=".SendEventNotiService" android:exported="true"  />
+
+    <!--service android:name=".ResetDailyAlarmService" android:exported="true"  /-->
+    <service android:name=".DailyBatchService" android:exported="true"  />
+    
+    <service android:name=".SendRecoNotiService" android:exported="true"  />
+
+    <service android:name=".SendForceRecoNotiService" android:exported="true"  />
+
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+
+    <service
+        android:name=".SpiderDataListenerService" >
+      <intent-filter>
+        <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
+      </intent-filter>
+    </service>
+
+  </application>
+
+</manifest>
+	

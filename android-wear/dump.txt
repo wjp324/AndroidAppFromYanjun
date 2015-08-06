@@ -1,0 +1,106 @@
+Current Alarm Manager state:
+nowRTC=1416833651337=2014-11-24 20:54:11 nowELAPSED=385254946
+Next alarm: 385303609 = 2014-11-24 20:55:00
+Next wakeup: 385303709 = 2014-11-24 20:55:00
+
+Pending alarm batches: 8
+Batch{ae5a9b70 num=1 start=385303609 end=385303609 STANDALONE}:
+  ELAPSED #0: Alarm{ae5d28f0 type 3 android}
+    type=3 whenElapsed=385303609 when=+48s663ms window=0 repeatInterval=0 count=0
+    operation=PendingIntent{ae113fa0: PendingIntentRecord{ae113f48 android broadcastIntent}}
+Batch{ae5d12a8 num=1 start=385303709 end=385303709}:
+  RTC_WAKEUP #0: Alarm{ae5d1260 type 0 com.google.android.wearable.app}
+    type=0 whenElapsed=385303709 when=+48s763ms window=0 repeatInterval=0 count=0
+    operation=PendingIntent{ae523718: PendingIntentRecord{ae258ac0 com.google.android.wearable.app broadcastIntent}}
+Batch{ae55e9d8 num=4 start=385796733 end=385796733}:
+  RTC_WAKEUP #3: Alarm{ae5586e8 type 0 com.google.android.gms}
+    type=0 whenElapsed=385664159 when=+6m49s213ms window=-1 repeatInterval=1800000 count=0
+    operation=PendingIntent{ae387828: PendingIntentRecord{ae1ed620 com.google.android.gms broadcastIntent}}
+  ELAPSED_WAKEUP #2: Alarm{ae55ea60 type 2 com.google.android.gms}
+    type=2 whenElapsed=385796733 when=+9m1s787ms window=0 repeatInterval=0 count=0
+    operation=PendingIntent{ae2ac158: PendingIntentRecord{ae176078 com.google.android.gms broadcastIntent}}
+  ELAPSED #1: Alarm{ae552b50 type 3 android}
+    type=3 whenElapsed=385363716 when=+1m48s770ms window=-1 repeatInterval=0 count=0
+    operation=PendingIntent{ae0cb870: PendingIntentRecord{ae0dcc88 android broadcastIntent}}
+  ELAPSED #0: Alarm{ae55e990 type 3 android}
+    type=3 whenElapsed=385215897 when=-39s49ms window=-1 repeatInterval=1800000 count=0
+    operation=PendingIntent{ae0d4a48: PendingIntentRecord{ae16e5e0 android broadcastIntent}}
+Batch{ae55eaf0 num=3 start=387854218 end=387854218}:
+  RTC_WAKEUP #2: Alarm{ae55ebc0 type 0 com.google.android.gms}
+    type=0 whenElapsed=385934312 when=+11m19s366ms window=-1 repeatInterval=9834000 count=0
+    operation=PendingIntent{ae30f188: PendingIntentRecord{ae5beb68 com.google.android.gms broadcastIntent}}
+  ELAPSED_WAKEUP #1: Alarm{ae55eb78 type 2 android}
+    type=2 whenElapsed=387854218 when=+43m19s272ms window=0 repeatInterval=0 count=0
+    operation=PendingIntent{ae1736e8: PendingIntentRecord{ae14aa40 android broadcastIntent}}
+  ELAPSED_WAKEUP #0: Alarm{ae55eaa8 type 2 android}
+    type=2 whenElapsed=387733761 when=+41m18s815ms window=-1 repeatInterval=0 count=0
+    operation=PendingIntent{ae107828: PendingIntentRecord{ae1cde18 android broadcastIntent}}
+Batch{ae55ec50 num=1 start=396403609 end=396403609 STANDALONE}:
+  RTC #0: Alarm{ae55ec08 type 1 android}
+    type=1 whenElapsed=396403609 when=+3h5m48s663ms window=0 repeatInterval=0 count=0
+    operation=PendingIntent{ae10e000: PendingIntentRecord{ae126590 android broadcastIntent}}
+Batch{ae55ed20 num=1 start=396404224 end=396404224}:
+  RTC #0: Alarm{ae55ecd8 type 1 com.google.android.apps.fitness}
+    type=1 whenElapsed=396404224 when=+3h5m49s277ms window=0 repeatInterval=0 count=0
+    operation=PendingIntent{ae4b3a70: PendingIntentRecord{ae20c628 com.google.android.apps.fitness broadcastIntent}}
+Batch{ae55edf0 num=2 start=433815355 end=433815355}:
+  RTC_WAKEUP #1: Alarm{ae55ee78 type 0 com.android.providers.calendar}
+    type=0 whenElapsed=433815355 when=+13h29m20s409ms window=0 repeatInterval=0 count=0
+    operation=PendingIntent{ae5958c0: PendingIntentRecord{ae59e810 com.android.providers.calendar broadcastIntent}}
+  ELAPSED_WAKEUP #0: Alarm{ae55eda8 type 2 com.google.android.gms}
+    type=2 whenElapsed=432000000 when=+12h59m5s54ms window=-1 repeatInterval=86400000 count=0
+    operation=PendingIntent{ae3d8f68: PendingIntentRecord{adffef88 com.google.android.gms startService}}
+Batch{ae55ef08 num=1 start=864082350 end=1224245990}:
+  ELAPSED #0: Alarm{ae55eec0 type 3 android}
+    type=3 whenElapsed=864082350 when=+5d13h0m27s404ms window=-1 repeatInterval=0 count=0
+    operation=PendingIntent{ae1446c8: PendingIntentRecord{ae15e030 android broadcastIntent}}
+
+  Broadcast ref count: 0
+
+  Top Alarms:
+    +20m31s317ms running, 0 wakeups, 6421 alarms: android
+       act=android.intent.action.TIME_TICK
+    +15m47s206ms running, 6233 wakeups, 6233 alarms: com.google.android.wearable.app
+       act=com.google.android.wearable.action.UPDATE_CLOCK
+    +13m29s502ms running, 66 wakeups, 66 alarms: com.google.android.gms
+       cmp={com.google.android.gms/com.google.android.gms.checkin.CheckinService$Receiver}
+    +12m39s66ms running, 75 wakeups, 75 alarms: com.futcore.restaurant
+       cmp={com.futcore.restaurant/com.futcore.restaurant.WakeAlertReceiverSimp}
+    +9m9s199ms running, 57 wakeups, 57 alarms: com.futcore.restaurant
+       cmp={com.futcore.restaurant/com.futcore.restaurant.WakeAlertReceiverSim}
+    +8m55s545ms running, 179 wakeups, 179 alarms: com.google.android.gms
+       cmp={com.google.android.gms/com.google.android.gms.checkin.EventLogService$Receiver}
+    +54s966ms running, 0 wakeups, 214 alarms: android
+       act=com.android.server.action.NETWORK_STATS_POLL
+    +53s524ms running, 20 wakeups, 20 alarms: com.android.providers.calendar
+       act=com.android.providers.calendar.intent.CalendarProvider2
+    +23s621ms running, 0 wakeups, 491 alarms: android
+       act=android.net.ConnectivityService.action.PKT_CNT_SAMPLE_INTERVAL_ELAPSED
+    +23s74ms running, 37 wakeups, 37 alarms: com.futcore.restaurant
+       cmp={com.futcore.restaurant/com.futcore.restaurant.WakeAlertReceiverActSim}
+ 
+  Alarm Stats:
+  com.google.android.gms +20m4s938ms running, 329 wakeups:
+    +13m29s502ms 66 wakes 66 alarms: cmp={com.google.android.gms/com.google.android.gms.checkin.CheckinService$Receiver}
+    +8m55s545ms 179 wakes 179 alarms: cmp={com.google.android.gms/com.google.android.gms.checkin.EventLogService$Receiver}
+    +2s154ms 78 wakes 78 alarms: act=com.google.android.gms.gcm.ACTION_CHECK_QUEUE
+    +108ms 6 wakes 6 alarms: cmp={com.google.android.gms/com.google.android.gms.analytics.internal.PlayLogReportingService}
+  com.google.android.wearable.app +15m47s206ms running, 6233 wakeups:
+    +15m47s206ms 6233 wakes 6233 alarms: act=com.google.android.wearable.action.UPDATE_CLOCK
+  com.google.android.apps.fitness +16s98ms running, 0 wakeups:
+    +16s98ms 0 wakes 4 alarms: act=com.google.android.wearable.RESET_AT_MIDNIGHT
+  com.futcore.restaurant +21m44s239ms running, 169 wakeups:
+    +12m39s66ms 75 wakes 75 alarms: cmp={com.futcore.restaurant/com.futcore.restaurant.WakeAlertReceiverSimp}
+    +9m9s199ms 57 wakes 57 alarms: cmp={com.futcore.restaurant/com.futcore.restaurant.WakeAlertReceiverSim}
+    +23s74ms 37 wakes 37 alarms: cmp={com.futcore.restaurant/com.futcore.restaurant.WakeAlertReceiverActSim}
+  com.android.providers.calendar +54s936ms running, 24 wakeups:
+    +53s524ms 20 wakes 20 alarms: act=com.android.providers.calendar.intent.CalendarProvider2
+    +1s412ms 4 wakes 4 alarms: act=com.android.providers.calendar.SCHEDULE_ALARM cmp={com.android.providers.calendar/com.android.providers.calendar.CalendarReceiver}
+  android +21m20s977ms running, 54 wakeups:
+    +20m31s317ms 0 wakes 6421 alarms: act=android.intent.action.TIME_TICK
+    +54s966ms 0 wakes 214 alarms: act=com.android.server.action.NETWORK_STATS_POLL
+    +23s621ms 0 wakes 491 alarms: act=android.net.ConnectivityService.action.PKT_CNT_SAMPLE_INTERVAL_ELAPSED
+    +835ms 49 wakes 49 alarms: act=android.content.syncmanager.SYNC_ALARM
+    +105ms 5 wakes 5 alarms: act=com.android.server.IdleMaintenanceService.action.UPDATE_IDLE_MAINTENANCE_STATE
+    +66ms 0 wakes 4 alarms: act=android.intent.action.DATE_CHANGED
+    +6ms 0 wakes 1 alarms: act=com.android.server.NetworkTimeUpdateService.action.POLL

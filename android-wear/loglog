@@ -1,0 +1,3 @@
+#!/bin/bash
+
+adb -s "03bc644502a26414" logcat

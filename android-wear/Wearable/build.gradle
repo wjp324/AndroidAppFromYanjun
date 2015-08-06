@@ -1,0 +1,47 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 20
+    buildToolsVersion '21.0.2'
+
+    defaultConfig {
+        minSdkVersion 20
+        targetSdkVersion 20
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+//    maven {
+//        url "https://repo.commonsware.com.s3.amazonaws.com"
+//    }
+}
+
+dependencies {
+
+//    compile fileTree(dir: 'libs', include: '*.jar')
+//    compile project(':cwac-endless-master')
+//    compile project(':Android-PullToRefresh-master:extras:PullToRefreshListFragment')
+
+
+//    compile 'com.google.android.gms:play-services:5.0.+@aar'
+
+    compile 'com.google.android.gms:play-services-wearable:+'
+
+    compile "com.android.support:support-v13:20.0.+"
+    compile "com.google.android.support:wearable:1.0.+"
+
+    compile 'com.j256.ormlite:ormlite-android:4.48'
+    compile 'com.google.code.gson:gson:2.3.1'
+
+//    compile 'com.commonsware.cwac:wakeful:1.0.+'
+}

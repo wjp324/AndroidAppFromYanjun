@@ -1,0 +1,1 @@
+adb -s "0061f18b1953285b" uninstall com.futcore.restaurant

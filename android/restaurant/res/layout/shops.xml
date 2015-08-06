@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+  
+  <!--LinearLayout
+      android:id="@+id/shopFilter"
+      android:layout_width="fill_parent"
+      android:layout_height="40dp"
+      android:background="#ccc"
+      android:orientation="horizontal"
+      >
+    <LinearLayout
+	android:id="@+id/areaFilter"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="horizontal"
+	android:layout_weight="1"
+	>
+      <TextView
+          android:id="@+id/areaText"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+	  android:layout_weight="1" 
+	  android:gravity="center"
+          android:text="全部地区" />
+    </LinearLayout>
+
+    <LinearLayout
+	android:id="@+id/catFilter"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="horizontal"
+	android:layout_weight="1"
+	>
+      <TextView
+          android:id="@+id/catText"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+	  android:layout_weight="1" 
+	  android:gravity="center"
+          android:text="全部分类" />
+      
+    </LinearLayout>
+
+    <LinearLayout
+	android:id="@+id/sortFilter"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="horizontal"
+	android:layout_weight="1"
+	>
+      <TextView
+          android:id="@+id/sortText"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+	  android:layout_weight="1" 
+	  android:gravity="center"
+          android:text="默认排序" />
+    </LinearLayout>
+
+  </LinearLayout-->
+
+
+  <LinearLayout
+      android:id="@+id/shopFilter"
+      android:layout_width="fill_parent"
+      android:layout_height="40dp"
+      android:background="@drawable/border_bottom"
+      android:orientation="horizontal"
+      >
+      
+    <LinearLayout
+	android:id="@+id/areaFilter"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="horizontal"
+	android:gravity="center" 
+	android:layout_weight="1"
+	>
+      <TextView
+          android:id="@+id/areaText"
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent"
+	      android:gravity="center"
+	      android:textColor="#b9b9b9"
+          android:textSize="14sp"
+          android:text="全部地区" />
+      
+      <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="6dp">                 
+         
+           <ImageView
+              android:layout_width="15dp"
+              android:layout_height="13dp"
+              android:scaleType="centerCrop"
+              
+              android:layout_centerVertical="true"
+              android:src="@drawable/tb08d" />                        
+            </RelativeLayout>
+      
+    </LinearLayout>
+
+    <LinearLayout
+	android:id="@+id/catFilter"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="horizontal"
+	android:layout_weight="1"
+	android:gravity="center"
+	>
+      <TextView
+          android:id="@+id/catText"
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent"
+	      android:gravity="center"
+	      android:textColor="#b9b9b9"
+          android:textSize="14sp"
+          android:text="全部分类" />
+      
+      <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent"
+          android:layout_marginLeft="6dp">                 
+             <ImageView
+              android:layout_width="15dp"
+              android:layout_height="13dp"
+              android:scaleType="centerCrop"
+              
+              android:layout_centerVertical="true"
+              android:src="@drawable/tb08d" />                        
+            </RelativeLayout>
+      
+    </LinearLayout>
+
+    <LinearLayout
+	android:id="@+id/sortFilter"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="horizontal"
+	android:layout_weight="1"
+	android:gravity="center"
+	>
+      <TextView
+          android:id="@+id/sortText"
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent"
+	      android:gravity="center"
+	      android:textColor="#b9b9b9"
+          android:textSize="14sp"
+          android:text="默认排序" />
+      
+      <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent"
+          android:layout_marginLeft="6dp">                 
+             <ImageView
+              android:layout_width="15dp"
+              android:layout_height="13dp"
+              android:scaleType="centerCrop"
+              
+              android:layout_centerVertical="true"
+              android:src="@drawable/tb08d" />                        
+            </RelativeLayout>
+            
+    </LinearLayout>
+
+  </LinearLayout>
+
+
+  <LinearLayout
+    android:id="@+id/shopDetailFragmentContainer"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <fragment
+      android:name="com.futcore.restaurant.ui.shop.ShopsListFragment"
+      android:id="@+id/shopList"
+      android:layout_weight="1"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:background="#00FF00" />
+  </LinearLayout>
+
+</LinearLayout>

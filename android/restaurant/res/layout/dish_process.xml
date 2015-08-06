@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	      android:orientation="vertical"
+	      android:layout_width="fill_parent"
+	      android:layout_height="fill_parent"
+	      >
+  <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_weight="1"
+      >
+
+    <ImageView
+	android:id="@+id/camera_pic"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:scaleType="centerCrop"
+	/>
+
+    <!--LinearLayout 
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingTop="10dp"
+	android:background="#f00"
+	>
+      <Button
+	  android:id="@+id/process_ok"
+	  android:text="OK"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:layout_gravity="right"
+	  />
+    </LinearLayout-->
+
+  </RelativeLayout>
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      >
+    <Button
+	android:id="@+id/button_original"
+	android:text="original"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_gravity="center"
+	/>
+
+    <Button
+	android:id="@+id/button_effect1"
+	android:text="contrast"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_gravity="center"
+	/>
+    <Button
+	android:id="@+id/button_effect2"
+	android:text="saturation"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_gravity="center"
+	/>
+  </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/indexPull"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="#eee" >
+
+     <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:orientation="vertical">
+        
+         <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="16dp"
+            android:padding="8dp"
+            
+            android:layout_weight="1"
+            android:background="#fff"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/average"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="6dp" 
+                android:text="捞王锅料理" />
+
+            <TextView
+                android:id="@+id/average"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp"
+                android:textColor="#ff6600"
+                android:text="来店消费机送......" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" 
+                android:paddingBottom="10dp" 
+                android:background="@drawable/border_bottom_black">
+
+                <TextView
+                    android:id="@+id/comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="有效期："
+                    android:textColor="#c4c4c4"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/comment"
+                    android:text="2013-10-12"
+                    android:textColor="#777777"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/amount2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/amount"
+                    android:text="至"
+                    android:textColor="#c4c4c4"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/amount2"
+                    android:text="2013-10-31"
+                    android:textColor="#777777"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+            
+            <TextView
+                android:id="@+id/average"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp"
+                
+                android:text="周一至周四到店消费送价值58圆点也会生 花生一份个、加工和23远的比鞥获赠组ufo为欧德福点费劲将的佛法讲我让佛额外加入哦呜 " />
+            
+            
+       <LinearLayout 
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginTop="10dp">
+           
+           
+                <LinearLayout
+	               android:id="@+id/addReview"
+	               android:layout_width="fill_parent"
+	               android:layout_height="fill_parent"
+	               android:orientation="horizontal"
+	               android:gravity="left" 	
+                   android:layout_weight="1">
+       <RelativeLayout 
+	  android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/View01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+ 
+            android:textSize="12sp"
+            android:text="已下载" />
+        
+        <TextView
+              android:id="@+id/View02"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+   
+              android:textSize="12sp"
+              android:layout_toRightOf="@+id/View01"
+              android:text="443" />
+        
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+     
+            android:layout_toRightOf="@+id/View02"
+            android:textSize="12sp"
+            android:text="次" />
+          </RelativeLayout>
+      
+    </LinearLayout>
+    
+                <LinearLayout
+	               android:id="@+id/addReview"
+	               android:layout_width="fill_parent"
+	               android:layout_height="fill_parent"
+	               android:orientation="horizontal"
+	               android:gravity="left" 	
+                   android:layout_weight="1">
+       <RelativeLayout 
+	  android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/View01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:textSize="12sp"
+            android:text="2" />
+        
+        <TextView
+
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+             
+              android:textSize="12sp"
+              android:layout_toRightOf="@+id/View01"
+              android:text="家商户适用" />
+
+          </RelativeLayout>
+      
+    </LinearLayout>
+           
+           
+           
+       </LinearLayout>
+          <LinearLayout
+              android:layout_width="fill_parent"
+	          android:layout_height="wrap_content"
+	          android:layout_marginTop="10dp">  
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+	android:background="@color/g_g"
+	android:textColor="#fff"
+        android:text="下载到手机" />    
+            </LinearLayout>
+            
+               <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#c4c4c4"
+                    android:layout_marginTop="10dp"
+                    android:textSize="12sp"
+                    android:text="注：将此页面直接展示或下载到手机均可使用" />   
+        </LinearLayout>
+        
+         <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="12sp"
+                    android:text="离您最近的商户" />
+         
+         <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"       
+            android:layout_weight="1"
+            android:background="#fff"
+            android:orientation="vertical" >
+            
+             <TextView
+                android:id="@+id/average"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="6dp"
+                android:paddingLeft="8dp"
+                android:text="捞王锅料理(滨湖商业街店)" />
+             
+       <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:paddingBottom="10dp"
+          android:paddingTop="10dp"
+	  android:background="@drawable/border_bottom"
+          android:paddingLeft="8dp"
+          android:paddingRight="8dp" >
+  
+          <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:gravity="left"
+          >
+          
+          <com.android.volley.toolbox.NetworkImageView
+              android:id="@+id/bigThumb"
+              android:layout_width="100dp"
+              android:layout_height="60dp"
+              android:layout_alignParentLeft="true"
+              android:layout_alignParentTop="true"
+              android:layout_marginRight="8dp"
+              android:background="@drawable/thumb_border"
+              android:padding="4dp"
+              android:scaleType="centerCrop"
+              android:src="@drawable/pic_1" />
+         </RelativeLayout>
+       <LinearLayout 
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:paddingLeft="4dp"
+          android:layout_marginRight="50dp"
+          >
+       
+       <ImageView
+              android:id="@+id/testBanner"
+              android:layout_width="77dp"
+              android:layout_height="15dp"
+              android:layout_centerVertical="true"
+              android:scaleType="centerCrop"
+              android:layout_marginLeft="6dp"
+              android:layout_marginTop="2dp"
+              android:src="@drawable/star01" />    
+           
+       <RelativeLayout 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_marginLeft="6dp"
+          android:paddingTop="6dp"
+          >
+          
+           
+          
+          <TextView
+              android:id="@+id/textView1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="#c4c4c4"
+              android:textSize="12sp"
+              android:text="人均：￥" />
+
+          <TextView
+              android:id="@+id/average"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="#c4c4c4"
+              android:textSize="12sp"
+              android:layout_toRightOf="@+id/textView1"
+              android:text="130" />
+           
+      </RelativeLayout>
+
+       <RelativeLayout 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_marginLeft="6dp"
+          android:paddingTop="6dp"
+          >
+          
+           
+          
+          <TextView
+              android:id="@+id/textView11"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="#c4c4c4"
+              android:textSize="12sp"
+              android:text="2.7" />
+
+          <TextView
+              android:id="@+id/average"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="#c4c4c4"
+              android:textSize="12sp"
+              android:layout_toRightOf="@+id/textView11"
+              android:text="km" />
+           
+      </RelativeLayout>
+         
+          </LinearLayout>  
+          
+
+        <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent">                 
+             <ImageView
+              android:layout_width="15dp"
+              android:layout_height="13dp"
+              android:scaleType="centerCrop"             
+              android:layout_centerVertical="true"
+              android:layout_marginRight="86dp"
+              android:src="@drawable/tb08r" />                        
+            </RelativeLayout>
+            
+
+      </LinearLayout>
+      
+       
+       
+       <LinearLayout
+          android:id="@+id/addrCon"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:paddingTop="10dp"
+          android:paddingBottom="10dp"
+          android:paddingLeft="8dp"
+          android:paddingRight="8dp"
+	      android:background="@drawable/border_bottom"
+	  >
+       
+          
+          <TextView
+              android:id="@+id/contact"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="滨湖街道商业街道11-156,1258号" />
+          <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent">                 
+             <ImageView
+              android:layout_width="15dp"
+              android:layout_height="13dp"
+              android:scaleType="centerCrop"
+              
+              android:layout_centerVertical="true"
+              android:src="@drawable/tb08r" />                        
+            </RelativeLayout>
+          
+          
+
+      </LinearLayout>
+       
+               <LinearLayout
+          android:id="@+id/addrCon"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:paddingTop="10dp"
+          android:paddingBottom="6dp"
+          android:paddingLeft="8dp"
+          android:paddingRight="8dp"
+	  >
+       
+          
+          <TextView
+              android:id="@+id/contact"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="83118888" />
+          <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent">                 
+             <ImageView
+              android:layout_width="15dp"
+              android:layout_height="13dp"
+              android:scaleType="centerCrop"
+              
+              android:layout_centerVertical="true"
+              android:src="@drawable/tb08r" />                        
+            </RelativeLayout>
+          
+          
+
+      </LinearLayout>
+       
+             
+          </LinearLayout>      
+         
+          <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:padding="8dp"      
+            android:layout_weight="1"
+            android:background="#fff">
+               
+          
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="全部适用商户" />            
+                      
+          <TextView
+              android:id="@+id/contact"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:text="2家" />
+          <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent">                 
+             <ImageView
+              android:layout_width="15dp"
+              android:layout_height="13dp"
+              android:scaleType="centerCrop"
+              
+              android:layout_centerVertical="true"
+              android:src="@drawable/tb08r" />                        
+            </RelativeLayout>
+                      
+                      
+               </LinearLayout>
+         
+     </LinearLayout>         
+        
+    </ScrollView>
+
+</LinearLayout>

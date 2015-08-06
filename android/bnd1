@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+./gradlew installDebug # &&
+#/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/platform-tools/adb shell am start -n com.futcore.restaurant/.ui.account.MainLoginActivity &&
+#/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/platform-tools/adb logcat
+

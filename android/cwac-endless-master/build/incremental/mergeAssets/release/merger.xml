@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="/home/yanjzhou/ProjectsN/ebay-lsb/android/cwac-endless-master/assets" />
+    </dataSet>
+    <dataSet config="release" >
+        <source path="/home/yanjzhou/ProjectsN/ebay-lsb/android/cwac-endless-master/build-types/release/assets" />
+    </dataSet>
+
+</merger>

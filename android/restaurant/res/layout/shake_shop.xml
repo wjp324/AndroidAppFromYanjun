@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sectionContent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+  
+  <ImageView
+      android:layout_marginTop="0dp"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_weight="1" 
+      android:scaleType="fitXY"
+      android:src="@drawable/yy"
+      />
+  
+  
+  <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:orientation="horizontal"
+      android:gravity="center">                 
+
+
+    <LinearLayout
+	android:id="@+id/areaFilter"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="horizontal"
+	android:gravity="right" 
+
+android:layout_weight="1"
+>
+
+      <ImageView
+	  android:id="@+id/shakePhone"
+	  android:layout_width="120dp"
+	  android:layout_height="120dp"
+	  android:layout_gravity="center"
+	  android:layout_centerVertical="true"
+	  android:src="@drawable/tb13" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+	android:id="@+id/areaFilter"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="horizontal"
+	android:gravity="left" 
+	android:layout_weight="1">
+
+      <ImageView
+	  android:id="@+id/shakeText"
+	  android:layout_width="110dp"
+	  android:layout_height="110dp"
+	  android:layout_gravity="center"
+	  android:layout_centerVertical="true"
+	  android:src="@drawable/tb14" />
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+
+  <LinearLayout 
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:orientation="vertical"
+      android:gravity="right" >
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="8.5">
+      
+      <TextView
+          android:id="@+id/l_section1"
+          style="@style/shakeText"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+	  android:gravity="center_vertical"
+          android:text=" " />
+      
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="7.9">
+      
+
+
+      <LinearLayout 
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:layout_weight="5">
+        
+	<TextView
+            android:id="@+id/l_section1"
+            style="@style/shakeText"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+	    android:gravity="center_vertical"
+            android:text=" " />
+        
+      </LinearLayout>
+      
+      
+      <LinearLayout 
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:layout_weight="1"
+          >
+        
+	<TextView
+            android:id="@+id/chooseTaste"
+            style="@style/shakeText"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center" 
+	    android:layout_alignParentBottom="true"
+            android:text="不限口味" />
+        
+      </LinearLayout>
+      
+      
+    </LinearLayout>
+    
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="8">
+      
+      <LinearLayout 
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:layout_weight="1"
+          >
+        
+	<TextView
+            android:id="@+id/choosePrice"
+            style="@style/shakeText"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center" 
+	    android:layout_alignParentBottom="true"
+            android:text="不限价格" />
+        
+      </LinearLayout>
+
+      <LinearLayout 
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:layout_weight="2.5">
+        
+	<TextView
+            android:id="@+id/l_section1"
+            style="@style/shakeText"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+	    android:gravity="center_vertical"
+            android:text=" " />
+        
+      </LinearLayout>
+      
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="2.5">
+      
+      <TextView
+          android:id="@+id/l_section1"
+          style="@style/shakeText"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+	  android:gravity="center_vertical"
+          android:text=" " />
+      
+    </LinearLayout>
+    
+  </LinearLayout >
+  
+  <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:orientation="horizontal"
+      android:gravity="center">   
+    <LinearLayout
+	android:id="@+id/shopCon"
+	android:visibility="gone"
+	android:layout_width="200dp"
+	android:layout_height="200dp"
+	android:orientation="vertical"
+	android:gravity="center"
+	android:layout_margin="30dp" 
+	android:layout_weight="1"
+	>
+
+      <TextView
+          android:id="@+id/shopName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="6dp"
+          android:paddingBottom="6dp"
+          android:background="@drawable/border_bottom_dashed"
+          android:text="捞王锅料理(滨湖商业街店)" />
+      
+      <LinearLayout 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:paddingBottom="6dp"
+          android:layout_marginTop="10dp"
+          android:background="@drawable/border_bottom_dashed"
+          >
+	
+	<ImageView
+            android:id="@+id/testBanner"
+            android:layout_width="77dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/border_bottom_dashed"
+            android:src="@drawable/star01" />    
+        
+	<RelativeLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp"
+            android:paddingTop="6dp"
+            >
+          
+          
+          
+          <TextView
+              android:id="@+id/textView1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="#f60"
+              android:textSize="12sp"
+              android:text="￥" />
+
+          <TextView
+              android:id="@+id/average"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="#f60"
+              android:textSize="12sp"
+              android:layout_toRightOf="@+id/textView1"
+              android:text="130" />
+          
+	</RelativeLayout>
+      </LinearLayout>   
+      
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_marginTop="16dp"
+          android:paddingBottom="6dp"
+          android:gravity="center"
+          android:background="@drawable/border_bottom_dashed">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+          <TextView
+              android:id="@+id/textView2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="口味："
+              android:textColor="#8e6847"
+              android:textSize="12sp" />
+
+          <TextView
+              android:id="@+id/taste"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@+id/textView2"
+              android:text="24"
+              android:textColor="#8e6847"
+              android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+          <TextView
+              android:id="@+id/textView3"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="环境："
+              android:textColor="#8e6847"
+              android:textSize="12sp" />
+
+          <TextView
+              android:id="@+id/environment"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@+id/textView3"
+              android:text="22"
+              android:textColor="#8e6847"
+              android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+          <TextView
+              android:id="@+id/textView4"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="服务："
+              android:textColor="#8e6847"
+              android:textSize="12sp" />
+
+          <TextView
+              android:id="@+id/service"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@+id/textView4"
+              android:text="25"
+              android:textColor="#8e6847"
+              android:textSize="12sp" />
+        </RelativeLayout>
+      </LinearLayout>
+      
+      <TextView
+          android:id="@+id/contact"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:textColor="#8e6847"
+          android:textSize="12sp"
+          android:text="滨湖街道商业街道11-156,1258号" />
+      
+      
+      <LinearLayout 
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:gravity="center"
+          android:layout_marginTop="10dp">
+        
+        
+        <LinearLayout
+	    android:id="@+id/addReview"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal"
+	    android:gravity="center" 	
+            android:layout_weight="1">
+	  <LinearLayout
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:orientation="horizontal">
+
+            
+            
+            
+            <RelativeLayout
+		android:layout_width="wrap_content"
+		android:layout_height="fill_parent">                 
+              <ImageView
+		  android:layout_width="15dp"
+		  android:layout_height="13dp"
+		  android:scaleType="centerCrop"
+		  android:layout_centerVertical="true"
+		  android:src="@drawable/tb04" />                        
+            </RelativeLayout>
+
+            <TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"       
+		android:textSize="12sp"
+		android:textColor="#8e6847"
+		android:text="280m" />
+            
+          </LinearLayout>
+	  
+	</LinearLayout>
+	
+        <LinearLayout
+	    android:id="@+id/addReview"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal"
+	    android:gravity="center" 	
+            android:layout_weight="1">
+	  <LinearLayout
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:orientation="horizontal">
+
+            
+            <TextView
+
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"       
+android:textSize="12sp"
+android:textColor="#8e6847"
+android:text="更多详情" />
+            
+            <RelativeLayout
+		android:layout_width="wrap_content"
+		android:layout_height="fill_parent">                 
+              <ImageView
+		  android:layout_width="15dp"
+		  android:layout_height="13dp"
+		  android:scaleType="centerCrop"
+		  
+		  android:layout_centerVertical="true"
+		  android:src="@drawable/tb08r" />                        
+            </RelativeLayout>
+
+          </LinearLayout>
+	  
+	</LinearLayout>
+        
+      </LinearLayout>      
+      
+      <RelativeLayout
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:gravity="center" 
+          >                 
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="26dp"
+            android:scaleType="centerCrop" 
+            android:layout_centerVertical="true"
+
+android:src="@drawable/shoucang" />                        
+      </RelativeLayout>
+      
+    </LinearLayout>
+
+    
+  </LinearLayout>
+
+  
+  
+</RelativeLayout>
+

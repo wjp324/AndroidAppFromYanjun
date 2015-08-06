@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="180dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ffff0000"
+    >
+
+  <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+      android:id="@+id/indexPull"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:background="#FFFFFF" >
+
+    <RelativeLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:paddingLeft="4dp"
+	android:paddingRight="4dp" >
+
+      <WebView
+	  android:layout_marginTop="4dp"
+	  android:id="@+id/webBanner"
+	  android:layout_width="fill_parent"
+	  android:layout_height="140dp"
+	  />
+
+      <LinearLayout
+          android:id="@+id/indexBlock1"
+          android:layout_below="@id/webBanner"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+	  android:orientation="vertical"
+          android:paddingTop="4dp" 
+          android:paddingBottom="10dp" >
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:gravity="center_horizontal"
+	    android:padding="0dp"
+	    android:weightSum="3">
+
+	  <LinearLayout
+	      android:layout_width="match_parent"
+	      android:layout_height="wrap_content"
+	      android:orientation="horizontal"
+	      android:gravity="center_horizontal"
+	      android:padding="0dp"
+	      >
+
+	    <LinearLayout
+		android:id="@+id/indexUnit1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_weight="1" 
+		android:gravity="center_horizontal"
+		android:paddingRight="2dp"
+		android:paddingBottom="4dp"
+		style="@style/IndexUnit"
+		>
+
+	      <com.android.volley.toolbox.NetworkImageView
+		  android:id="@+id/indexUImg1"
+		  android:layout_marginTop="0dp"
+                  android:layout_width="fill_parent"
+		  android:layout_height="100dp"
+		  android:scaleType="centerCrop"
+		  android:layout_weight="1" 
+		  />
+	      <LinearLayout
+		  android:layout_width="fill_parent"
+		  android:layout_height="fill_parent"
+		  android:orientation="vertical"
+		  android:layout_weight="1" 
+		  android:gravity="center_vertical"
+		  android:paddingTop="20dp"
+		  android:paddingBottom="20dp"
+		  android:background="#ccc"
+		  >
+
+		<TextView
+                    android:id="@+id/l_section1"
+                    style="@style/IndexUnitTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:gravity="center_vertical"
+                    android:text="优惠券" />
+		<TextView
+                    android:id="@+id/l_section1"
+                    style="@style/IndexUnitText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:gravity="center_vertical"
+                    android:text="拼餐 拼购 拼歌" />
+		<TextView
+                    android:id="@+id/l_section1"
+                    style="@style/IndexUnitText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:gravity="center_vertical"
+                    android:text="high翻全城" />
+	      </LinearLayout>
+
+	    </LinearLayout>
+
+	    <LinearLayout
+		android:id="@+id/indexUnit2"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_weight="1" 
+		android:gravity="center_horizontal"
+		android:paddingLeft="2dp"
+		android:paddingBottom="4dp"
+		style="@style/IndexUnit"
+		>
+
+	      <com.android.volley.toolbox.NetworkImageView
+		  android:id="@+id/indexUImg2"
+		  android:layout_marginTop="0dp"
+                  android:layout_width="fill_parent"
+		  android:layout_height="100dp"
+		  android:scaleType="centerCrop"
+		  android:layout_weight="1" 
+		  />
+
+	      <LinearLayout
+		  android:layout_width="fill_parent"
+		  android:layout_height="fill_parent"
+		  android:orientation="vertical"
+		  android:layout_weight="1" 
+		  android:gravity="center_vertical"
+		  android:paddingTop="20dp"
+		  android:paddingBottom="20dp"
+		  android:background="#ccc"
+		  >
+
+		<TextView
+                    android:id="@+id/l_section1"
+                    style="@style/IndexUnitTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:gravity="center_vertical"
+                    android:text="外卖" />
+		<TextView
+                    android:id="@+id/l_section1"
+                    style="@style/IndexUnitText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:gravity="center_vertical"
+                    android:text="拼餐 拼购 拼歌" />
+		<TextView
+                    android:id="@+id/l_section1"
+                    style="@style/IndexUnitText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:gravity="center_vertical"
+                    android:text="high翻全城" />
+	      </LinearLayout>
+
+	    </LinearLayout>
+
+	  </LinearLayout>
+
+
+
+
+	  <LinearLayout
+	      android:id="@+id/linearLayout11"
+	      android:layout_width="match_parent"
+	      android:layout_height="wrap_content"
+	      android:orientation="horizontal"
+	      android:gravity="center_horizontal"
+	      android:padding="0dp"
+	      >
+
+	    <LinearLayout
+		android:id="@+id/indexUnit3"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_weight="1" 
+		android:gravity="center_horizontal"
+		android:paddingRight="2dp"
+		android:paddingBottom="4dp"
+		style="@style/IndexUnit"
+		>
+
+	      <com.android.volley.toolbox.NetworkImageView
+		  android:id="@+id/indexUImg3"
+		  android:layout_marginTop="0dp"
+                  android:layout_width="fill_parent"
+		  android:layout_height="100dp"
+		  android:scaleType="centerCrop"
+		  android:layout_weight="1" 
+		  />
+
+	      <LinearLayout
+		  android:layout_width="fill_parent"
+		  android:layout_height="fill_parent"
+		  android:orientation="vertical"
+		  android:layout_weight="1" 
+		  android:gravity="center_vertical"
+		  android:paddingTop="20dp"
+		  android:paddingBottom="20dp"
+		  android:background="#f60"
+		  >
+
+		<TextView
+                    android:id="@+id/l_section1"
+                    style="@style/IndexUnitTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:gravity="center_vertical"
+                    android:text="点评" />
+		<TextView
+                    android:id="@+id/l_section1"
+                    style="@style/IndexUnitText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:gravity="center_vertical"
+                    android:text="拼餐 拼购 拼歌" />
+		<TextView
+                    android:id="@+id/l_section1"
+                    style="@style/IndexUnitText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:gravity="center_vertical"
+                    android:text="high翻全城" />
+	      </LinearLayout>
+
+
+	    </LinearLayout>
+
+	    <LinearLayout
+		android:id="@+id/indexUnit4"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_weight="1" 
+		android:gravity="center_horizontal"
+		android:paddingLeft="2dp"
+		android:paddingBottom="4dp"
+		style="@style/IndexUnit"
+		>
+
+	      <LinearLayout
+		  android:layout_width="fill_parent"
+		  android:layout_height="fill_parent"
+		  android:orientation="vertical"
+		  android:layout_weight="1" 
+		  android:gravity="center_vertical"
+		  android:paddingTop="20dp"
+		  android:paddingBottom="20dp"
+		  android:background="#ccc"
+		  >
+
+		<TextView
+                    android:id="@+id/l_section1"
+                    style="@style/IndexUnitTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:gravity="center_vertical"
+                    android:text="爱上卡" />
+		<TextView
+                    android:id="@+id/l_section1"
+                    style="@style/IndexUnitText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:gravity="center_vertical"
+                    android:text="拼餐 拼购 拼歌" />
+		<TextView
+                    android:id="@+id/l_section1"
+                    style="@style/IndexUnitText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:gravity="center_vertical"
+                    android:text="high翻全城" />
+	      </LinearLayout>
+
+	      <com.android.volley.toolbox.NetworkImageView
+		  android:id="@+id/indexUImg4"
+		  android:layout_marginTop="0dp"
+                  android:layout_width="fill_parent"
+		  android:layout_height="100dp"
+		  android:scaleType="centerCrop"
+		  android:layout_weight="1" 
+		  />
+
+	    </LinearLayout>
+
+	  </LinearLayout>
+
+	  <LinearLayout
+	      android:layout_width="match_parent"
+	      android:layout_height="wrap_content"
+	      android:orientation="horizontal"
+	      android:gravity="center_horizontal"
+	      android:padding="0dp"
+	      >
+
+	    <LinearLayout
+		android:id="@+id/indexUnit5"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_weight="1" 
+		android:gravity="center_horizontal"
+		android:paddingRight="2dp"
+		android:paddingBottom="4dp"
+		style="@style/IndexUnit"
+		>
+
+
+	      <LinearLayout
+		  android:layout_width="fill_parent"
+		  android:layout_height="fill_parent"
+		  android:orientation="vertical"
+		  android:layout_weight="1" 
+		  android:gravity="center_vertical"
+		  android:paddingTop="20dp"
+		  android:paddingBottom="20dp"
+		  android:background="#ccc"
+		  >
+
+		<TextView
+                    android:id="@+id/l_section1"
+                    style="@style/IndexUnitTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:gravity="center_vertical"
+                    android:text="附近商户" />
+		<TextView
+                    android:id="@+id/l_section1"
+                    style="@style/IndexUnitText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:gravity="center_vertical"
+                    android:text="拼餐 拼购 拼歌" />
+		<TextView
+                    android:id="@+id/l_section1"
+                    style="@style/IndexUnitText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:gravity="center_vertical"
+                    android:text="high翻全城" />
+	      </LinearLayout>
+
+	      <com.android.volley.toolbox.NetworkImageView
+		  android:id="@+id/indexUImg5"
+		  android:layout_marginTop="0dp"
+                  android:layout_width="fill_parent"
+		  android:layout_height="100dp"
+		  android:scaleType="centerCrop"
+		  android:layout_weight="1" 
+		  />
+
+
+	    </LinearLayout>
+
+	    <LinearLayout
+		android:id="@+id/indexUnit6"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_weight="1" 
+		android:gravity="center_horizontal"
+		android:paddingLeft="2dp"
+		android:paddingBottom="4dp"
+		style="@style/IndexUnit"
+		>
+
+	      <LinearLayout
+		  android:layout_width="fill_parent"
+		  android:layout_height="fill_parent"
+		  android:orientation="vertical"
+		  android:layout_weight="1" 
+		  android:gravity="center_vertical"
+		  android:paddingTop="20dp"
+		  android:paddingBottom="20dp"
+		  android:background="#ccc"
+		  >
+		<TextView
+                    android:id="@+id/l_section1"
+                    style="@style/IndexUnitTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:gravity="center_vertical"
+                    android:text="拼社区" />
+		<TextView
+                    android:id="@+id/l_section1"
+                    style="@style/IndexUnitText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:gravity="center_vertical"
+                    android:text="拼餐 拼购 拼歌" />
+		<TextView
+                    android:id="@+id/l_section1"
+                    style="@style/IndexUnitText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+		    android:layout_weight="1" 
+		    android:gravity="center_vertical"
+                    android:text="high翻全城" />
+	      </LinearLayout>
+
+
+	      <com.android.volley.toolbox.NetworkImageView
+		  android:id="@+id/indexUImg6"
+		  android:layout_marginTop="0dp"
+                  android:layout_width="fill_parent"
+		  android:layout_height="100dp"
+		  android:scaleType="centerCrop"
+		  android:layout_weight="1" 
+		  />
+
+	    </LinearLayout>
+
+	  </LinearLayout>
+
+	</LinearLayout>
+      </LinearLayout>
+
+    </RelativeLayout>
+
+  </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+</RelativeLayout>

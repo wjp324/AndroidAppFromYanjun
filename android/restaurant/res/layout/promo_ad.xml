@@ -1,0 +1,65 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="4dp"
+    >
+
+  <com.android.volley.toolbox.NetworkImageView
+      android:id="@+id/promoAd1"
+      android:layout_width="fill_parent"
+      android:scaleType="centerCrop"
+      android:layout_height="150dp" 
+      android:layout_weight="1" 
+      android:layout_marginRight="4dp"
+      />
+
+  <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:orientation="vertical"
+      android:layout_weight="1" 
+      android:layout_marginRight="4dp"
+      >
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/promoAd2"
+        android:layout_width="fill_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="fill_parent" 
+	android:layout_weight="1" 
+	android:layout_marginBottom="4dp"
+	/>
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/promoAd3"
+        android:layout_width="fill_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="fill_parent" 
+	android:layout_weight="1" 
+	/>
+    
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:orientation="vertical"
+      android:layout_weight="1" 
+      >
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/promoAd4"
+        android:layout_width="fill_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="fill_parent" 
+	android:layout_weight="1" 
+	android:layout_marginBottom="4dp"
+	/>
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/promoAd5"
+        android:layout_width="fill_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="fill_parent" 
+	android:layout_weight="1" 
+	/>
+  </LinearLayout>
+</LinearLayout>

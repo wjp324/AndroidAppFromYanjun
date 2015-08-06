@@ -1,0 +1,556 @@
+<!doctype html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css" />
+		<link href='http://fonts.useso.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.useso.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.useso.com/css?family=Ovo' rel='stylesheet' type='text/css' />
+        
+    
+		<!-- Fullscreen jQuery template -->
+		<script id="fullviewTmpl" type="text/x-jquery-tmpl"> 
+			{{html bgimage}}
+			<div class="full-view">
+				<span class="full-view-exit">Exit full screen view</span>
+				<div class="header">
+					<h2 class="title">${title}</h2>
+					<div class="full-nav">
+						<span class="full-nav-prev">Previous</span>
+						<span class="full-nav-pages">
+							<span class="full-nav-current">${current}</span>/
+							<span class="full-nav-total">${total}</span>
+						</span>
+						<span class="full-nav-next">Next</span>
+					</div>
+					<p class="subline">${subline}</p>
+					<span class="loading-small"></span>
+				</div>
+				<div class="project-descr-full">
+					<div class="thumbs-wrapper"><div class="thumbs">{{html thumbs}}</div></div>
+					<div class="project-descr-full-wrapper">
+						<div class="project-descr-full-content">{{html description}}</div><!-- project-descr-full-content -->
+					</div>
+				</div><!-- project-descr-full -->
+			</div><!-- full-view -->
+		</script>
+	</head>
+	<body>
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+                <div id="logo"><img src="images/logo.png"/></div>
+            </div>
+            <div id="bs-example-navbar-collapse-5" class="collapse navbar-collapse">
+                <div class="navbar-text navbar-right">
+                	<div id="icon">
+                   		<img src="images/default.png"/>
+                   </div> 
+                	<div id="username">
+                	<a>&nbsp;&nbsp yichli</a>
+                    <select>
+                    <option>Welcome</option>
+                    <option>Myself</option>
+                    <option>log out</option>
+                    
+                    </select>
+               		</div>
+                </div>
+                
+            </div>
+            </div>
+        </nav>
+           
+		<div class="container" id="container">
+			
+			<div class="item block" data-bgimage="images/1_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/1_1.jpg"/>
+						<img src="images/thumbs/2_1.jpg"/>
+					</div>
+				</div>
+				<h2 class="title">Personal Works</h2>
+				<p class="subline">Concept <span class="fancy">&amp;</span> Design</p>
+				<div class="intro">
+					<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. <a href="#" class="more_link">View project</a></p>
+				</div>
+				<div class="project-descr">
+					<p>O my friend - but it is too much for my strength - I sink under the weight of the splendour of these visions!</p>
+					<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+					<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/2_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/2_1.jpg"/>
+						<img src="images/thumbs/2_1.jpg"/>
+						<img src="images/thumbs/2_1.jpg"/>
+					</div>	
+				</div>
+				<h2 class="title">Business Cards</h2>
+				<p class="subline">Design <span class="fancy">&amp;</span> print</p>
+				<div class="intro">
+					<p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. <a href="#" class="more_link">View project</a></p></div>
+				<div class="project-descr">
+					<p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.</p>
+					<p>Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+					<p>"How about if I sleep a little bit longer and forget all this nonsense", he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn't get into that position.</p>
+					<p>O my friend - but it is too much for my strength - I sink under the weight of the splendour of these visions!</p>
+					<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/3_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/3_1.jpg"/>
+						<img src="images/thumbs/3_1.jpg"/>
+					</div>
+				</div>
+				<h2 class="title">Lovely Cards Project</h2>
+				<p class="subline">Concept, design <span class="fancy">&amp;</span> print</p>
+				<div class="intro">
+					<p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. <a href="#" class="more_link">View project</a></p>
+				</div>
+				<div class="project-descr">
+					<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+					<p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/1_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/4_1.jpg"/>
+						<img src="images/thumbs/4_1.jpg"/>
+						<img src="images/thumbs/4_1.jpg"/>
+					</div>
+				</div>
+				<h2 class="title">Serenity Project</h2>
+				<p class="subline">Design <span class="fancy">&amp;</span> print</p>
+				<div class="intro">
+					<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally <a href="#" class="more_link">View project</a></p>
+				</div>
+				<div class="project-descr">
+					<p>Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+					<p>"How about if I sleep a little bit longer and forget all this nonsense", he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn't get into that position.</p>	
+					<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+					<p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/2_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/1_1.jpg"/>
+						<img src="images/thumbs/1_1.jpg"/>
+						<img src="images/thumbs/1_1.jpg"/>
+					</div>
+				</div>
+				<h2 class="title">Bright Print Project</h2>
+				<p class="subline">Concept, design <span class="fancy">&amp;</span> print</p>
+				<div class="intro">
+					<p>Drops of rain could be heard hitting the pane, which made him feel quite sad. <a href="#" class="more_link">View project</a></p>
+				</div>
+				<div class="project-descr">
+					<p>However hard he threw himself onto his right, he always rolled back to where he was. He must have tried it a hundred times, shut his eyes so that he wouldn't have to look at the floundering legs, and only stopped when he began to feel a mild, dull pain there that he had never felt before.</p>
+					<p>"Oh, God", he thought, "what a strenuous career it is that I've chosen! Travelling day in and day out.</p>
+					<p>Doing business like this takes much more effort than doing your own business at home, and on top of that there's the curse of travelling, worries about making train connections, bad and irregular food, contact with different people all the time so that you can never get to know anyone or become friendly with them.</p>
+					<p>It can all go to Hell!</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/4_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/2_1.jpg"/>
+						<img src="images/thumbs/2_1.jpg"/>
+						<img src="images/thumbs/2_1.jpg"/>
+					</div>
+				</div>
+				<h2 class="title">In the clouds Project</h2>
+				<p class="subline">Concept, design <span class="fancy">&amp;</span> print</p>
+				<div class="intro">
+					<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. <a href="#" class="more_link">View project</a></p>
+				</div>
+				<div class="project-descr">
+					<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
+					<p>Pityful a rethoric question ran over her cheek, then she continued her way. On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country.</p>
+					<p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/1_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/3_1.jpg"/>
+						<img src="images/thumbs/3_1.jpg"/>
+						<img src="images/thumbs/3_1.jpg"/>
+					</div>	
+				</div>
+				<h2 class="title">Quantum Design</h2>
+				<p class="subline">Design <span class="fancy">&amp;</span> print</p>
+				<div class="intro">
+					<p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. <a href="#" class="more_link">View project</a></p></div>
+				<div class="project-descr">
+					<p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.</p>
+					<p>Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+					<p>"How about if I sleep a little bit longer and forget all this nonsense", he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn't get into that position.</p>
+					<p>O my friend - but it is too much for my strength - I sink under the weight of the splendour of these visions!</p>
+					<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+				</div>
+			</div>
+			
+			<div class="item block" data-bgimage="images/1_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/1_1.jpg"/>
+						<img src="images/thumbs/2_1.jpg"/>
+					</div>
+				</div>
+				<h2 class="title">Personal Works</h2>
+				<p class="subline">Concept <span class="fancy">&amp;</span> Design</p>
+				<div class="intro">
+					<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. <a href="#" class="more_link">View project</a></p>
+				</div>
+				<div class="project-descr">
+					<p>O my friend - but it is too much for my strength - I sink under the weight of the splendour of these visions!</p>
+					<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+					<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/2_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/2_1.jpg"/>
+						<img src="images/thumbs/2_1.jpg"/>
+						<img src="images/thumbs/2_1.jpg"/>
+					</div>	
+				</div>
+				<h2 class="title">Business Cards</h2>
+				<p class="subline">Design <span class="fancy">&amp;</span> print</p>
+				<div class="intro">
+					<p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. <a href="#" class="more_link">View project</a></p></div>
+				<div class="project-descr">
+					<p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.</p>
+					<p>Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+					<p>"How about if I sleep a little bit longer and forget all this nonsense", he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn't get into that position.</p>
+					<p>O my friend - but it is too much for my strength - I sink under the weight of the splendour of these visions!</p>
+					<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/3_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/3_1.jpg"/>
+						<img src="images/thumbs/3_1.jpg"/>
+					</div>
+				</div>
+				<h2 class="title">Lovely Cards Project</h2>
+				<p class="subline">Concept, design <span class="fancy">&amp;</span> print</p>
+				<div class="intro">
+					<p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. <a href="#" class="more_link">View project</a></p>
+				</div>
+				<div class="project-descr">
+					<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+					<p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/1_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/1_1.jpg"/>
+						<img src="images/thumbs/2_1.jpg"/>
+					</div>
+				</div>
+				<h2 class="title">Personal Works</h2>
+				<p class="subline">Concept <span class="fancy">&amp;</span> Design</p>
+				<div class="intro">
+					<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. <a href="#" class="more_link">View project</a></p>
+				</div>
+				<div class="project-descr">
+					<p>O my friend - but it is too much for my strength - I sink under the weight of the splendour of these visions!</p>
+					<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+					<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/2_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/2_1.jpg"/>
+						<img src="images/thumbs/2_1.jpg"/>
+						<img src="images/thumbs/2_1.jpg"/>
+					</div>	
+				</div>
+				<h2 class="title">Business Cards</h2>
+				<p class="subline">Design <span class="fancy">&amp;</span> print</p>
+				<div class="intro">
+					<p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. <a href="#" class="more_link">View project</a></p></div>
+				<div class="project-descr">
+					<p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.</p>
+					<p>Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+					<p>"How about if I sleep a little bit longer and forget all this nonsense", he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn't get into that position.</p>
+					<p>O my friend - but it is too much for my strength - I sink under the weight of the splendour of these visions!</p>
+					<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/3_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/3_1.jpg"/>
+						<img src="images/thumbs/3_1.jpg"/>
+					</div>
+				</div>
+				<h2 class="title">Lovely Cards Project</h2>
+				<p class="subline">Concept, design <span class="fancy">&amp;</span> print</p>
+				<div class="intro">
+					<p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. <a href="#" class="more_link">View project</a></p>
+				</div>
+				<div class="project-descr">
+					<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+					<p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/1_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/1_1.jpg"/>
+						<img src="images/thumbs/2_1.jpg"/>
+					</div>
+				</div>
+				<h2 class="title">Personal Works</h2>
+				<p class="subline">Concept <span class="fancy">&amp;</span> Design</p>
+				<div class="intro">
+					<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. <a href="#" class="more_link">View project</a></p>
+				</div>
+				<div class="project-descr">
+					<p>O my friend - but it is too much for my strength - I sink under the weight of the splendour of these visions!</p>
+					<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+					<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/2_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/2_1.jpg"/>
+						<img src="images/thumbs/2_1.jpg"/>
+						<img src="images/thumbs/2_1.jpg"/>
+					</div>	
+				</div>
+				<h2 class="title">Business Cards</h2>
+				<p class="subline">Design <span class="fancy">&amp;</span> print</p>
+				<div class="intro">
+					<p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. <a href="#" class="more_link">View project</a></p></div>
+				<div class="project-descr">
+					<p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.</p>
+					<p>Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+					<p>"How about if I sleep a little bit longer and forget all this nonsense", he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn't get into that position.</p>
+					<p>O my friend - but it is too much for my strength - I sink under the weight of the splendour of these visions!</p>
+					<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/3_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/3_1.jpg"/>
+						<img src="images/thumbs/3_1.jpg"/>
+					</div>
+				</div>
+				<h2 class="title">Lovely Cards Project</h2>
+				<p class="subline">Concept, design <span class="fancy">&amp;</span> print</p>
+				<div class="intro">
+					<p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. <a href="#" class="more_link">View project</a></p>
+				</div>
+				<div class="project-descr">
+					<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+					<p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/3_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/4_1.jpg"/>
+						<img src="images/thumbs/4_1.jpg"/>
+					</div>
+				</div>
+				<h2 class="title">Green Autumn Project</h2>
+				<p class="subline">Concept, design <span class="fancy">&amp;</span> print</p>
+				<div class="intro">
+					<p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. <a href="#" class="more_link">View project</a></p>
+				</div>
+				<div class="project-descr">
+					<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+					<p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/2_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/1_1.jpg"/>
+						<img src="images/thumbs/1_1.jpg"/>
+					</div>
+				</div>
+				<h2 class="title">Summer Collection</h2>
+				<p class="subline">Concept <span class="fancy">&amp;</span> Design</p>
+				<div class="intro">
+					<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. <a href="#" class="more_link">View project</a></p>
+				</div>
+				<div class="project-descr">
+					<p>O my friend - but it is too much for my strength - I sink under the weight of the splendour of these visions!</p>
+					<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+					<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/2_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/2_1.jpg"/>
+						<img src="images/thumbs/2_1.jpg"/>
+						<img src="images/thumbs/2_1.jpg"/>
+					</div>	
+				</div>
+				<h2 class="title">Cards Deluxe Project</h2>
+				<p class="subline">Design <span class="fancy">&amp;</span> print</p>
+				<div class="intro">
+					<p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. <a href="#" class="more_link">View project</a></p></div>
+				<div class="project-descr">
+					<p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.</p>
+					<p>Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+					<p>"How about if I sleep a little bit longer and forget all this nonsense", he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn't get into that position.</p>
+					<p>O my friend - but it is too much for my strength - I sink under the weight of the splendour of these visions!</p>
+					<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/1_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/3_1.jpg"/>
+						<img src="images/thumbs/3_1.jpg"/>
+					</div>
+				</div>
+				<h2 class="title">Sunshine Print Project</h2>
+				<p class="subline">Concept, design <span class="fancy">&amp;</span> print</p>
+				<div class="intro">
+					<p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. <a href="#" class="more_link">View project</a></p>
+				</div>
+				<div class="project-descr">
+					<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+					<p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/4_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/4_1.jpg"/>
+						<img src="images/thumbs/1_1.jpg"/>
+					</div>
+				</div>
+				<h2 class="title">Winter Silence Project</h2>
+				<p class="subline">Concept, design <span class="fancy">&amp;</span> print</p>
+				<div class="intro">
+					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+					<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+					<p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. <a href="#" class="more_link">View project</a></p>
+				</div>
+				<div class="project-descr">
+					<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+					<p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/3_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/2_1.jpg"/>
+						<img src="images/thumbs/2_1.jpg"/>
+						<img src="images/thumbs/3_1.jpg"/>
+					</div>
+				</div>
+				<h2 class="title">Happy Collection</h2>
+				<p class="subline">Design <span class="fancy">&amp;</span> print</p>
+				<div class="intro">
+					<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally <a href="#" class="more_link">View project</a></p>
+				</div>
+				<div class="project-descr">
+					<p>Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+					<p>"How about if I sleep a little bit longer and forget all this nonsense", he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn't get into that position.</p>	
+					<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+					<p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/2_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/2_1.jpg"/>
+						<img src="images/thumbs/2_1.jpg"/>
+						<img src="images/thumbs/2_1.jpg"/>
+					</div>
+				</div>
+				<h2 class="title">Awesome Colors Project</h2>
+				<p class="subline">Concept, design <span class="fancy">&amp;</span> print</p>
+				<div class="intro">
+					<p>Drops of rain could be heard hitting the pane, which made him feel quite sad. <a href="#" class="more_link">View project</a></p>
+				</div>
+				<div class="project-descr">
+					<p>However hard he threw himself onto his right, he always rolled back to where he was. He must have tried it a hundred times, shut his eyes so that he wouldn't have to look at the floundering legs, and only stopped when he began to feel a mild, dull pain there that he had never felt before.</p>
+					<p>"Oh, God", he thought, "what a strenuous career it is that I've chosen! Travelling day in and day out.</p>
+					<p>Doing business like this takes much more effort than doing your own business at home, and on top of that there's the curse of travelling, worries about making train connections, bad and irregular food, contact with different people all the time so that you can never get to know anyone or become friendly with them.</p>
+					<p>It can all go to Hell!</p>
+				</div>
+			</div>
+			<div class="item block" data-bgimage="images/1_1.jpg">
+				<div class="thumbs-wrapper">
+					<div class="thumbs">
+						<img src="images/thumbs/1_1.jpg"/>
+						<img src="images/thumbs/1_1.jpg"/>
+					</div>
+				</div>
+				<h2 class="title">Fancy Project #23</h2>
+				<p class="subline">Design <span class="fancy">&amp;</span> print</p>
+				<div class="intro">
+					<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally <a href="#" class="more_link">View project</a></p>
+				</div>
+				<div class="project-descr">
+					<p>Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+					<p>"How about if I sleep a little bit longer and forget all this nonsense", he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn't get into that position.</p>	
+					<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+					<p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+				</div>
+			</div>
+            
+            
+            
+            
+            
+			<div class="clr"></div>
+		</div><!-- container -->
+      
+       
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<!-- the jScrollPane script -->
+		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript" src="js/jquery.masonry.min.js"></script>
+		<script type="text/javascript" src="js/jquery.gpCarousel.js"></script>
+        <script type="text/javascript" src="js/jquery.gpCarousel.js"></script>
+        <script type="text/javascript" src="js/dsb.js"></script>
+        
+		<script type="text/javascript">
+			
+			
+
+			
+			
+			$(document).ready(function() { 
+				if($('.container').width()<767){
+						var newWidth =  $('.block').width();
+						$('.block img').css("width",newWidth);
+				}
+				else
+					$('.block img').css("width","170px");
+					
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+  <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="180dp"
+      >
+    <ImageView
+        android:id="@+id/memberBg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/index_bg" />
+
+    <com.android.volley.toolbox.NetworkImageView
+	android:id="@+id/memberThumb"
+	android:layout_width="100dp"
+	android:layout_height="100dp"
+	android:layout_marginTop="10dp"
+	android:layout_marginLeft="10dp"
+	android:layout_alignParentTop="true"
+	android:padding="5dp"
+	android:cropToPadding="true"
+	android:contentDescription="TODO"
+	android:scaleType="centerCrop"
+	android:background="@drawable/thumb_border"
+	android:visibility="gone"
+	/>
+
+    <TextView
+	android:id="@+id/username"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_alignParentTop="true"
+	android:layout_toRightOf="@id/memberThumb"
+	android:layout_marginTop="20dp"
+	android:layout_marginLeft="20dp"
+	android:singleLine="true"
+	android:text="Description"
+	android:textSize="24sp" 
+	android:textColor="#fff"
+	android:textStyle="bold"
+	android:visibility="gone"
+	/>
+
+
+    <TextView
+	android:id="@+id/loginHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+	android:gravity="center"
+	android:layout_marginTop="28dp"
+	android:layout_gravity="center_horizontal"
+	android:layout_centerHorizontal="true"
+	android:textColor="#888"
+        android:text="您还没有登录～" />
+
+    <Button
+        android:id="@+id/loginBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginHint"
+	android:layout_centerHorizontal="true"
+	android:paddingLeft="45dp"
+	android:paddingRight="45dp"
+	android:layout_marginTop="5dp"
+	android:background="@drawable/container_dropshadow"
+        android:text="登录"
+        android:ellipsize="end"/>
+
+    <!--LinearLayout
+	android:layout_width="fill_parent"
+	android:layout_height="60dp"
+	android:background="#bb000000"
+	android:orientation="horizontal"
+	android:layout_alignParentBottom="true"
+	>
+
+      <LinearLayout
+          android:id="@+id/memberReviews"
+	  android:paddingTop="5dp"
+	  android:paddingBottom="5dp"
+	  android:layout_width="fill_parent"
+	  android:layout_height="fill_parent"
+	  android:orientation="vertical"
+	  android:layout_weight="1"
+	  >
+	<TextView
+            style="@style/memberTitleWhite"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+	    android:layout_weight="4" 
+	    android:gravity="center"
+            android:text="点评" />
+
+	<TextView
+            style="@style/memberNumWhite"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+	    android:layout_weight="3" 
+	    android:gravity="center"
+            android:text="0" />
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/memberPics"
+	  android:paddingTop="5dp"
+	  android:paddingBottom="5dp"
+	  android:layout_width="fill_parent"
+	  android:layout_height="fill_parent"
+	  android:orientation="vertical"
+	  android:layout_weight="1"
+	  >
+	<TextView
+            style="@style/memberTitleWhite"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+	    android:layout_weight="4" 
+	    android:gravity="center"
+            android:text="照片" />
+
+	<TextView
+            style="@style/memberNumWhite"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+	    android:layout_weight="3" 
+	    android:gravity="center"
+            android:text="0" />
+      </LinearLayout>
+      
+
+    </LinearLayout-->
+    
+  </RelativeLayout>
+
+
+
+  <ListView
+      android:id="@+id/memberList1"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" 
+      >
+  </ListView>
+
+</LinearLayout>

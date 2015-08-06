@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="ComAndroidSupportSupportV42100.aar" >
+        <source path="/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/build/exploded-bundles/ComAndroidSupportSupportV42100.aar/assets" />
+    </dataSet>
+    <dataSet config="ComAndroidSupportSupportV132000.aar" >
+        <source path="/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/build/exploded-bundles/ComAndroidSupportSupportV132000.aar/assets" />
+    </dataSet>
+    <dataSet config="ComGoogleAndroidSupportWearable100.aar" >
+        <source path="/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/build/exploded-bundles/ComGoogleAndroidSupportWearable100.aar/assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/src/main/assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/src/debug/assets" />
+    </dataSet>
+
+</merger>

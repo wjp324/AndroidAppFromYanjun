@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="horizontal"
+		android:padding="6dp">
+
+<Button
+     android:id="@+id/addnew"
+     style="?android:attr/buttonStyleSmall"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:textColor="@color/g_g"
+     android:background="#00ffffff"
+     android:text="Add New" />
+
+</LinearLayout>

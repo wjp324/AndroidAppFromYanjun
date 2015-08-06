@@ -1,0 +1,18 @@
+#!/bin/bash
+
+
+#./gradlew installDebug  &&
+
+./gradlew assembleDebug &&
+#adb -s "03bc644502a26414" uninstall com.futcore.restaurant &&
+#adb -s "03bc644502a26414" install ./Wearable/build/apk/Wearable-debug-unaligned.apk &&
+#/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/platform-tools/adb -s "03bc644502a26414"  shell am start -n com.example.android.wearable.gridviewpager/.MainActivity &&
+#/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/platform-tools/adb -s "03bc644502a26414" logcat
+#adb -s localhost:4444 uninstall com.futcore.restaurant &&
+adb -s localhost:4444 install -r ./Wearable/build/apk/Wearable-debug-unaligned.apk &&
+/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/platform-tools/adb -s localhost:4444  shell am start -n com.example.android.wearable.gridviewpager/.MainActivity &&
+/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/platform-tools/adb -s localhost:4444 logcat
+
+
+
+

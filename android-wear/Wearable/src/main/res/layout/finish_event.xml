@@ -1,0 +1,70 @@
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+   <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+	android:scaleType="centerCrop"
+	android:src="@drawable/spiderred"
+	/>
+
+
+  <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:orientation="vertical"
+      >
+
+    <LinearLayout
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:layout_weight="2" 
+	android:background="#aa5cb85c"
+	android:id="@+id/finishConfirm"
+	>
+    </LinearLayout>
+
+    <!--LinearLayout
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:layout_weight="1" 
+	android:background="#ffd9534f"
+	android:id="@+id/finishCancel"
+	>
+	</LinearLayout-->
+
+    <LinearLayout
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:layout_weight="1" 
+	android:background="#aaffffff"
+	android:id="@+id/finishCancel"
+	>
+      <TextView
+	  android:id="@+id/eventEndTime"
+	  android:layout_width="fill_parent"
+	  android:padding="10dip" 
+	  android:layout_height="wrap_content" 
+	  android:gravity="center_vertical"
+	  android:text="Example application"
+	  android:textSize="16sp" />
+      <TextView
+	  android:id="@+id/eventTitle"
+	  android:layout_width="fill_parent"
+	  android:padding="13dip" 
+	  android:layout_height="fill_parent" 
+	  android:text="Example application"
+	  android:textSize="14sp" />
+    </LinearLayout>
+
+    
+  </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/samples/android-20/wearable/Timer/Wearable/build/intermediates/pre-dexed/debug/classes-1d673d76328e6b7babbefeedb7a7a6687b039c67.jar"
+        jar="/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/samples/android-20/wearable/Timer/Wearable/build/intermediates/exploded-aar/com.android.support/support-v13/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e128103d5281ddd26195a7f980b36d0d005a4e56"/>
+    <item
+        dex="/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/samples/android-20/wearable/Timer/Wearable/build/intermediates/pre-dexed/debug/classes-75d2639900d7e29dd3ab6a445b821f066763e8f0.jar"
+        jar="/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/samples/android-20/wearable/Timer/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="6804efbb78d7facc2e1aa107c7342bee83afae45"/>
+    <item
+        dex="/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/samples/android-20/wearable/Timer/Wearable/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-32e6167ba942ed8b06f23d977aa6710630c2be88.jar"
+        jar="/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/samples/android-20/wearable/Timer/Wearable/build/intermediates/exploded-aar/com.android.support/support-v13/20.0.0/libs/internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="27bbd3982cdfe4468a9bf99c8c773734a9049e33"/>
+    <item
+        dex="/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/samples/android-20/wearable/Timer/Wearable/build/intermediates/pre-dexed/debug/classes-54b57fdd71cf03a8aab96fcc31d934e7cbe5f0f9.jar"
+        jar="/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/samples/android-20/wearable/Timer/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="b6a82434c1eca686607867cd906bcc80ed987837"/>
+    <item
+        dex="/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/samples/android-20/wearable/Timer/Wearable/build/intermediates/pre-dexed/debug/classes-42979813b9bbf3709f49704d01fe1271ab9a9536.jar"
+        jar="/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/samples/android-20/wearable/Timer/Wearable/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
+    <item
+        dex="/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/samples/android-20/wearable/Timer/Wearable/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-6c5f5d9439f41d330ee5300738095b544a82b271.jar"
+        jar="/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
+    <item
+        dex="/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/samples/android-20/wearable/Timer/Wearable/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-93b55dc85bbdff8a0c946fe8e32b1084be77429f.jar"
+        jar="/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/samples/android-20/wearable/Timer/Wearable/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
+
+</pre-dex-items>

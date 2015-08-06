@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ddd">
+
+  <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      >
+
+    <LinearLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:gravity="center_horizontal"
+	>
+      
+      <RatingBar
+          android:id="@+id/ratingBar1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:numStars="5"
+          android:stepSize="1.0"         
+	  />
+    </LinearLayout>
+
+
+    <LinearLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:background="#fff"
+	>
+
+      <TextView
+          android:id="@+id/l_section1"
+          android:layout_width="fill_parent"
+          android:layout_height="50dp"
+	      android:layout_weight="1" 
+	      android:gravity="center_vertical"
+	      android:layout_marginLeft="10dp"
+          android:text="请分别对口味、环境核服务评分" />
+
+      <LinearLayout
+	  android:layout_width="fill_parent"
+	  android:layout_height="wrap_content"
+	  android:orientation="horizontal"
+	  >
+
+	<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+	        android:gravity="center_vertical"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+            android:text="口味" />
+
+	<RatingBar
+            android:id="@+id/ratingBar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1.0"
+	    />
+      </LinearLayout>
+
+
+      <LinearLayout
+	  android:layout_width="fill_parent"
+	  android:layout_height="wrap_content"
+	  android:orientation="horizontal"
+	  >
+
+	<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+	        android:gravity="center_vertical"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+            android:text="环境" />
+
+	<RatingBar
+            android:id="@+id/ratingBar3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1.0"
+	    />
+      </LinearLayout>
+
+
+      <LinearLayout
+	  android:layout_width="fill_parent"
+	  android:layout_height="wrap_content"
+	  android:orientation="horizontal"
+	  >
+
+	<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+	        android:gravity="center_vertical"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+            android:text="服务" />
+
+	<RatingBar
+            android:id="@+id/ratingBar4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1.0"
+	    />
+      </LinearLayout>
+
+      
+    </LinearLayout>
+
+
+    <LinearLayout
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:background="#fff"
+	android:paddingTop="15dp"
+	android:paddingLeft="10dp"
+	android:paddingRight="10dp"
+	android:layout_marginTop ="10dp"
+	>
+      
+      <EditText
+	  android:inputType="textMultiLine"
+	  android:id="@+id/reviewCon"
+	  style="@style/formEdit"
+	  android:layout_width="fill_parent"
+	  android:layout_height="fill_parent"
+	  android:hint="@string/username_hint"
+	  android:lines="8" 
+	  android:minLines="6"
+	  android:maxLines="10"
+	  android:scrollbars="vertical"
+	  android:gravity="top|left"
+	  />
+    
+    </LinearLayout>
+
+    <LinearLayout
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:layout_marginTop="10dp"
+	android:layout_weight="1"
+	
+	>
+
+      <LinearLayout
+	  android:layout_width="fill_parent"
+	  android:layout_height="fill_parent"
+	  android:padding="10dp"
+	  android:background="#fff"
+	  >    
+                   
+          
+	<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+	        android:layout_marginRight="10dp"
+	        android:layout_gravity="center"
+            android:text="均价（选填）" />
+
+
+	<EditText
+	    android:id="@+id/price"
+	    style="@style/formEdit"
+	    android:layout_width="fill_parent"
+	    android:layout_height="30dp"
+	    android:layout_marginTop="10dp"
+	    android:hint="@string/username_hint"
+	    android:inputType="number"/>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+	android:id="@+id/reviewSub"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:singleLine="true"
+	android:textStyle="bold"
+	android:layout_marginTop ="10dp"
+	android:layout_marginRight ="15dp"
+	android:layout_marginLeft ="15dp"
+	android:background="#f60"
+	style="@style/formButton"
+	android:text="提交" />
+  </LinearLayout>
+
+
+</ScrollView>
+

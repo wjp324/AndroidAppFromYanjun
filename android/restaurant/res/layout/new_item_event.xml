@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+  <!--EditText
+      android:id="@+id/itemeventname"
+      style="@style/formEdit"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="30dp"
+      android:hint="Item name"
+      android:inputType="textCapSentences|textAutoCorrect"/-->
+  <EditText
+      android:id="@+id/itemeventname"
+      style="@style/formEdit"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="30dp"
+      android:hint="Item name"
+      />
+
+  <LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      >
+    <EditText
+	android:id="@+id/itemnmins"
+	android:layout_weight="1" 
+	style="@style/formEdit"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:hint="N minutes"
+	android:inputType="number"
+	/>
+
+    <Button
+	android:id="@+id/min30but"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:singleLine="true"
+	android:textStyle="bold"
+	style="@style/formButton"
+	android:layout_weight="1" 
+	android:text="30" 
+	android:background="@color/gray"
+	/>
+
+    <Button
+	android:id="@+id/min60but"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:singleLine="true"
+	android:textStyle="bold"
+	style="@style/formButton"
+	android:layout_weight="1" 
+	android:text="60" 
+	android:background="@color/gray"
+	/>
+
+    <Button
+	android:id="@+id/min120but"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:singleLine="true"
+	android:textStyle="bold"
+	style="@style/formButton"
+	android:layout_weight="1" 
+	android:text="120" 
+	android:background="@color/gray"
+	/>
+  </LinearLayout>
+
+
+
+  <LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      >
+
+    <Button
+	android:id="@+id/after30but"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:singleLine="true"
+	android:textStyle="bold"
+	style="@style/formButton"
+	android:layout_weight="1" 
+	android:text="30" 
+	android:background="@color/gray"
+	/>
+
+    <Button
+	android:id="@+id/after60but"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:singleLine="true"
+	android:textStyle="bold"
+	style="@style/formButton"
+	android:layout_weight="1" 
+	android:text="60" 
+	android:background="@color/gray"
+	/>
+
+    <Button
+	android:id="@+id/after90but"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:singleLine="true"
+	android:textStyle="bold"
+	style="@style/formButton"
+	android:layout_weight="1" 
+	android:text="60" 
+	android:background="@color/gray"
+	/>
+
+    <Button
+	android:id="@+id/after120but"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:singleLine="true"
+	android:textStyle="bold"
+	style="@style/formButton"
+	android:layout_weight="1" 
+	android:text="120" 
+	android:background="@color/gray"
+	/>
+  </LinearLayout>
+  
+
+  <LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      >
+
+    <TimePicker
+	android:id="@+id/timePicker1"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content" />
+
+    <Button
+	android:id="@+id/resettimepicker"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:singleLine="true"
+	android:textStyle="bold"
+	style="@style/formButton"
+	android:layout_weight="1" 
+	android:text="Reset"
+	android:background="@color/gray"
+	/>
+    
+  </LinearLayout>
+
+
+  <EditText
+      android:id="@+id/itemeventcrit"
+      style="@style/formEdit"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:scrollbars="vertical" 
+      android:lines="8"
+      android:minLines="6"
+      android:gravity="top|left"
+      android:maxLines="10"
+      android:hint="Item crit"
+      android:inputType="textMultiLine"
+      />
+
+  <!--TimePicker
+      android:id="@+id/timePicker1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" /-->
+
+
+  <Button
+      android:id="@+id/newitemeventsub"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:singleLine="true"
+      android:textStyle="bold"
+      style="@style/formButton"
+      android:layout_weight="1" 
+      android:text="Add" 
+      android:background="@color/g_g"
+      />
+
+</LinearLayout>

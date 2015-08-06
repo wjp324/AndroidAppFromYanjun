@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+  <!--item
+      android:id="@+id/events_add"
+      android:showAsAction="always"
+      android:title="@string/new_post" 
+      android:actionLayout="@layout/just_add"/-->
+
+  <!--item
+      android:id="@+id/menu_signout"
+      android:icon="@android:drawable/ic_menu_close_clear_cancel"
+      android:showAsAction="always"
+      android:textColor="#00000000"
+      android:title="@string/sign_out" /-->
+
+  <item
+      android:id="@+id/menu_signout"
+      android:icon="@android:drawable/ic_menu_close_clear_cancel"
+      android:showAsAction="withText|always"
+      android:title="ggggg" 
+      />
+
+</menu>

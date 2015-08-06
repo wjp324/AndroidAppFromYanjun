@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f00"
+    >
+
+  <!--ImageView
+      android:id="@+id/bg"
+      android:layout_width="700dp"
+      android:layout_height="fill_parent"
+      android:src="@drawable/shanghai1"
+      android:scaleType="centerCrop"/-->
+  
+  <com.futcore.restaurant.custom_view.SlideImageLinearLayout
+      android:id="@+id/bgCon"
+      android:layout_height="fill_parent" 
+      android:layout_width="fill_parent"       
+      >
+    <com.futcore.restaurant.custom_view.CoveredImageView
+	android:id="@+id/bg"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:src="@drawable/shanghai1"
+	android:scaleType="centerCrop"/>
+  </com.futcore.restaurant.custom_view.SlideImageLinearLayout>
+
+
+  <com.futcore.restaurant.custom_view.ViewPagerCustomDuration
+      android:id="@+id/mainPager"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+  <!--ImageView
+      android:id="@+id/logo"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:scaleType="centerCrop"
+      android:layout_centerVertical="true"
+      android:layout_centerHorizontal="true"
+      android:src="@drawable/shake_phone" /-->
+
+</RelativeLayout>

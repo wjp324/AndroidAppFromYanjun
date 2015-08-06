@@ -1,0 +1,8 @@
+<!-- From: file:/home/yanjzhou/ProjectsN/ebay-lsb/android/Android-PullToRefresh-master/extras/PullToRefreshListFragment/AndroidManifest.xml --><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2110" android:versionName="2.1.1" package="com.handmark.pulltorefresh.extras.listfragment">
+
+  <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="17"/>
+
+
+    <application/>
+
+</manifest>

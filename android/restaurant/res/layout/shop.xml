@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+
+  <ScrollView
+      android:id="@+id/indexPull"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_weight="1"
+      android:background="#f8f8f8" >
+
+    <LinearLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	>
+
+      <TextView
+	  android:id="@+id/shopName"
+	  android:layout_width="fill_parent"
+	  android:layout_height="wrap_content"
+	  android:layout_weight="1" 
+	  android:gravity="center_vertical"
+	  android:padding="8dp"
+	  android:text="@string/account_details" 
+	  android:layout_marginTop="10dp"
+	  android:textSize="@dimen/shop_title_size"/>
+
+      <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:paddingBottom="18dp"
+	  android:background="@drawable/border_bottom_orange"
+          android:paddingLeft="4dp" >
+  
+          <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          >
+          
+          <com.android.volley.toolbox.NetworkImageView
+              android:id="@+id/bigThumb"
+              android:layout_width="140dp"
+              android:layout_height="80dp"
+              android:layout_alignParentLeft="true"
+              android:layout_alignParentTop="true"
+              android:layout_marginLeft="6dp"
+              android:layout_marginRight="6dp"
+              android:background="@drawable/thumb_border"
+              android:padding="4dp"
+              android:scaleType="centerCrop"
+              android:src="@drawable/pic_1" />
+         </RelativeLayout>
+       <LinearLayout 
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:paddingLeft="4dp">
+       
+       <ImageView
+              android:id="@+id/testBanner"
+              android:layout_width="77dp"
+              android:layout_height="15dp"
+              android:layout_centerVertical="true"
+              android:scaleType="centerCrop"
+              android:layout_marginLeft="6dp"
+              android:layout_marginTop="12dp"
+              android:src="@drawable/star01" />    
+           
+       <RelativeLayout 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_marginLeft="6dp"
+          android:paddingTop="10dp"
+          >
+          
+           
+          
+          <TextView
+              android:id="@+id/textView1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="#c4c4c4"
+              android:textSize="12sp"
+              android:text="人均：￥" />
+
+          <TextView
+              android:id="@+id/average"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="#c4c4c4"
+              android:textSize="12sp"
+              android:layout_toRightOf="@+id/textView1"
+              android:text="130" />
+           
+      </RelativeLayout>
+
+       <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="6dp"
+           android:orientation="horizontal"
+           android:paddingTop="10dp" >
+
+           <RelativeLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="left" >
+
+               <TextView
+                   android:id="@+id/textView2"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="口味："
+                   android:textColor="#c4c4c4"
+                   android:textSize="12sp" />
+
+               <TextView
+                   android:id="@+id/taste"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentBottom="true"
+                   android:layout_toRightOf="@+id/textView2"
+                   android:text="24"
+                   android:textColor="#c4c4c4"
+                   android:textSize="12sp" />
+           </RelativeLayout>
+
+           <RelativeLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center" >
+
+               <TextView
+                   android:id="@+id/textView3"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentBottom="true"
+                   android:text="环境："
+                   android:textColor="#c4c4c4"
+                   android:textSize="12sp" />
+
+               <TextView
+                   android:id="@+id/environment"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentBottom="true"
+                   android:layout_toRightOf="@+id/textView3"
+                   android:text="22"
+                   android:textColor="#c4c4c4"
+                   android:textSize="12sp" />
+           </RelativeLayout>
+
+           <RelativeLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="right" >
+
+               <TextView
+                   android:id="@+id/textView4"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentBottom="true"
+                   android:text="服务："
+                   android:textColor="#c4c4c4"
+                   android:textSize="12sp" />
+
+               <TextView
+                   android:id="@+id/service"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentBottom="true"
+                   android:layout_toRightOf="@+id/textView4"
+                   android:text="25"
+                   android:textColor="#c4c4c4"
+                   android:textSize="12sp" />
+           </RelativeLayout>
+       </LinearLayout>
+         
+          </LinearLayout>  
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/addrCon"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:paddingTop="18dp"
+          android:paddingBottom="18dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp"
+	  android:background="@drawable/border_bottom"
+	  >
+       
+          
+            <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent">                 
+             <ImageView
+              android:id="@+id/testBanner"
+              android:layout_width="20dp"
+              android:layout_height="17dp"
+              android:layout_centerVertical="true"
+              android:scaleType="centerCrop"
+              android:layout_marginLeft="10dp"
+              android:src="@drawable/tb04" />                        
+            </RelativeLayout>
+          
+          <TextView
+              android:id="@+id/address"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginLeft="10dp"
+              
+              android:text="青阳路120号茂业百货7楼青阳路青阳路百货7楼青阳路" />
+
+        
+          <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent">                 
+             <ImageView
+              android:layout_width="25dp"
+              android:layout_height="13dp"
+              android:scaleType="centerCrop"
+              
+              android:layout_marginRight="10dp"
+              android:layout_centerVertical="true"
+              android:src="@drawable/tb08r" />                        
+            </RelativeLayout>
+          
+          
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/contactCon"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:paddingLeft="4dp"
+          android:paddingTop="18dp"
+          android:paddingBottom="18dp"
+          android:paddingRight="4dp" 
+	  android:background="@drawable/border_bottom"
+	  >
+
+          
+          <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent">                 
+             <ImageView
+              android:id="@+id/testBanner"
+              android:layout_width="20dp"
+              android:layout_height="17dp"
+              android:layout_centerVertical="true"
+              android:scaleType="centerCrop"
+              android:layout_marginLeft="10dp"
+              android:src="@drawable/tb19" />                        
+            </RelativeLayout>
+          
+          
+          <TextView
+              android:id="@+id/contact"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginLeft="10dp"
+              android:text="4001008888" />
+
+          <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent">                 
+             <ImageView
+              android:layout_width="25dp"
+              android:layout_height="13dp"
+              android:scaleType="centerCrop"
+              
+              android:layout_marginRight="10dp"
+              android:layout_centerVertical="true"
+              android:src="@drawable/tb08r" />                        
+            </RelativeLayout>
+
+          
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+	  android:layout_marginTop="10dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp"
+          android:paddingTop="10dp"
+          android:paddingBottom="10dp"
+	  android:background="@drawable/border_bottom"
+           >
+	
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#c4c4c4"
+            android:textSize="12sp"
+            android:text="网友推荐:" />
+
+	
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:orientation="horizontal"
+	    android:paddingLeft="4dp"
+	    android:paddingRight="4dp" >
+
+         
+          <TextView
+              android:id="@+id/discuss"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginLeft="10dp"
+              
+              android:text="拆最牛哇 土豆泥  下角年油条 口味主题 口水鲶鱼 钵钵鸡 口味虾 靠脑花 马会有事的 哪里读啊考的看得见哦的付款飞" />
+
+
+        
+          <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent">                 
+             <ImageView
+              android:layout_width="25dp"
+              android:layout_height="13dp"
+              android:scaleType="centerCrop"
+              
+              android:layout_marginRight="10dp"
+              android:layout_centerVertical="true"
+              android:src="@drawable/tb08r" />                        
+            </RelativeLayout>
+          
+          
+	</LinearLayout>
+
+      </LinearLayout>
+
+      
+      
+    
+    <LinearLayout
+        android:id="@+id/commentCon"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_bottom"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="10dp" >
+
+      <RelativeLayout 
+	  android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#c4c4c4"
+            android:textSize="12sp"
+            android:text="点评(共" />
+        
+        <TextView
+              android:id="@+id/amount"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="#c4c4c4"
+              android:textSize="12sp"
+              android:layout_toRightOf="@+id/comment"
+              android:text="443" />
+        
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#c4c4c4"
+            android:layout_toRightOf="@+id/amount"
+            android:textSize="12sp"
+            android:text="条)：" />
+          </RelativeLayout>
+          
+	    <TextView
+              android:id="@+id/author"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginLeft="10dp"
+              android:text="小白兔" />
+	    
+	    
+        <ImageView
+              android:id="@+id/star"
+              android:layout_width="77dp"
+              android:layout_height="15dp"
+              android:layout_centerVertical="true"
+              android:scaleType="centerCrop"
+              android:layout_marginLeft="6dp"
+              android:layout_marginTop="12dp"
+              android:src="@drawable/star01" />
+        
+        
+
+	
+	    <LinearLayout
+	       android:layout_width="fill_parent"
+	       android:layout_height="wrap_content"
+	       android:layout_marginTop="10dp"
+	       android:orientation="horizontal"
+	       android:paddingLeft="4dp"
+	       android:paddingRight="4dp" >
+
+         
+          <TextView
+              android:id="@+id/discuss"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginLeft="10dp"              
+              android:text="13131212拆最牛哇 土豆泥  下角年油条 口味主题 口水鲶鱼 钵钵鸡 口味虾 靠脑花 马会有事的 哪里读啊考的看得见哦的付款飞" />
+
+
+        
+          <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent">                 
+             <ImageView
+              android:layout_width="25dp"
+              android:layout_height="13dp"
+              android:scaleType="centerCrop"
+              
+              android:layout_marginRight="10dp"
+              android:layout_centerVertical="true"
+              android:src="@drawable/tb08r" />                        
+            </RelativeLayout>
+          
+            
+          
+	</LinearLayout>
+         
+	    <TextView
+              android:id="@+id/time"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginLeft="10dp"
+              android:layout_marginTop="10dp"
+              android:text="13-10-09 17:32" />
+	    
+    </LinearLayout>
+      
+
+
+
+
+      
+</LinearLayout>
+
+</ScrollView>
+
+  
+
+
+  <LinearLayout
+      android:id="@+id/buttonsCon"
+      android:layout_width="fill_parent"
+      android:layout_height="120dp"
+      android:orientation="horizontal"
+      android:paddingLeft="4dp"
+      android:paddingRight="4dp" 
+      android:layout_weight="1"
+      android:background="#eee">
+    <LinearLayout
+	android:id="@+id/addPic"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="horizontal"
+	android:gravity="center"
+	android:layout_weight="1"
+	android:background="#eee">
+      <TextView
+          
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent"
+          android:layout_marginLeft="10dp"
+	  android:gravity="center"
+          android:text="上传图片" />
+      <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent">                 
+             <ImageView
+              android:layout_width="23dp"
+              android:layout_height="20dp"
+              android:scaleType="centerCrop"
+              
+              android:layout_marginLeft="5dp"
+              android:layout_centerVertical="true"
+              android:src="@drawable/tb16" />                        
+    </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+	android:id="@+id/addReview"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="horizontal"
+	android:gravity="center" 
+	
+	android:layout_weight="1"
+	android:background="#eee">
+      <TextView
+         
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent"
+          android:layout_marginRight="5dp"
+	  android:gravity="center"
+          android:text="添加点评" />
+      <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent">                 
+             <ImageView
+              android:layout_width="23dp"
+              android:layout_height="20dp"
+              android:scaleType="centerCrop"
+              
+              android:layout_marginRight="10dp"
+              android:layout_centerVertical="true"
+              android:src="@drawable/tb07" />                        
+    </RelativeLayout>
+    </LinearLayout>
+
+  </LinearLayout>
+
+
+
+
+</LinearLayout>
+

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	  package="com.futcore.restaurant"
+	  android:installLocation="auto"
+	  android:versionCode="77"
+	  android:versionName="2.4.5" >
+  <!--uses-sdk
+      android:minSdkVersion="8"
+      android:targetSdkVersion="17" /-->
+
+
+  <uses-library
+      android:name="org.apache.pdfbox"
+      android:required="true" />
+
+  <uses-sdk
+      android:minSdkVersion="15"
+      android:targetSdkVersion="19" />
+
+
+  <supports-screens
+      android:anyDensity="true"
+      android:largeScreens="true"
+      android:normalScreens="true"
+      android:smallScreens="true" />
+
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+  <uses-permission android:name="android.permission.CALL_PHONE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <!--uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /-->
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.READ_CONTACTS"/>
+  <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+  <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+
+
+  <uses-permission android:name="android.permission.RECORD_VIDEO" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+  
+  <!-- GCM configuration -->
+  <permission
+      android:name="com.futcore.restaurant.permission.C2D_MESSAGE"
+      android:protectionLevel="signature" />
+
+  <uses-permission android:name="com.futcore.restaurant.permission.C2D_MESSAGE" />
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+  <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+  <uses-feature
+      android:name="android.hardware.camera"
+      android:required="false" />
+  <uses-feature
+      android:name="android.hardware.camera.autofocus"
+      android:required="false" />
+  <uses-feature
+      android:name="android.hardware.location"
+      android:required="false" />
+  <uses-feature
+      android:name="android.hardware.location.gps"
+      android:required="false" />
+  <uses-feature
+      android:name="android.hardware.location.network"
+      android:required="false" />
+  <uses-feature
+      android:name="android.hardware.touchscreen"
+      android:required="false" />
+
+  <application
+      android:name="WordPress"
+      android:allowBackup="false"
+      android:hardwareAccelerated="true"
+      android:icon="@drawable/appicon"
+      android:logo="@drawable/app_logo"
+      android:label="Yarobo"
+      android:theme="@style/WordPress1" >
+
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+
+
+    <!-- Account activities -->
+    <activity
+        android:name=".ui.accounts.AccountSetupActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:windowSoftInputMode="adjustResize" />
+    <activity android:name=".ui.accounts.AdditionalSettingsActivity" />
+    <activity android:name=".ui.accounts.NewAccountActivity" />
+    <activity
+        android:name=".ui.accounts.SignupActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize" />
+
+    <!-- Preferences activities -->
+    <activity android:name=".ui.prefs.AboutActivity" />
+    <activity
+        android:name=".ui.prefs.BlogPreferencesActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:windowSoftInputMode="stateHidden"
+        android:theme="@style/Theme.Sherlock.Light" />
+    <activity android:name=".ui.prefs.LicensesActivity" />
+    <activity
+        android:name=".ui.prefs.PreferencesActivity"
+        android:windowSoftInputMode="stateHidden"
+        android:theme="@style/Theme.Sherlock.Light" />
+
+    <service android:name=".service.EventStatusService" />
+
+    <service android:name=".service.MusicService" />
+
+
+    <receiver
+        android:name=".RemoteControlReceiver"
+        android:enabled="true" >
+      <intent-filter android:priority="2147483647">
+        <action android:name="android.intent.action.MEDIA_BUTTON" />
+      </intent-filter>
+    </receiver>
+
+
+    <receiver 
+        android:enabled="true" 
+        android:name=".SpiderReceiver"
+        android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </receiver>
+
+    <service
+        android:name=".SpiderService"
+        android:enabled="true"
+        android:exported="true">
+      <intent-filter>
+        <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
+      </intent-filter>
+    </service>
+
+    <service
+        android:name=".SendRecoService"
+        android:enabled="true"
+        android:exported="true">
+      <intent-filter>
+        <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
+      </intent-filter>
+    </service>
+
+    <service
+        android:name=".SendNewRecoService"
+        android:enabled="true"
+        android:exported="true">
+      <intent-filter>
+        <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
+      </intent-filter>
+    </service>
+    
+
+
+    <!-- Comments activities -->
+    <activity
+        android:name=".ui.comments.CommentsActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize" />
+    <activity
+        android:name=".ui.comments.EditCommentActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize" />
+    <activity
+        android:name=".ui.comments.AddCommentActivity"
+        android:theme="@style/WordPress.Dialog"
+        android:windowSoftInputMode="stateVisible" />
+
+
+    <activity
+        android:name=".ui.NewItemActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize" />
+
+    <!-- Posts activities -->
+    <activity
+        android:name=".ui.posts.AddCategoryActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:label="@string/add_new_category"
+        android:theme="@style/WordPress.Dialog" />
+
+    <activity
+        android:name=".ui.posts.EditLinkActivity"
+        android:label="@string/create_a_link"
+        android:theme="@style/WordPress.Dialog" />
+
+    <activity
+	android:launchMode="singleTask"
+        android:name=".ui.promo.PromosActivity"
+        android:label="@string/create_a_link"
+	android:screenOrientation="portrait"
+	/>
+
+    <activity
+        android:name=".ui.promo.PromoActivity"
+        android:label="@string/create_a_link"
+	android:screenOrientation="portrait"
+	/>
+
+    <activity
+	android:launchMode="singleTask"
+        android:name=".ui.member.MemberIndexActivity"
+        android:label="@string/create_a_link"
+	android:screenOrientation="portrait"
+	/>
+
+
+    <activity
+        android:name=".ui.member.BasicActivity"
+        android:label="@string/create_a_link"
+	android:screenOrientation="portrait"
+        android:windowSoftInputMode="stateHidden|adjustResize"
+	/>
+
+    <activity
+        android:name=".ui.account.LoginActivity"
+        android:label="@string/login"
+	android:screenOrientation="portrait"
+	/>
+
+    <activity
+	android:launchMode="singleTask"
+        android:name=".ui.account.RetrieveActivity"
+        android:label="@string/create_a_link"
+	android:screenOrientation="portrait"
+	/>
+
+
+
+    <activity
+        android:name=".ui.promo.PromoDetailActivity"
+        android:label="@string/create_a_link"
+	android:screenOrientation="portrait"
+	/>
+
+    <activity
+        android:name="ui.NewEventActivity"
+        android:label="@string/create_a_link"
+	android:screenOrientation="portrait"
+	/>
+
+    <activity
+        android:name=".ui.UpdateAllActivity"
+        android:label="Update Model"
+	android:screenOrientation="portrait"
+	/>
+
+    <activity
+        android:name=".ui.UpdateRecoActivity"
+        android:label="Update Reco"
+	android:screenOrientation="portrait"
+	/>
+    
+
+    <activity
+        android:name=".NewEventItemActivity"
+        android:label="New Event Item"
+	android:screenOrientation="portrait"
+	/>
+
+    <activity
+        android:name=".TestSendActivity"
+        android:label="Test Send"
+	android:screenOrientation="portrait"
+	/>
+
+    <activity
+        android:name=".ui.JustTestActivity"
+        android:label="just test"
+	android:screenOrientation="portrait"
+	/>
+
+    <activity
+        android:name=".ui.posts.EditPostActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:windowSoftInputMode="stateHidden|adjustResize" >
+      <intent-filter>
+        <action android:name="android.intent.action.SEND" />
+        <action android:name="android.intent.action.SEND_MULTIPLE" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <data android:mimeType="text/plain" />
+        <data android:mimeType="image/*" />
+        <data android:mimeType="video/*" />
+      </intent-filter>
+    </activity>
+    <!--activity
+        android:name=".ui.posts.PostsActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize" >
+        <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+<category android:name="android.intent.category.LAUNCHER" />
+</intent-filter>
+</activity-->
+
+
+
+    <activity
+        android:name=".ui.account.MainLoginActivity"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:windowSoftInputMode="stateHidden|adjustResize"
+	android:screenOrientation="portrait">
+      <!--intent-filter>
+          <action android:name="android.intent.action.MAIN" />
+
+<category android:name="android.intent.category.LAUNCHER" />
+</intent-filter-->
+    </activity>
+
+
+    <activity
+	android:launchMode="singleTask"
+        android:name=".ui.MainActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:windowSoftInputMode="stateHidden|adjustResize"
+	android:screenOrientation="portrait">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+
+
+    <activity
+        android:name=".ui.posts.PagesActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize" />
+    <activity
+        android:name=".ui.posts.PreviewPostActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize" />
+    <activity
+        android:name=".ui.posts.SelectCategoriesActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize" />
+    <activity android:name=".ui.posts.ViewPostActivity" />
+
+    <!-- Other activities -->
+    <activity
+        android:name=".ui.AddQuickPressShortcutActivity"
+        android:label="QuickPress" >
+      <intent-filter>
+        <action android:name="android.intent.action.CREATE_SHORTCUT" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".ui.DashboardActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize" />
+    <activity
+        android:name=".ui.reader.ReaderActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize" />
+    <activity
+        android:name=".ui.StatsActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize" />
+    <activity android:name=".ui.ViewSiteActivity"
+	      android:configChanges="orientation|keyboardHidden|screenSize" >
+    </activity>
+    
+    <!-- Notifications activities -->
+    <activity
+        android:name=".ui.notifications.NotificationsActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize" />
+
+    <!-- Services -->
+    <service
+        android:name=".util.PostUploadService"
+        android:label="Post Upload Service" >
+    </service>
+    
+    <service android:name="com.futcore.restaurant.GCMIntentService" />
+    <receiver
+        android:name="com.google.android.gcm.GCMBroadcastReceiver"
+        android:permission="com.google.android.c2dm.permission.SEND" >
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+        <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+        <category android:name="com.futcore.restaurant" />
+      </intent-filter>
+    </receiver>
+  </application>
+</manifest>

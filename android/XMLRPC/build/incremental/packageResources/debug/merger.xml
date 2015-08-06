@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="/home/yanjzhou/ProjectsN/android/XMLRPC/res" >
+            <file
+                name="push_left_in"
+                path="/home/yanjzhou/ProjectsN/android/XMLRPC/res/anim/push_left_in.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="push_left_out"
+                path="/home/yanjzhou/ProjectsN/android/XMLRPC/res/anim/push_left_out.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="text_view"
+                path="/home/yanjzhou/ProjectsN/android/XMLRPC/res/layout/text_view.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="test"
+                path="/home/yanjzhou/ProjectsN/android/XMLRPC/res/layout/test.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="main"
+                path="/home/yanjzhou/ProjectsN/android/XMLRPC/res/layout/main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="android"
+                path="/home/yanjzhou/ProjectsN/android/XMLRPC/res/drawable/android.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="frame"
+                path="/home/yanjzhou/ProjectsN/android/XMLRPC/res/drawable/frame.9.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="error"
+                path="/home/yanjzhou/ProjectsN/android/XMLRPC/res/drawable/error.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="back"
+                path="/home/yanjzhou/ProjectsN/android/XMLRPC/res/drawable/back.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                path="/home/yanjzhou/ProjectsN/android/XMLRPC/res/values/strings.xml"
+                qualifiers="" >
+                <string name="app_name" >XML-RPC Test
+                </string>
+            </file>
+        </source>
+        <source path="/home/yanjzhou/ProjectsN/android/XMLRPC/build/res/rs/debug" />
+        <source path="/home/yanjzhou/ProjectsN/android/XMLRPC/build/res/generated/debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/home/yanjzhou/ProjectsN/android/XMLRPC/build-types/debug/res" />
+    </dataSet>
+
+</merger>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 22.6.2">
+
+    <issue
+        id="InlinedApi"
+        severity="Warning"
+        message="Field requires API level 11 (current min is 4): android.R.attr#showDividers"
+        category="Correctness"
+        priority="6"
+        summary="Finds inlined fields that may or may not work on older platforms"
+        explanation="This check scans through all the Android API field references in the application and flags certain constants, such as static final integers and Strings, which were introduced in later versions. These will actually be copied into the class files rather than being referenced, which means that the value is available even when running on older devices. In some cases that&apos;s fine, and in other cases it can result in a runtime crash or incorrect behavior. It depends on the context, so consider the code carefully and device whether it&apos;s safe and can be suppressed or whether the code needs tbe guarded.
+
+If you really want to use this API and don&apos;t need to support older devices just set the `minSdkVersion` in your `AndroidManifest.xml` file.
+If your code is *deliberately* accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the `@TargetApi` annotation specifying the local minimum SDK to apply, such as `@TargetApi(11)`, such that this check considers 11 rather than your manifest file&apos;s minimum SDK as the required API level.
+"
+        errorLine1="        /* 1 */ android.R.attr.showDividers,"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/JakeWharton-Android-ViewPagerIndicator-8cd549f/library/src/com/viewpagerindicator/IcsLinearLayout.java"
+            line="20"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="InlinedApi"
+        severity="Warning"
+        message="Field requires API level 11 (current min is 4): android.R.attr#dividerPadding"
+        category="Correctness"
+        priority="6"
+        summary="Finds inlined fields that may or may not work on older platforms"
+        explanation="This check scans through all the Android API field references in the application and flags certain constants, such as static final integers and Strings, which were introduced in later versions. These will actually be copied into the class files rather than being referenced, which means that the value is available even when running on older devices. In some cases that&apos;s fine, and in other cases it can result in a runtime crash or incorrect behavior. It depends on the context, so consider the code carefully and device whether it&apos;s safe and can be suppressed or whether the code needs tbe guarded.
+
+If you really want to use this API and don&apos;t need to support older devices just set the `minSdkVersion` in your `AndroidManifest.xml` file.
+If your code is *deliberately* accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the `@TargetApi` annotation specifying the local minimum SDK to apply, such as `@TargetApi(11)`, such that this check considers 11 rather than your manifest file&apos;s minimum SDK as the required API level.
+"
+        errorLine1="        /* 2 */ android.R.attr.dividerPadding,"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/JakeWharton-Android-ViewPagerIndicator-8cd549f/library/src/com/viewpagerindicator/IcsLinearLayout.java"
+            line="21"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="AllowBackup"
+        severity="Warning"
+        message="Should explicitly set android:allowBackup to true or false (it&apos;s true by default, and that can have some security implications for the application&apos;s data)"
+        category="Security"
+        priority="3"
+        summary="Ensure that allowBackup is explicitly set in the application&apos;s manifest"
+        explanation="The allowBackup attribute determines if an application&apos;s data can be backed up and restored. It is documented at http://developer.android.com/reference/android/R.attr.html#allowBackup
+
+By default, this flag is set to `true`. When this flag is set to `true`, application data can be backed up and restored by the user using `adb backup` and `adb restore`.
+
+This may have security consequences for an application. `adb backup` allows users who have enabled USB debugging to copy application data off of the device. Once backed up, all application data can be read by the user. `adb restore` allows creation of application data from a source specified by the user. Following a restore, applications should not assume that the data, file permissions, and directory permissions were created by the application itself.
+
+Setting `allowBackup=&quot;false&quot;` opts an application out of both backup and restore.
+
+To fix this warning, decide whether your application should support backup, and explicitly set `android:allowBackup=(true|false)&quot;`"
+        url="http://developer.android.com/reference/android/R.attr.html#allowBackup"
+        urls="http://developer.android.com/reference/android/R.attr.html#allowBackup"
+        quickfix="adt">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/JakeWharton-Android-ViewPagerIndicator-8cd549f/library/AndroidManifest.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.color.vpi__bright_foreground_inverse_holo_dark appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;color name=&quot;vpi__bright_foreground_inverse_holo_dark&quot;>@color/vpi__bright_foreground_holo_light&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/JakeWharton-Android-ViewPagerIndicator-8cd549f/library/res/values/vpi__colors.xml"
+            line="24"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.color.vpi__bright_foreground_inverse_holo_light appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;color name=&quot;vpi__bright_foreground_inverse_holo_light&quot;>@color/vpi__bright_foreground_holo_dark&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/JakeWharton-Android-ViewPagerIndicator-8cd549f/library/res/values/vpi__colors.xml"
+            line="25"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.color.vpi__light_theme appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/JakeWharton-Android-ViewPagerIndicator-8cd549f/library/res/color/vpi__light_theme.xml"/>
+    </issue>
+
+    <issue
+        id="ViewConstructor"
+        severity="Warning"
+        message="Custom view com/viewpagerindicator/IcsLinearLayout is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int)"
+        category="Usability"
+        priority="3"
+        summary="Checks that custom views define the expected constructors"
+        explanation="Some layout tools (such as the Android layout editor for Studio &amp; Eclipse) needs to find a constructor with one of the following signatures:
+* `View(Context context)`
+* `View(Context context, AttributeSet attrs)`
+* `View(Context context, AttributeSet attrs, int defStyle)`
+
+If your custom view needs to perform initialization which does not apply when used in a layout editor, you can surround the given code with a check to see if `View#isInEditMode()` is false, since that method will return `false` at runtime but true within a user interface editor.">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/JakeWharton-Android-ViewPagerIndicator-8cd549f/library/src/com/viewpagerindicator/IcsLinearLayout.java"/>
+    </issue>
+
+</issues>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+  <item
+      android:id="@+id/search_con"
+      android:showAsAction="always"
+      android:title="@string/new_post" 
+      android:actionLayout="@layout/search_field"/>
+
+    <!--item
+        android:id="@+id/menu_new_post"
+        android:icon="@drawable/search_but"
+        android:showAsAction="always"
+        android:title="@string/new_post"/-->
+</menu>

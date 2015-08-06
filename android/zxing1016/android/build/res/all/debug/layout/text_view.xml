@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:textStyle="bold"
+    android:textSize="16dip"
+    android:textColor="#fff"
+    android:gravity="center_vertical"
+/>
+<!-- From: file:/home/yanjzhou/ProjectsN/android/XMLRPC/res/layout/text_view.xml --><!-- From: file:/home/yanjzhou/ProjectsN/android/zxing1016/android/build/exploded-bundles/AndroidXMLRPCUnspecified.aar/res/layout/text_view.xml -->

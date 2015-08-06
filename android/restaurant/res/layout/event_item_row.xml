@@ -1,0 +1,113 @@
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dip" 
+    >
+
+  <!--ImageView
+      android:id="@+id/picIndi"
+      android:layout_width="20dp"
+      android:layout_height="17dp"
+      android:layout_alignParentTop="true"
+      android:layout_marginTop="6dp"
+      android:layout_marginRight="10dp"
+      android:cropToPadding="true"
+      android:contentDescription="TODO"
+      android:scaleType="fitXY"
+      android:src="@drawable/tb02"
+      />
+
+  <TextView
+      android:id="@+id/itemTitle"
+      android:layout_width="fill_parent"
+      android:layout_height="30dp" 
+      android:ellipsize="marquee"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentTop="true"
+      android:layout_alignWithParentIfMissing="true"
+      android:layout_toRightOf="@id/picIndi"
+      android:singleLine="true"
+      android:gravity="center_vertical"
+      android:text="Example application"
+      android:textSize="18sp" />
+
+  <TextView
+      android:id="@+id/itemPrice"
+      android:layout_width="fill_parent"
+      android:layout_height="26dip"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentRight="true"
+      android:ellipsize="marquee"
+      android:layout_toRightOf="@id/picIndi"
+      android:singleLine="true"
+      android:text="Description"
+      android:layout_marginTop="3dp"
+      android:layout_below="@id/itemTitle"
+      android:textColor="#f60"
+      android:textSize="14sp" />
+
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentRight="true"
+      >
+
+    <ImageView
+        android:id="@+id/add1"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:scaleType="centerCrop"
+	android:layout_alignParentRight="true"
+        android:src="@drawable/kadd" />
+
+    <ImageView
+        android:id="@+id/add2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="centerCrop"
+	android:layout_alignParentRight="true"
+	android:visibility="gone"
+        android:src="@drawable/add" />
+    <EditText
+        android:id="@+id/num"
+        android:layout_width="30dp"
+	android:gravity="center"
+        android:layout_height="30dp"
+        android:layout_toLeftOf="@id/add2"
+	android:visibility="gone"
+	android:textColor="#888"
+	android:background="@drawable/form_background"
+	/>
+    <TextView
+	android:id="@+id/itemId"
+	android:visibility="gone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+	>
+    </TextView>
+
+    <ImageView
+        android:id="@+id/sub"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="centerCrop"
+        android:layout_toLeftOf="@id/num"
+	android:visibility="gone"
+        android:src="@drawable/j" />
+
+  </RelativeLayout-->
+
+
+  <TextView
+      android:id="@+id/eventItemTitle"
+      android:layout_width="fill_parent"
+      android:layout_height="30dp" 
+      android:ellipsize="marquee"
+      android:singleLine="true"
+      android:gravity="center_vertical"
+      android:text="Example application"
+      android:textSize="18sp" />
+
+</RelativeLayout> 

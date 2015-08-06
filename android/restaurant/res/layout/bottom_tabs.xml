@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView  
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabConScroll"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="none"
+    android:background="@drawable/border_top"
+    >
+  <LinearLayout
+      android:id="@+id/tabCon"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:orientation="horizontal"
+      >
+    <LinearLayout
+	android:id="@+id/tab1"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center_horizontal"
+	android:layout_weight="1"
+	>
+      
+      <!--ImageView
+	android:id="@+id/tabIcon1"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        style="@style/TabIcon"
+        android:src="@drawable/tb01" /-->
+      <ImageView
+	android:id="@+id/tabIcon1"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        style="@style/TabIcon"
+        android:src="@drawable/tb02" />
+
+      <TextView
+	  android:id="@+id/tabTitle1"
+	  android:layout_width="fill_parent"
+	  android:layout_height="25dp"
+	  android:gravity="center"
+          style="@style/TabText"
+          android:text="@string/tab1" />
+
+      />
+    </LinearLayout>
+
+    <LinearLayout
+	android:id="@+id/tab2"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center_horizontal"
+	android:layout_weight="1"
+	>
+      <ImageView
+	android:id="@+id/tabIcon2"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        style="@style/TabIcon"
+        android:src="@drawable/tb02" />
+      <TextView
+	  android:id="@+id/tabTitle2"
+	  android:layout_width="fill_parent"
+	  android:layout_height="25dp"
+	  android:gravity="center"
+          style="@style/TabText"
+          android:text="@string/tab2" />
+      />
+    </LinearLayout>
+
+
+    <LinearLayout
+	android:id="@+id/tab4"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center_horizontal"
+	android:layout_weight="1"
+	>
+      <ImageView
+	android:id="@+id/tabIcon4"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        style="@style/TabIcon"
+        android:src="@drawable/tb04" />
+      />
+      <TextView
+	  android:id="@+id/tabTitle4"
+	  android:layout_width="fill_parent"
+	  android:layout_height="25dp"
+	  android:gravity="center"
+          style="@style/TabText"
+          android:text="@string/tab4" />
+      />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+	android:id="@+id/tab3"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center_horizontal"
+	android:layout_weight="1"
+	>
+      <ImageView
+	android:id="@+id/tabIcon3"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        style="@style/TabIcon"
+        android:src="@drawable/tb03" />
+      />
+      <TextView
+	  android:id="@+id/tabTitle3"
+	  android:layout_width="fill_parent"
+	  android:layout_height="25dp"
+	  android:gravity="center"
+          style="@style/TabText"
+          android:text="@string/tab3" />
+      />
+    </LinearLayout>
+
+    <!--LinearLayout
+	android:id="@+id/tab5"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center_horizontal"
+	android:layout_weight="1"
+	>
+      <ImageView
+	android:id="@+id/tabIcon5"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        style="@style/TabIcon"
+        android:src="@drawable/tb05" />
+      />
+      <TextView
+	  android:id="@+id/tabTitle5"
+	  android:layout_width="fill_parent"
+	  android:layout_height="25dp"
+	  android:gravity="center"
+          style="@style/TabText"
+          android:text="@string/tab5" />
+      />
+    </LinearLayout-->
+
+    <LinearLayout
+	android:id="@+id/tab6"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center_horizontal"
+	android:layout_weight="1"
+	>
+      <ImageView
+	android:id="@+id/tabIcon6"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        style="@style/TabIcon"
+        android:src="@drawable/tb06" />
+      />
+      <TextView
+	  android:id="@+id/tabTitle6"
+	  android:layout_width="fill_parent"
+	  android:layout_height="25dp"
+	  android:gravity="center"
+          style="@style/TabText"
+          android:text="@string/tab6" />
+      />
+    </LinearLayout>
+
+  </LinearLayout>
+</HorizontalScrollView>
+

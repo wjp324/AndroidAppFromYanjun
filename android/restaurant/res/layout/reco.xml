@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+  <LinearLayout
+      android:id="@+id/currentEventsFragmentContainer"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:orientation="vertical">
+    <fragment
+	android:name="com.futcore.restaurant.ui.CurrentEventsListFragment"
+	android:id="@+id/currentEventsList"
+	android:layout_weight="1"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#00FF00" />
+    <!--fragment
+	android:name="com.futcore.restaurant.ui.RecoEventsListFragment"
+	android:id="@+id/recoEventsList"
+	android:layout_weight="1"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#ff0000" /-->
+  </LinearLayout>
+
+
+  <Button
+      android:id="@+id/recoevent"
+      style="?android:attr/buttonStyleSmall"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/icon_refresh" />
+
+  <TextView
+      android:id="@+id/testloc"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:text="@string/test_loc"
+      android:textSize="25sp" />
+
+  <EditText
+      android:id="@+id/newitemin"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/author_email"
+      android:layout_marginBottom="8dp"
+      android:autoText="true"
+      android:capitalize="none"
+      android:hint="@string/author_url"
+      android:singleLine="true" />
+
+
+  <Button
+      android:id="@+id/newitembut"
+      style="?android:attr/buttonStyleSmall"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/icon_heart" />
+
+</LinearLayout>

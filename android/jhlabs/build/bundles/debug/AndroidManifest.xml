@@ -1,0 +1,122 @@
+<!-- From: file:/home/yanjzhou/ProjectsN/android/jhlabs/AndroidManifest.xml --><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2" android:versionName="1.01" package="com.jabistudio.androidjhlabs">
+    <uses-sdk android:minSdkVersion="7"/>
+    
+    <uses-permission android:name="android.permission.INTERNET"/> 
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    
+    
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name="com.jabistudio.androidjhlabs.AndroidjhlabsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.jabistudio.androidjhlabs.FilterListActivity"/>
+        
+        <!-- Color Adjustment Filters Activity -->
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.ChannelMixFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.ContrastFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.CurvesFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.DiffusionFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.DitherFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.ExposureFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.GainFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.GammaFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.GrayFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.GrayscaleFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.HSBAdjustFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.InvertAlphaFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.InvertFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.LevelsFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.LookupFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.MapColorsFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.MaskFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.PosterizeFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.QuantizeFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.RescaleFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.RGBAdjustFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.SolarizeFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.ThresholdFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.TritoneFilterActivity" android:theme="@android:style/Theme.Light"/>
+		
+		<!-- Distortion and Warping Filters Activity -->
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.BicubicScaleFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.CircleFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.CropFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.DiffuseFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.DisplaceFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.DissolveFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.FieldWarpFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.FlipFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.KaleidoscopeFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.MarbleFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.MirrorFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.OffsetFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.PerspectiveFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.PinchFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.PolarFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.RippleFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.RotateFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.ScaleFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.ShearFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.SphereFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.SwimFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.TileImageFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.TwirlFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.WarpFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.distortionandwarpingactivity.WaterFilterActivity" android:theme="@android:style/Theme.Light"/>
+		
+		<!-- Effects Filters Activity -->
+		<activity android:name="com.jabistudio.androidjhlabs.effectsactivity.BlockFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.effectsactivity.BorderFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.effectsactivity.ChromeFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.effectsactivity.ColorHalftoneFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.effectsactivity.ContourFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.effectsactivity.CrystallizeFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.effectsactivity.EmbossFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.effectsactivity.FeedbackFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.effectsactivity.HalftoneFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.effectsactivity.LightFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.effectsactivity.NoiseFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.effectsactivity.PointillizeFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.effectsactivity.ShadowFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.effectsactivity.ShapeFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.effectsactivity.StampFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.effectsactivity.WeaveFilterActivity" android:theme="@android:style/Theme.Light"/>
+		
+		<!-- Blurring and Sharpening Filters Activity -->
+		<activity android:name="com.jabistudio.androidjhlabs.blurringandsharpeningactivity.BlurFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.blurringandsharpeningactivity.BoxBlurFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.blurringandsharpeningactivity.BumpFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.blurringandsharpeningactivity.DespeckleFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.blurringandsharpeningactivity.GaussianFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.blurringandsharpeningactivity.GlowFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.blurringandsharpeningactivity.HighPassFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.blurringandsharpeningactivity.LensBlurFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.blurringandsharpeningactivity.MaximumFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.blurringandsharpeningactivity.MedianFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.blurringandsharpeningactivity.MinimumFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.blurringandsharpeningactivity.MotionBlurFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.blurringandsharpeningactivity.OilFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.blurringandsharpeningactivity.RaysFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.blurringandsharpeningactivity.ReduceNoiseFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.blurringandsharpeningactivity.SharpenFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.blurringandsharpeningactivity.SmartBlurFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.blurringandsharpeningactivity.UnsharpFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.blurringandsharpeningactivity.VariableBlurFilterActivity" android:theme="@android:style/Theme.Light"/>
+		
+		<!-- Edge Detection Activity -->
+		<activity android:name="com.jabistudio.androidjhlabs.edgedetectionactivity.DoGFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.edgedetectionactivity.EdgeFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name="com.jabistudio.androidjhlabs.edgedetectionactivity.LaplaceFilterActivity" android:theme="@android:style/Theme.Light"/>
+
+		<!-- Alpha Channel Activity -->
+		<activity android:name="com.jabistudio.androidjhlabs.alphachannelactivity.OpacityFilterActivity" android:theme="@android:style/Theme.Light"/>
+    </application>
+    
+</manifest>

@@ -1,0 +1,4 @@
+<!-- From: file:/home/yanjzhou/ProjectsN/android/JakeWharton-Android-ViewPagerIndicator-8cd549f/library/AndroidManifest.xml --><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="65" android:versionName="2.4.1" package="com.viewpagerindicator">
+
+    <uses-sdk android:minSdkVersion="4"/>
+</manifest>

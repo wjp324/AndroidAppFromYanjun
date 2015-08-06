@@ -1,0 +1,12 @@
+#!/bin/bash
+curdir=`dirname $0`
+comm=$1
+
+if [ -z "$1" ]
+  then
+	comm="up"
+fi
+
+git add $curdir
+git commit -m "$comm"
+git push -u origin master

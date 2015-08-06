@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+  <!--item
+      android:id="@+id/justtest"
+      android:icon="@drawable/ab_icon_web"
+      android:showAsAction="withText|always"
+      android:title="just test" 
+      />
+  
+  <item
+      android:id="@+id/updatereco"
+      android:icon="@drawable/ab_icon_send"
+      android:showAsAction="withText|always"
+      android:title="update reco" 
+      />
+  
+  <item
+      android:id="@+id/updateall"
+      android:icon="@drawable/ab_icon_refresh"
+      android:showAsAction="withText|always"
+      android:title="update all" 
+      /-->
+
+  <!--item
+      android:id="@+id/testsend"
+      android:icon="@drawable/ab_icon_send"
+      android:showAsAction="withText|always"
+      android:title="update all" 
+      /-->
+  <item
+      android:id="@+id/new_item_event"
+      android:icon="@drawable/ab_icon_new"
+      android:showAsAction="withText|always"
+      android:title="new item and event"/>
+</menu>

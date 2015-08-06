@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="image_options_label">#CCCCCC</color>
+    <color name="image_options_text">#FFFFFF</color>
+    <color name="pressed_wordpress">#CC2EA2CC</color>
+    <color name="list_row_bg">#FFFFFF</color>
+    <color name="list_row_selected">#78c8e6</color>
+
+    <!-- Colors for menu drawer. -->
+    <!--color name="md__itemBackground">#CC2EA2CC</color-->
+    <color name="md__itemOriBackground">#eee</color>
+    <color name="md__itemBackground">#eee</color>
+    <!--color name="md__iconTintColor">#DDFFFFFF</color-->
+    <color name="md__textColor">#aaa</color>
+    <color name="md__textCurrentColor">#f60</color>
+    <color name="md__iconTintColor">#aaa</color>
+    <color name="md__iconCurrentTintColor">#f60</color>
+    <!--color name="md__shadowColor">#99000000</color-->
+    <color name="md__shadowColor">#ccc</color>
+    
+    <color name="wordpress_blue">#21759B</color>
+    <color name="light_gray">#E5E5E5</color>
+    <color name="gray">#CCC</color>
+    <color name="menu_gray">#efefef</color>
+
+<!-- global -->
+  <!--color name="g_g">#f60</color-->
+  <color name="g_g">#0654b9</color>
+  <!--color name="g_g">#0072c6</color-->
+  <color name="bDialogBg">#9000</color>
+  <color name="tabColor">#aaa</color>
+
+  <!--drawable name="focused">#ff5500</drawable>
+  <drawable name="selected">#FF00FF</drawable--> 
+  <drawable name="focused">#f60</drawable>
+  <drawable name="selected">#f60</drawable> 
+
+</resources>

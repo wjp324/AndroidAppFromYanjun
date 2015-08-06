@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical">
+  <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="8dp">
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+	android:layout_weight="1" 
+	android:gravity="center_vertical"
+        android:text="优惠券" 
+	android:textSize="18sp"
+	/>
+
+    <com.android.volley.toolbox.NetworkImageView
+	android:layout_marginTop="6dp"
+	android:id="@+id/itemThumb"
+        android:layout_width="fill_parent"
+	android:layout_height="150dp"
+	android:scaleType="centerCrop"
+	/>
+
+    <LinearLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"
+	android:layout_marginTop="6dp"
+	>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+	  android:gravity="center_vertical"
+          android:text="价格：" 
+	  android:textSize="15sp"
+	  />
+
+      <TextView
+          android:id="@+id/price"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+	  android:layout_weight="1" 
+	  android:gravity="center_vertical"
+          android:text="￥20.00" 
+	  android:textColor="#f60"
+	  android:textSize="15sp"
+	  />
+
+    </LinearLayout>
+
+    <LinearLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"
+	android:layout_marginTop="6dp"
+	>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+	  android:gravity="center_vertical"
+          android:text="介绍：" 
+	  android:textSize="15sp"
+	  />
+
+      <TextView
+          android:id="@+id/desc"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+	  android:gravity="center_vertical"
+          android:text="价格发送发算法大算法速度发送的发阿斯饭的阿斯顿发发送的发三短发算法速度发阿飞打法斯蒂芬阿斯顿发达饭撒："
+          android:singleLine="false"                
+	  android:textSize="15sp"
+	  />
+
+    </LinearLayout>
+
+    
+  </LinearLayout>
+  
+</ScrollView>
+
+
+

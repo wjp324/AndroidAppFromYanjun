@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="/home/yanjzhou/ProjectsN/ebay-lsb/android/Android-PullToRefresh-master/extras/PullToRefreshListFragment/res" >
+            <file
+                name="need_this_for_maven"
+                path="/home/yanjzhou/ProjectsN/ebay-lsb/android/Android-PullToRefresh-master/extras/PullToRefreshListFragment/res/layout/need_this_for_maven.xml"
+                qualifiers=""
+                type="layout" />
+        </source>
+        <source path="/home/yanjzhou/ProjectsN/ebay-lsb/android/Android-PullToRefresh-master/extras/PullToRefreshListFragment/build/res/rs/release" />
+        <source path="/home/yanjzhou/ProjectsN/ebay-lsb/android/Android-PullToRefresh-master/extras/PullToRefreshListFragment/build/res/generated/release" />
+    </dataSet>
+    <dataSet config="release" >
+        <source path="/home/yanjzhou/ProjectsN/ebay-lsb/android/Android-PullToRefresh-master/extras/PullToRefreshListFragment/build-types/release/res" />
+    </dataSet>
+
+</merger>

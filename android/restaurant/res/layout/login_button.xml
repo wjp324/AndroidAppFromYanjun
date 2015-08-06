@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+  <!--ImageView
+      android:id="@+id/logo"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:scaleType="centerCrop"
+      android:layout_centerVertical="true"
+      android:layout_centerHorizontal="true"
+      android:src="@drawable/shake_phone" /-->
+
+  <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"  
+      android:layout_marginBottom="20dp"
+      android:orientation="horizontal" >
+    <Button
+	android:id="@+id/toRegister"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:singleLine="true"
+	android:textStyle="bold"
+	android:layout_marginRight ="15dp"
+	android:layout_marginLeft ="10dp"
+	android:paddingTop = "10dp"
+	android:paddingBottom = "10dp"
+	android:layout_weight="1" 
+	android:background="#caaa"
+	android:textSize="19sp"
+	android:textColor="#fff"
+	android:text="@string/register" />
+
+    <Button
+	android:id="@+id/toLogin"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingTop = "10dp"
+	android:paddingBottom = "10dp"
+	android:singleLine="true"
+	android:layout_marginRight ="15dp"
+	android:textStyle="bold"
+	android:layout_weight="1" 
+	android:textSize="19sp"
+	android:textColor="#fff"
+	android:text="@string/login" 
+	android:background="@color/g_g"
+	/>
+  </LinearLayout>
+</RelativeLayout>

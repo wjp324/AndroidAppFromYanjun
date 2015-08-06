@@ -1,0 +1,13 @@
+#!/bin/bash
+
+curdir=`dirname $0`
+
+#./gradlew installDebug &&
+$curdir/gradlew assembleDebug &&
+#adb -s "0061f18b1953285b" uninstall com.futcore.restaurant &&
+adb -s "0b8354c3029906fc" install -r $curdir/restaurant/build/apk/restaurant-debug-unaligned.apk &&
+#/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/platform-tools/adb shell am start -n com.futcore.restaurant/.ui.account.MainLoginActivity &&
+#/home/yanjzhou/Software/bin/adt-bundle-linux-x86_64-20140321/sdk/platform-tools/adb -s "0061f18b1953285b" logcat
+adb -s "0b8354c3029906fc" logcat
+
+

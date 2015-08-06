@@ -1,0 +1,13 @@
+<!-- From: file:/home/yanjzhou/ProjectsN/android/XMLRPC/AndroidManifest.xml --><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0.0" package="org.xmlrpc">
+    <application android:debuggable="true" android:label="@string/app_name">
+        <activity android:label="@string/app_name" android:name="com.xmlrpc.Test">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+<uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+</manifest>

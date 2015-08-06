@@ -1,0 +1,1303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 22.6.2">
+
+    <issue
+        id="MultipleUsesSdk"
+        severity="Fatal"
+        message="There should only be a single &lt;uses-sdk> element in the manifest: merge these together"
+        category="Correctness"
+        priority="6"
+        summary="Checks that the `&lt;uses-sdk>` element appears at most once"
+        explanation="The `&lt;uses-sdk>` element should appear just once; the tools will *not* merge the contents of all the elements so if you split up the attributes across multiple elements, only one of them will take effect. To fix this, just merge all the attributes from the various elements into a single &lt;uses-sdk> element."
+        url="http://developer.android.com/guide/topics/manifest/uses-sdk-element.html"
+        urls="http://developer.android.com/guide/topics/manifest/uses-sdk-element.html"
+        errorLine1="    &lt;uses-sdk"
+        errorLine2="    ^">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/AndroidManifest.xml"
+            line="59"
+            column="5"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/AndroidManifest.xml"
+            line="33"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        severity="Warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
+        category="Correctness"
+        priority="6"
+        summary="Checks that the manifest specifies a targetSdkVersion that is recent"
+        explanation="When your application runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.
+
+To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        url="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        urls="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        errorLine1="  &lt;uses-sdk android:minSdkVersion=&quot;15&quot; android:targetSdkVersion=&quot;18&quot;/>"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/AndroidManifest.xml"
+            line="33"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="WrongManifestParent"
+        severity="Fatal"
+        message="The &lt;uses-sdk> element must be a direct child of the &lt;manifest> root element"
+        category="Correctness"
+        priority="6"
+        summary="Checks that various manifest elements are declared in the right place"
+        explanation="The `&lt;uses-library>` element should be defined as a direct child of the `&lt;application>` tag, not the `&lt;manifest>` tag or an `&lt;activity>` tag. Similarly, a `&lt;uses-sdk>` tag much be declared at the root level, and so on. This check looks for incorrect declaration locations in the manifest, and complains if an element is found in the wrong place."
+        url="http://developer.android.com/guide/topics/manifest/manifest-intro.html"
+        urls="http://developer.android.com/guide/topics/manifest/manifest-intro.html"
+        errorLine1="    &lt;uses-sdk"
+        errorLine2="    ^">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/AndroidManifest.xml"
+            line="59"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Fatal"
+        message="&quot;country_codes&quot; is not translated in ar, bg, ca, cs, da, de, el, es, eu, fi, fr, he, hi, hu, id, it, iw, ja, ko, nl, pl, pt, ro, ru, sk, sl, sv, tr, uk, zh-rCN, zh-rTW"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for incomplete translations where not all strings are translated"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.
+
+If the string should *not* be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.
+
+By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable `ANDROID_LINT_COMPLETE_REGIONS`.
+
+You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1="  &lt;string-array name=&quot;country_codes&quot;>"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values/arrays.xml"
+            line="3"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Fatal"
+        message="&quot;preferences_front_light_values&quot; is not translated in ar, bg, ca, cs, da, de, el, es, eu, fi, fr, he, hi, hu, id, it, iw, ja, ko, nl, pl, pt, ro, ru, sk, sl, sv, tr, uk, zh-rCN, zh-rTW"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for incomplete translations where not all strings are translated"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.
+
+If the string should *not* be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.
+
+By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable `ANDROID_LINT_COMPLETE_REGIONS`.
+
+You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1="  &lt;string-array name=&quot;preferences_front_light_values&quot;>"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values/arrays.xml"
+            line="37"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="DrawAllocation"
+        severity="Warning"
+        message="Avoid object allocations during draw/layout operations (preallocate and reuse instead)"
+        category="Performance"
+        priority="9"
+        summary="Looks for memory allocations within drawing code"
+        explanation="You should avoid allocating objects during a drawing or layout operation. These are called frequently, so a smooth UI can be interrupted by garbage collection pauses caused by the object allocations.
+
+The way this is generally handled is to allocate the needed objects up front and to reuse them for each drawing operation.
+
+Some methods allocate memory on your behalf (such as `Bitmap.create`), and these should be handled in the same way."
+        errorLine1="        possibleResultPoints = new ArrayList&lt;ResultPoint>(5);"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/src/com/google/zxing/client/android/ViewfinderView.java"
+            line="122"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="UseSparseArrays"
+        severity="Warning"
+        message="Use new SparseArray&lt;Map&lt;?, ?>>(...) instead for better performance"
+        category="Performance"
+        priority="4"
+        summary="Looks for opportunities to replace HashMaps with the more efficient SparseArray"
+        explanation="For maps where the keys are of type integer, it&apos;s typically more efficient to use the Android `SparseArray` API. This check identifies scenarios where you might want to consider using `SparseArray` instead of `HashMap` for better performance.
+
+This is *particularly* useful when the value types are primitives like ints, where you can use `SparseIntArray` and avoid auto-boxing the values from `int` to `Integer`.
+
+If you need to construct a `HashMap` because you need to call an API outside of your control which requires a `Map`, you can suppress this warning using for example the `@SuppressLint` annotation."
+        errorLine1="            Map&lt;Integer, Map&lt;?, ?>> theResult = new HashMap&lt;Integer, Map&lt;?, ?>>();"
+        errorLine2="                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/src/com/google/zxing/client/android/CaptureActivity.java"
+            line="877"
+            column="49"/>
+    </issue>
+
+    <issue
+        id="NestedWeights"
+        severity="Warning"
+        message="Nested weights are bad for performance"
+        category="Performance"
+        priority="3"
+        summary="Looks for nested layout weights, which are costly"
+        explanation="Layout weights require a widget to be measured twice. When a LinearLayout with non-zero weights is nested inside another LinearLayout with non-zero weights, then the number of measurements increase exponentially."
+        errorLine1="              android:layout_weight=&quot;1&quot;"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/layout/search_book_contents.xml"
+            line="32"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        severity="Warning"
+        message="Possible overdraw: Root element paints background @color/encode_view with a theme that also paints a background (inferred theme is @android:style/Theme.Holo)"
+        category="Performance"
+        priority="3"
+        summary="Looks for overdraw issues (where a view is painted only to be fully painted over)"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.
+
+NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.
+
+If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.
+
+Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead.
+"
+        errorLine1="              android:background=&quot;@color/encode_view&quot;"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/layout-land/encode.xml"
+            line="21"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        severity="Warning"
+        message="Possible overdraw: Root element paints background @color/encode_view with a theme that also paints a background (inferred theme is @android:style/Theme.Holo)"
+        category="Performance"
+        priority="3"
+        summary="Looks for overdraw issues (where a view is painted only to be fully painted over)"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.
+
+NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.
+
+If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.
+
+Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead.
+"
+        errorLine1="              android:background=&quot;@color/encode_view&quot;"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/layout/encode.xml"
+            line="22"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.color.result_minor_text appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="  &lt;color name=&quot;result_minor_text&quot;>#ffc0c0c0&lt;/color>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values/colors.xml"
+            line="21"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.color.result_text appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="  &lt;color name=&quot;result_text&quot;>#ffffffff&lt;/color>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values/colors.xml"
+            line="23"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.msg_default_format appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="  &lt;string name=&quot;msg_default_format&quot;>Format&lt;/string>"
+        errorLine2="          ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ar/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-bg/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ca/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-cs/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-da/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-de/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-el/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-es/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-eu/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-fi/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-fr/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-he/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-hi/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-hu/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-id/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-it/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-iw/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ja/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ko/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-nl/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-pl/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-pt/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ro/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ru/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-sk/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-sl/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-sv/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-tr/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-uk/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-zh-rCN/strings.xml"
+            line="65"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-zh-rTW/strings.xml"
+            line="65"
+            column="11"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.msg_default_meta appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="  &lt;string name=&quot;msg_default_meta&quot;>Metadata&lt;/string>"
+        errorLine2="          ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ar/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-bg/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ca/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-cs/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-da/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-de/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-el/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-es/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-eu/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-fi/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-fr/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-he/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-hi/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-hu/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-id/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-it/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-iw/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ja/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ko/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-nl/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-pl/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-pt/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ro/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ru/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-sk/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-sl/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-sv/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-tr/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-uk/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-zh-rCN/strings.xml"
+            line="66"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-zh-rTW/strings.xml"
+            line="66"
+            column="11"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.msg_default_time appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="  &lt;string name=&quot;msg_default_time&quot;>Time&lt;/string>"
+        errorLine2="          ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ar/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-bg/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ca/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-cs/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-da/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-de/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-el/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-es/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-eu/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-fi/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-fr/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-he/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-hi/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-hu/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-id/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-it/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-iw/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ja/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ko/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-nl/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-pl/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-pt/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ro/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ru/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-sk/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-sl/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-sv/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-tr/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-uk/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-zh-rCN/strings.xml"
+            line="69"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-zh-rTW/strings.xml"
+            line="69"
+            column="11"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.msg_default_type appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="  &lt;string name=&quot;msg_default_type&quot;>Type&lt;/string>"
+        errorLine2="          ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ar/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-bg/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ca/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-cs/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-da/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-de/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-el/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-es/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-eu/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-fi/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-fr/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-he/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-hi/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-hu/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-id/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-it/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-iw/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ja/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ko/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-nl/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-pl/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-pt/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ro/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ru/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-sk/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-sl/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-sv/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-tr/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-uk/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-zh-rCN/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-zh-rTW/strings.xml"
+            line="70"
+            column="11"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.preferences_disable_exposure_title appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="  &lt;string name=&quot;preferences_disable_exposure_title&quot;>No exposure&lt;/string>"
+        errorLine2="          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ar/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-bg/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ca/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-cs/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-da/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-de/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-el/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-es/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-eu/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-fi/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-fr/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-he/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-hi/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-hu/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-id/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-it/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-iw/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ja/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ko/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-nl/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-pl/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-pt/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ro/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-ru/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-sk/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-sl/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-sv/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-tr/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-uk/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-zh-rCN/strings.xml"
+            line="101"
+            column="11"/>
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/values-zh-rTW/strings.xml"
+            line="101"
+            column="11"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable res/drawable/launcher_icon.png in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Ensures that images are not defined in the density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon *really* is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/drawable/launcher_icon.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable res/drawable/share_via_barcode.png in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Ensures that images are not defined in the density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon *really* is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/drawable/share_via_barcode.png"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        severity="Warning"
+        message="Missing the following drawables in drawable-mdpi: launcher_icon.png (found in drawable-xhdpi, drawable-hdpi)"
+        category="Usability:Icons"
+        priority="4"
+        summary="Ensures that icons provide custom versions for all supported densities"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies icons which do not have complete coverage across the densities.
+
+Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/drawable-mdpi"/>
+    </issue>
+
+    <issue
+        id="ButtonStyle"
+        severity="Warning"
+        message="Buttons in button bars should be borderless; use style=&quot;?android:attr/buttonBarButtonStyle&quot; (and ?android:attr/buttonBarStyle on the parent)"
+        category="Usability"
+        priority="5"
+        summary="Ensures that buttons in button bars are borderless"
+        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
+        url="http://developer.android.com/design/building-blocks/buttons.html"
+        urls="http://developer.android.com/design/building-blocks/buttons.html"
+        errorLine1="      &lt;Button "
+        errorLine2="      ^">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/layout-ldpi/capture.xml"
+            line="77"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="ButtonStyle"
+        severity="Warning"
+        message="Buttons in button bars should be borderless; use style=&quot;?android:attr/buttonBarButtonStyle&quot; (and ?android:attr/buttonBarStyle on the parent)"
+        category="Usability"
+        priority="5"
+        summary="Ensures that buttons in button bars are borderless"
+        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
+        url="http://developer.android.com/design/building-blocks/buttons.html"
+        urls="http://developer.android.com/design/building-blocks/buttons.html"
+        errorLine1="      &lt;Button "
+        errorLine2="      ^">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/layout/capture.xml"
+            line="78"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="ButtonStyle"
+        severity="Warning"
+        message="Buttons in button bars should be borderless; use style=&quot;?android:attr/buttonBarButtonStyle&quot; (and ?android:attr/buttonBarStyle on the parent)"
+        category="Usability"
+        priority="5"
+        summary="Ensures that buttons in button bars are borderless"
+        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
+        url="http://developer.android.com/design/building-blocks/buttons.html"
+        urls="http://developer.android.com/design/building-blocks/buttons.html"
+        errorLine1="      &lt;Button "
+        errorLine2="      ^">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/layout-ldpi/capture.xml"
+            line="93"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="ButtonStyle"
+        severity="Warning"
+        message="Buttons in button bars should be borderless; use style=&quot;?android:attr/buttonBarButtonStyle&quot; (and ?android:attr/buttonBarStyle on the parent)"
+        category="Usability"
+        priority="5"
+        summary="Ensures that buttons in button bars are borderless"
+        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
+        url="http://developer.android.com/design/building-blocks/buttons.html"
+        urls="http://developer.android.com/design/building-blocks/buttons.html"
+        errorLine1="      &lt;Button "
+        errorLine2="      ^">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/layout/capture.xml"
+            line="94"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="[Accessibility] Missing contentDescription attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Ensures that image widgets provide a contentDescription"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.
+
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.
+
+Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="  &lt;ImageView android:id=&quot;@+id/app_picker_list_item_icon&quot;"
+        errorLine2="  ^"
+        quickfix="adt">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/layout/app_picker_list_item.xml"
+            line="7"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="[Accessibility] Missing contentDescription attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Ensures that image widgets provide a contentDescription"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.
+
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.
+
+Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="  &lt;ImageView android:id=&quot;@+id/image_view&quot;"
+        errorLine2="  ^"
+        quickfix="adt">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/layout-land/encode.xml"
+            line="25"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="[Accessibility] Missing contentDescription attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Ensures that image widgets provide a contentDescription"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.
+
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.
+
+Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="  &lt;ImageView android:id=&quot;@+id/image_view&quot;"
+        errorLine2="  ^"
+        quickfix="adt">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/layout/encode.xml"
+            line="26"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="[Accessibility] Missing contentDescription attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Ensures that image widgets provide a contentDescription"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.
+
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.
+
+Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="    &lt;ImageView"
+        errorLine2="    ^"
+        quickfix="adt">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/layout-land/share.xml"
+            line="38"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="[Accessibility] Missing contentDescription attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Ensures that image widgets provide a contentDescription"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.
+
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.
+
+Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="    &lt;ImageView"
+        errorLine2="    ^"
+        quickfix="adt">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/layout/share.xml"
+            line="40"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;加点其他&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="   android:text=&quot;加点其他&quot;"
+        errorLine2="   ~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/layout-ldpi/capture.xml"
+            line="89"
+            column="4"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;加点其他&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="   android:text=&quot;加点其他&quot;"
+        errorLine2="   ~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/layout/capture.xml"
+            line="90"
+            column="4"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;来一份&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="   android:text=&quot;来一份&quot;"
+        errorLine2="   ~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/layout-ldpi/capture.xml"
+            line="106"
+            column="4"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;来一份&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="   android:text=&quot;来一份&quot;"
+        errorLine2="   ~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/layout/capture.xml"
+            line="107"
+            column="4"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;将二维码放入框内，即可自动扫描。&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="          android:text=&quot;将二维码放入框内，即可自动扫描。&quot;"
+        errorLine2="          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/layout/capture.xml"
+            line="283"
+            column="11"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;将二维码放入框内，即可自动扫描。&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="          android:text=&quot;将二维码放入框内，即可自动扫描。&quot;"
+        errorLine2="          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/home/yanjzhou/ProjectsN/android/zxing1016/android/res/layout-ldpi/capture.xml"
+            line="286"
+            column="11"/>
+    </issue>
+
+</issues>

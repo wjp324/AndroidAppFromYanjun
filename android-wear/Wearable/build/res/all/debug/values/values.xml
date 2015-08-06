@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- From: file:/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/build/exploded-bundles/ComGoogleAndroidSupportWearable100.aar/res/values/values.xml -->
+    <eat-comment />
+
+    <color name="black">#000</color>
+    <color name="blue">#2878ff</color>
+    <!-- From: file:/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/build/exploded-bundles/ComGoogleAndroidGmsPlayServicesBase6587.aar/res/values/common_colors.xml -->
+    <eat-comment />
+
+    <color name="common_action_bar_splitter">#d2d2d2</color>
+    <color name="common_signin_btn_dark_text_default">@android:color/white</color>
+    <color name="common_signin_btn_dark_text_disabled">#FFAAAAAA</color>
+    <color name="common_signin_btn_dark_text_focused">@android:color/white</color>
+    <color name="common_signin_btn_dark_text_pressed">@android:color/white</color>
+    <color name="common_signin_btn_default_background">#FFDD4B39</color>
+    <color name="common_signin_btn_light_text_default">#FF737373</color>
+    <color name="common_signin_btn_light_text_disabled">#FFAAAAAA</color>
+    <color name="common_signin_btn_light_text_focused">#FF737373</color>
+    <color name="common_signin_btn_light_text_pressed">@android:color/white</color>
+    <!-- From: file:/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/build/exploded-bundles/ComGoogleAndroidSupportWearable100.aar/res/values/values.xml -->
+    <eat-comment />
+
+    <color name="dark_blue">#2955C5</color>
+    <color name="disabled_text_light">#E0E0E0</color>
+    <color name="dismiss_close">#FF5151</color>
+    <color name="dismiss_close_pressed">#B83120</color>
+    <color name="dismiss_overlay_bg">#80000000</color>
+    <color name="green">#32CD32</color>
+    <color name="grey">#777777</color>
+    <color name="light_grey">#cccccc</color>
+    <color name="orange">#FF6D3F</color>
+    <color name="primary_text_dark">#FFFFFF</color>
+    <color name="primary_text_light">#434343</color>
+    <color name="red">#FF5252</color>
+    <color name="secondary_text_light">#A2A2A2</color>
+    <color name="semitransparent_grey">#66777777</color>
+    <!-- From: file:/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/src/main/res/values/colors.xml -->
+    <eat-comment />
+
+    <color name="text_color">#434343</color>
+    <!-- From: file:/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/build/exploded-bundles/ComGoogleAndroidSupportWearable100.aar/res/values/values.xml -->
+    <eat-comment />
+
+    <color name="white">#FFFFFF</color>
+    <!-- From: file:/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/src/main/res/values/colors.xml -->
+    <eat-comment />
+
+    <color name="wl_blue">#2878ff</color>
+    <color name="wl_gray">#c1c1c1</color>
+    <!-- From: file:/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/build/exploded-bundles/ComGoogleAndroidSupportWearable100.aar/res/values/values.xml -->
+    <eat-comment />
+
+    <declare-styleable name="BoxInsetLayout">
+        <attr name="layout_box">
+            <flag name="left" value="0x01" />
+            <flag name="top" value="0x02" />
+            <flag name="right" value="0x04" />
+            <flag name="bottom" value="0x08" />
+            <flag name="all" value="0x0F" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="CircledImageView">
+        <attr name="android:src" />
+        <attr name="circle_color" format="color" />
+        <attr name="circle_radius" format="dimension" />
+        <attr name="circle_radius_pressed" format="dimension" />
+        <attr name="circle_border_width" format="dimension" />
+        <attr name="circle_border_color" format="color" />
+        <attr name="circle_padding" format="dimension" />
+        <attr name="shadow_width" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="DelayedConfirmationView">
+        <attr name="update_interval" format="integer" />
+    </declare-styleable>
+    <!-- From: file:/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/build/exploded-bundles/ComGoogleAndroidGmsPlayServicesBase6587.aar/res/values/common_attrs.xml -->
+    <eat-comment />
+
+    <declare-styleable name="LoadingImageView">
+
+        <!--
+        What kind of aspect ratio adjustment to do.  It must be one of "none", "adjust_width",
+        or "adjust_height".
+        -->
+        <attr name="imageAspectRatioAdjust" format="enum">
+            <enum name="none" value="0" />
+            <enum name="adjust_width" value="1" />
+            <enum name="adjust_height" value="2" />
+        </attr>
+
+<!--         The fixed aspect ratio to use in aspect ratio adjustments. -->
+        <attr name="imageAspectRatio" format="float" />
+
+<!--         Whether or not this view should have a circular clip applied -->
+        <attr name="circleCrop" format="boolean" />
+    </declare-styleable>
+    <!-- From: file:/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/build/exploded-bundles/ComGoogleAndroidSupportWearable100.aar/res/values/values.xml -->
+    <eat-comment />
+
+    <declare-styleable name="WatchViewStub">
+
+        <!-- Resource id of a layout to use in rectangular containers -->
+        <attr name="rectLayout" format="reference" />
+        <!-- Resource id of a layout to use in round containers -->
+        <attr name="roundLayout" format="reference" />
+    </declare-styleable>
+
+    <dimen name="card_content_padding_rect_left">4dp</dimen>
+    <dimen name="card_content_padding_rect_right">4dp</dimen>
+    <dimen name="card_content_padding_rect_top">16dp</dimen>
+    <!-- From: file:/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/src/main/res/values/dimens.xml -->
+    <eat-comment />
+
+    <dimen name="circle_border_normal_width">10dp</dimen>
+    <dimen name="circle_padding">5dp</dimen>
+    <dimen name="circle_radius">50dp</dimen>
+    <!-- From: file:/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/build/exploded-bundles/ComGoogleAndroidSupportWearable100.aar/res/values/values.xml -->
+    <eat-comment />
+
+    <dimen name="close_button_diameter">104dp</dimen>
+    <dimen name="dismiss_padding">16dp</dimen>
+    <!-- From: file:/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/src/main/res/values/dimens.xml -->
+    <eat-comment />
+
+    <dimen name="page_column_margin">10dp</dimen>
+    <dimen name="page_column_margin_round">50dp</dimen>
+    <dimen name="page_row_margin">100dp</dimen>
+    <!-- From: file:/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/src/main/res/values/integers.xml -->
+    <eat-comment />
+
+    <integer name="action_text_faded_alpha">40</integer>
+    <!-- From: file:/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/build/exploded-bundles/ComGoogleAndroidGmsPlayServicesBase6587.aar/res/values/version.xml -->
+    <eat-comment />
+
+    <integer name="google_play_services_version">6587000</integer>
+    <!-- From: file:/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="about_text">Content is organized into multiple pages. Swipe
+        between cards to view other content.</string>
+    <string name="about_title">About</string>
+    <string name="allreco_text">All Recos</string>
+    <string name="app_name">Spiderman</string>
+    <string name="backgrounds_text">Backgrounds are supplied by the adapter\'s
+        getBackground method. Parallax and crossfade effects are applied
+        automatically.</string>
+    <string name="backgrounds_title">Backgrounds</string>
+    <string name="cards_text">Each page is created using a CardFragment. A
+        layout is placed inside the card and the rest is handled
+        automatically.</string>
+    <string name="cards_title">Cards</string>
+    <string name="columns_text">When moving between rows, the pager always
+        returns to column 0. This is adjustable in the adapter. See
+        method getCurrentColumnForRow().</string>
+    <string name="columns_title">Columns</string>
+    <!-- From: file:/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/build/exploded-bundles/ComGoogleAndroidGmsPlayServicesBase6587.aar/res/values/common_strings.xml -->
+    <eat-comment />
+
+    <string name="common_android_wear_notification_needs_update_text">An application requires an update to the Android Wear app.</string>
+    <string name="common_android_wear_update_text">This app won\'t run unless you update the Android Wear app.</string>
+    <string name="common_android_wear_update_title" msgid="6006316683626838685">Update Android Wear</string>
+    <string name="common_google_play_services_enable_button" msgid="2523291102206661146">Enable Google Play services</string>
+    <string name="common_google_play_services_enable_text" msgid="227660514972886228">This app won\'t work unless you enable Google Play services.</string>
+    <string name="common_google_play_services_enable_title" msgid="5122002158466380389">Enable Google Play services</string>
+    <string name="common_google_play_services_error_notification_requested_by_msg">Requested by <ns1:g id="app_name">%1$s</ns1:g></string>
+    <string name="common_google_play_services_install_button" msgid="7153882981874058840">Get Google Play services</string>
+    <string name="common_google_play_services_install_text_phone" msgid="2122112764540849864">This app won\'t run without Google Play services, which are missing from your phone.</string>
+    <string name="common_google_play_services_install_text_tablet" msgid="7351599665250191022">This app won\'t run without Google Play services, which are missing from your tablet.</string>
+    <string name="common_google_play_services_install_title" msgid="7215213145546190223">Get Google Play services</string>
+    <string name="common_google_play_services_invalid_account_text">The specified account does not exist on this device. Please choose a different account.</string>
+    <string name="common_google_play_services_invalid_account_title">Invalid Account</string>
+    <string name="common_google_play_services_needs_enabling_title">An application requires Google Play services to be enabled.</string>
+    <string name="common_google_play_services_network_error_text">A data connection is required to connect to Google Play services.</string>
+    <string name="common_google_play_services_network_error_title">Network Error</string>
+    <string name="common_google_play_services_notification_needs_installation_title">An application requires installation of Google Play services.</string>
+    <string name="common_google_play_services_notification_needs_update_title">An application requires an update for Google Play services.</string>
+    <string name="common_google_play_services_notification_ticker">Google Play services error</string>
+    <string name="common_google_play_services_unknown_issue">Unknown issue with Google Play services.</string>
+    <string name="common_google_play_services_unsupported_text">Google Play services, which some of your applications rely on, is not supported by your device. Please contact the manufacturer for assistance.</string>
+    <string name="common_google_play_services_unsupported_title">Google Play services</string>
+    <string name="common_google_play_services_update_button" msgid="6556509956452265614">Update</string>
+    <string name="common_google_play_services_update_text" msgid="9053896323427875356">This app won\'t run unless you update Google Play services.</string>
+    <string name="common_google_play_services_update_title" msgid="6006316683626838685">Update Google Play services</string>
+    <string name="common_open_on_phone">Open on phone</string>
+    <string name="common_signin_button_text">Sign in</string>
+    <string name="common_signin_button_text_long">Sign in with Google</string>
+    <!-- From: file:/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="dismiss_text">To exit the application, swipe from left to
+        right.</string>
+    <string name="dismiss_title">Dismiss</string>
+    <string name="event_finish">Finish</string>
+    <string name="expansion_text">By default, each card will grow taller to
+        accommodate extra content. Tall cards can be scrolled through
+        like any scrollable view. The maximum height is controlled by
+        setExpansionFactor() with a default of 10 pages. After that
+        you\'ll notice a faded edge to indicate there is more. Expansion
+        can be disabled completely using setExpansionEnabled(false).
+        With this, the content will be clipped if it\'s taller than one
+        page.</string>
+    <string name="expansion_title">Expansion</string>
+    <string name="history_text">History</string>
+    <string name="update_reco">Update Recomendation</string>
+    <string name="upload_finish">Upload Finish</string>
+    <string name="view_all">View All</string>
+    <string name="welcome_text">Welcome!</string>
+    <string name="welcome_title">GridViewPager</string>
+    <!-- From: file:/home/yanjzhou/ProjectsN/ebay-lsb/android-wear/Wearable/build/exploded-bundles/ComGoogleAndroidSupportWearable100.aar/res/values/values.xml -->
+    <eat-comment />
+
+    <style name="CardContent">
+        <item name="android:paddingLeft">@dimen/card_content_padding_rect_left</item>
+        <item name="android:paddingRight">@dimen/card_content_padding_rect_right</item>
+        <item name="android:paddingTop">@dimen/card_content_padding_rect_top</item>
+    </style>
+
+    <style name="CardText" parent="TextView.Medium.Light">
+        <item name="android:lineSpacingMultiplier">0.92</item>
+    </style>
+
+    <style name="CardTitle" parent="TextView.Medium.Light">
+        <item name="android:textColor">@color/secondary_text_light</item>
+    </style>
+
+    <style name="DismissOverlayText" parent="TextView.Large.Light">
+        <item name="android:background">@color/dismiss_close</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lineSpacingExtra">-2sp</item>
+        <item name="android:textColor">@color/primary_text_dark</item>
+    </style>
+
+    <style name="TextAppearance.Wearable.Large" parent="android:TextAppearance.Medium">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/primary_text_light</item>
+    </style>
+
+    <style name="TextAppearance.Wearable.Medium" parent="android:TextAppearance.Medium">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/primary_text_light</item>
+    </style>
+
+    <style name="TextAppearance.Wearable.Small" parent="android:TextAppearance.Medium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/primary_text_light</item>
+    </style>
+
+    <style name="TextView.Large" parent="@android:style/Widget.Holo.Light">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textAppearance">@style/TextAppearance.Wearable.Large</item>
+    </style>
+
+    <style name="TextView.Large.Light">
+        <item name="android:fontFamily">sans-serif-condensed-light</item>
+        <item name="android:textAppearance">@style/TextAppearance.Wearable.Large</item>
+    </style>
+
+    <style name="TextView.Medium" parent="@android:style/Widget.Holo.Light">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textAppearance">@style/TextAppearance.Wearable.Medium</item>
+    </style>
+
+    <style name="TextView.Medium.Light">
+        <item name="android:fontFamily">sans-serif-condensed-light</item>
+        <item name="android:textAppearance">@style/TextAppearance.Wearable.Medium</item>
+    </style>
+
+    <style name="TextView.Small" parent="@android:style/Widget.Holo.Light">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textAppearance">@style/TextAppearance.Wearable.Small</item>
+    </style>
+
+    <style name="TextView.Small.Light">
+        <item name="android:fontFamily">sans-serif-condensed-light</item>
+        <item name="android:textAppearance">@style/TextAppearance.Wearable.Small</item>
+    </style>
+
+    <style name="Theme.Wearable" parent="@android:Theme.DeviceDefault.Light.NoActionBar" />
+
+    <style name="Theme.Wearable.Modal">
+        <item name="android:windowSwipeToDismiss">false</item>
+    </style>
+
+</resources>
