@@ -3,6 +3,7 @@ package com.futcore.restaurant.ui;
 import com.futcore.restaurant.util.*;
 
 import android.content.Intent;
+
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.LayoutInflater;
@@ -67,6 +68,25 @@ import android.media.AudioManager;
 import android.widget.Button;
 import android.widget.EditText;
 
+
+import java.io.BufferedReader;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.client.ClientProtocolException;
+//import org.apache.http.client.DefaultHttpClient;
+import org.apache.http.impl.client.DefaultHttpClient;
+import java.io.InputStreamReader;
+import com.google.gson.Gson;
+
+import com.google.gson.reflect.TypeToken;
+import java.lang.reflect.Type;
+import com.google.gson.GsonBuilder;
+import java.io.UnsupportedEncodingException;
+
+
 //public class IndexFragment extends Fragment implements OnClickListener
 public class OngoingFragment extends SherlockFragment implements OnClickListener
 {
@@ -106,20 +126,49 @@ public class OngoingFragment extends SherlockFragment implements OnClickListener
         switch(id){
         case R.id.saveWish:
             {
+                Intent intent = new Intent(Intent.ACTION_CALL);
+
+                intent.setData(Uri.parse("tel:18516211115"));
+                startActivity(intent);                
+                //                sendWishRequest();
                 AlertUtil.showAlert(getActivity(), R.string.required_fields, nameEdit.getText().toString().trim());
             }
             break;
         }
     }
 
+    public void sendWishRequest()
+    {
+
+            HttpClient httpClient = new DefaultHttpClient();
+
+            try{
+                String itemname = "gggg item";
+                
+                String postUrl = "http://10.64.199.57/ebaylbs/addwish.php";
+                Gson gson=  new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ").create();
+                HttpPost post = new HttpPost(postUrl);
+                StringEntity  postingString =new StringEntity(gson.toJson(itemname)); //convert your pojo to   json
+                post.setEntity(postingString);
+                post.setHeader("Content-type", "application/json");
+                HttpResponse response = httpClient.execute(post);
+            } catch (ClientProtocolException e) {
+                e.printStackTrace();
+                // TODO Auto-generated catch block                
+                //            } catch (Exception ex) {
+                //                ex.printStackTrace();
+            } catch(UnsupportedEncodingException e){
+                e.printStackTrace();
+            } catch(IOException e){
+                e.printStackTrace();
+            }
+            finally{
+                //                httpClient.close();
+            }
+    }
+    
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
     }
-
-
-
-
-
-
 
     // HTTP GET request
     /*	private void sendGet() throws Exception {

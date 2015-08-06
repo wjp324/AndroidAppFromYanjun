@@ -120,7 +120,7 @@ public class NewItemActivity extends WPActionBarActivity implements OnClickListe
             .setVibrate(new long[] { 1000, 1000, 1000})
             .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.spider_420))
             //            .setUsesChronometer(true)
-            .setSubText("12 m")
+            .setSubText("6 m")
             //            .setWhen(System.currentTimeMillis())
             .addAction(R.drawable.ic_cc_alarm, getString(R.string.event_finish), null)
             ;
@@ -181,7 +181,7 @@ public class NewItemActivity extends WPActionBarActivity implements OnClickListe
         }
         
         mBuilder.setContentTitle(title).
-            setContentText("92 m");
+            setContentText("6 m");
             //            .setWhen(System.currentTimeMillis() + duration);
         
         mNotifyMgr.notify(mNotificationId, mBuilder.build());        
@@ -245,7 +245,7 @@ public class NewItemActivity extends WPActionBarActivity implements OnClickListe
         case R.id.cancelItem:
             {
                 //                sendNotification("test item", 2000, NOTI_NORMAL);
-                sendNotification("Free pear!", 2000, NOTI_NORMAL);
+                sendNotification("Free peach!", 2000, NOTI_NORMAL);
                 //                finish();
             }
             break;
@@ -268,4 +268,3 @@ public class NewItemActivity extends WPActionBarActivity implements OnClickListe
         //                latitude = location.getLatitude();
     }
 }
-
