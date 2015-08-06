@@ -12,13 +12,6 @@
       android:layout_width="fill_parent"
       android:layout_height="fill_parent"
       android:orientation="vertical">
-    <fragment
-	android:name="com.futcore.restaurant.ui.CurrentEventsListFragment"
-	android:id="@+id/currentEventsList"
-	android:layout_weight="1"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
-	android:background="#00FF00" />
     <!--fragment
 	android:name="com.futcore.restaurant.ui.RecoEventsListFragment"
 	android:id="@+id/recoEventsList"

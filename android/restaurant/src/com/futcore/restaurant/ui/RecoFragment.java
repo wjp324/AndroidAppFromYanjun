@@ -69,11 +69,6 @@ public class RecoFragment extends SherlockFragment implements OnClickListener, L
     private LocationHelper mLocationHelper;
 
     private int ACTIVITY_NEW_EVENT = 0;
-
-    CurrentEventsListFragment eventList = null;
-//    RecoEventsListFragment recoList = null;
-        
-    //    private int ACTIVITY_ADD_COMMENT = 1;
     
     public static RecoFragment newInstance() {
         RecoFragment fragment = new RecoFragment();
@@ -134,44 +129,11 @@ public class RecoFragment extends SherlockFragment implements OnClickListener, L
         
         mView = inflater.inflate(R.layout.reco, parent, false);
 
-
-        //        CurrentEventsListFragment eventList = new CurrentEventsListFragment();
-        eventList = new CurrentEventsListFragment();
-        //        recoList = new RecoEventsListFragment();
-        
-        
-        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-        transaction.add(R.id.currentEventsList, eventList).commit();
-
-        FragmentTransaction transaction1 = getChildFragmentManager().beginTransaction();
-        //        transaction1.add(R.id.recoEventsList, recoList).commit();
-
-        eventList.refreshEvents();
-        //        recoList.refreshEvents();
-
-        recoEvent = (Button)mView.findViewById(R.id.recoevent);
-        
-        recoEvent.setTypeface(font);
-        
-        recoEvent.setOnClickListener(this);
-        
-
         return mView;
     }
 
-    /*    //    @Override
-          protected void onPause() {
-          super.onPause();
-          if (mLocationHelper != null)
-          mLocationHelper.cancelTimer();
-          }
-    */
-
     public void onLocationChanged(Location location) {
-        //        AlertUtil.showAlert(ShakeShopActivity.this, R.string.required_fields, R.string.url_username_password_required);
         AlertUtil.showAlert(getActivity(), R.string.required_fields, R.string.url_username_password_required);
-        //                longitude = location.getLongitude();
-        //                latitude = location.getLatitude();
     }
     
     
@@ -189,45 +151,11 @@ public class RecoFragment extends SherlockFragment implements OnClickListener, L
     }
 
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.reco, menu);
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
-        Intent i;
-        switch (item.getItemId()) {
-            /*        case R.id.justtest:
-            //            AlertUtil.showAlert(getActivity(), R.string.required_fields, R.string.url_username_password_required);
-            //            new GetCertPlaceTask().execute();
-            i = new Intent(getActivity(), JustTestActivity.class);
-            startActivity(i);
-            break;
-        case R.id.updateall:
-            //            AlertUtil.showAlert(getActivity(), R.string.required_fields, R.string.url_username_password_required);
-            //            new GetCertPlaceTask().execute();
-            i = new Intent(getActivity(), UpdateAllActivity.class);
-            startActivity(i);
-            break;
-        case R.id.updatereco:
-            AlertUtil.showAlert(getActivity(), R.string.required_fields, R.string.url_username_password_required);
-            //            new GetCertPlaceTask().execute();
-            i = new Intent(getActivity(), UpdateRecoActivity.class);
-            startActivity(i);
-            break;
-            */
-        case R.id.new_item_event:
-            //            AlertUtil.showAlert(getActivity(), R.string.required_fields, R.string.url_username_password_required);
-            //            new GetCertPlaceTask().execute();
-            i = new Intent(getActivity(), NewEventItemActivity.class);
-            //            startActivity(i);
-            startActivityForResult(i, ACTIVITY_NEW_EVENT);
-            break;
-            /*        case R.id.testsend:
-            i = new Intent(getActivity(), TestSendActivity.class);
-            startActivityForResult(i, ACTIVITY_NEW_EVENT);
-            break;
-            */
-        }
-        
         return false;
     }
 
@@ -241,26 +169,11 @@ public class RecoFragment extends SherlockFragment implements OnClickListener, L
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (resultCode == ACTIVITY_NEW_EVENT) {
-            eventList.refreshEvents();
-            //            return;
-        }
     }
 
     public void onClick(View v)
     {
-        int id = v.getId();
         
-        switch(id){
-        case R.id.recoevent:
-            //            AlertUtil.showAlert(getActivity(), R.string.required_fields, R.string.url_username_password_required);
-            mLocationHelper.getLocation(getActivity(), locationResult);
-            AlertUtil.showAlert(getActivity(), R.string.required_fields, String.valueOf(mCurrentLocation.getLatitude())+" "+String.valueOf(mCurrentLocation.getLongitude())+" acc:"+String.valueOf(mCurrentLocation.getAccuracy()));
-            
-            break;
-        }
     }
 
 }

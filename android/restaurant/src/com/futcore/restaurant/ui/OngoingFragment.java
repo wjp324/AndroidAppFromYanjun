@@ -30,6 +30,7 @@ import com.actionbarsherlock.view.MenuItem;
 import com.futcore.restaurant.R;
 import com.futcore.restaurant.WordPress;
 ///import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 
 import com.futcore.restaurant.models.*;
 import com.futcore.restaurant.service.*;
@@ -92,10 +93,9 @@ public class OngoingFragment extends SherlockFragment implements OnClickListener
 {
     private View mView;
 
-    private Button saveBut;
-    private EditText nameEdit;
-
     private int ACTIVITY_NEW_EVENT = 0;
+
+    CurrentEventsListFragment eventList = null;
 
     public static OngoingFragment newInstance() {
         OngoingFragment fragment = new OngoingFragment();
@@ -113,10 +113,15 @@ public class OngoingFragment extends SherlockFragment implements OnClickListener
         setHasOptionsMenu(true);
         mView = inflater.inflate(R.layout.ongoing, parent, false);
 
-        nameEdit = (EditText)mView.findViewById(R.id.itemname);
-        saveBut = (Button)mView.findViewById(R.id.saveWish);
+        eventList = new CurrentEventsListFragment();
+
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+        transaction.add(R.id.currentEventsList, eventList).commit();
+
+        FragmentTransaction transaction1 = getChildFragmentManager().beginTransaction();
+
+        eventList.refreshWishs();
         
-        saveBut.setOnClickListener(this);
         
         return mView;
     }
@@ -126,49 +131,9 @@ public class OngoingFragment extends SherlockFragment implements OnClickListener
         //        super.onClick(v);
         int id = v.getId();
         switch(id){
-        case R.id.saveWish:
-            {
-                Intent intent = new Intent(Intent.ACTION_CALL);
-
-                intent.setData(Uri.parse("tel:18516211115"));
-                startActivity(intent);                
-                //                sendWishRequest();
-                AlertUtil.showAlert(getActivity(), R.string.required_fields, nameEdit.getText().toString().trim());
-            }
-            break;
         }
     }
 
-    public void sendWishRequest()
-    {
-
-            HttpClient httpClient = new DefaultHttpClient();
-
-            try{
-                String itemname = "gggg item";
-                
-                String postUrl = "http://10.64.199.57/ebaylbs/addwish.php";
-                Gson gson=  new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ").create();
-                HttpPost post = new HttpPost(postUrl);
-                StringEntity  postingString =new StringEntity(gson.toJson(itemname)); //convert your pojo to   json
-                post.setEntity(postingString);
-                post.setHeader("Content-type", "application/json");
-                HttpResponse response = httpClient.execute(post);
-            } catch (ClientProtocolException e) {
-                e.printStackTrace();
-                // TODO Auto-generated catch block                
-                //            } catch (Exception ex) {
-                //                ex.printStackTrace();
-            } catch(UnsupportedEncodingException e){
-                e.printStackTrace();
-            } catch(IOException e){
-                e.printStackTrace();
-            }
-            finally{
-                //                httpClient.close();
-            }
-    }
-    
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.reco, menu);
     }
@@ -185,78 +150,16 @@ public class OngoingFragment extends SherlockFragment implements OnClickListener
         }
         return false;
     }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == ACTIVITY_NEW_EVENT) {
+            eventList.refreshWishs();
+            //            return;
+        }
+    }
     
-
-    // HTTP GET request
-    /*	private void sendGet() throws Exception {
-		String url = "http://www.google.com/search?q=mkyong";
-		
-		URL obj = new URL(url);
-		HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-
-		// optional default is GET
-		con.setRequestMethod("GET");
-
-		//add request header
-		con.setRequestProperty("User-Agent", USER_AGENT);
-
-		int responseCode = con.getResponseCode();
-		System.out.println("\nSending 'GET' request to URL : " + url);
-		System.out.println("Response Code : " + responseCode);
-
-		BufferedReader in = new BufferedReader(
-		        new InputStreamReader(con.getInputStream()));
-		String inputLine;
-		StringBuffer response = new StringBuffer();
-
-		while ((inputLine = in.readLine()) != null) {
-			response.append(inputLine);
-		}
-		in.close();
-
-		//print result
-		System.out.println(response.toString());
-	}
-	
-	// HTTP POST request
-	private void sendPost() throws Exception {
-		String url = "https://selfsolve.apple.com/wcResults.do";
-		URL obj = new URL(url);
-		HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
-
-		//add reuqest header
-		con.setRequestMethod("POST");
-		con.setRequestProperty("User-Agent", USER_AGENT);
-		con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
-
-		String urlParameters = "sn=C02G8416DRJM&cn=&locale=&caller=&num=12345";
-		
-		// Send post request
-		con.setDoOutput(true);
-		DataOutputStream wr = new DataOutputStream(con.getOutputStream());
-		wr.writeBytes(urlParameters);
-		wr.flush();
-		wr.close();
-
-		int responseCode = con.getResponseCode();
-		System.out.println("\nSending 'POST' request to URL : " + url);
-		System.out.println("Post parameters : " + urlParameters);
-		System.out.println("Response Code : " + responseCode);
-
-		BufferedReader in = new BufferedReader(
-		        new InputStreamReader(con.getInputStream()));
-		String inputLine;
-		StringBuffer response = new StringBuffer();
-
-		while ((inputLine = in.readLine()) != null) {
-			response.append(inputLine);
-		}
-		in.close();
-		
-		//print result
-		System.out.println(response.toString());
-
-	}
-    */
+    
 }
 

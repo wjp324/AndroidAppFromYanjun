@@ -6,16 +6,12 @@ import java.util.Set;
 
 import com.j256.ormlite.field.DatabaseField;
 
-package com.futcore.restaurant.models;
-
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
-
-import com.j256.ormlite.field.DatabaseField;
-
 public class ManWish implements  java.io.Serializable 
 {
+
+    public static final String CREATETIME_FIELD_NAME = "createTime";
+    public static final String DELETE_FIELD_NAME = "isDelete";
+    
 	@DatabaseField(canBeNull = false, id = true)
 	private Integer wishId;
 	@DatabaseField
@@ -26,6 +22,10 @@ public class ManWish implements  java.io.Serializable
 	private Date expireTime;
 	@DatabaseField
 	private byte isDelete;
+
+    public ManWish()
+    {
+    }
 
     public ManWish(String wishName, Date createTime, byte isDelete)
     {
