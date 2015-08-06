@@ -276,7 +276,8 @@ public class NewItemActivity extends WPActionBarActivity implements OnClickListe
         case R.id.cancelItem:
             {
                 //                sendNotification("test item", 2000, NOTI_NORMAL);
-                sendNotification("Free peach!", 2000, NOTI_NORMAL);
+                //                sendNotification("Free peach!", 2000, NOTI_NORMAL);
+                sendNotification("免费桃子谁要!", 2000, NOTI_NORMAL);
                 //                finish();
             }
             break;

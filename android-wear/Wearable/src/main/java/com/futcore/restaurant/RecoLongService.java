@@ -87,7 +87,6 @@ public class RecoLongService extends Service
         return START_STICKY;
         //        return START_NOT_STICKY;
     }
-    
 
     private final class ServiceHandler extends Handler {
         public ServiceHandler(Looper looper) {

@@ -4,6 +4,8 @@ import com.futcore.restaurant.NewEventItemActivity;
 import com.futcore.restaurant.TestSendActivity;
 import android.content.Intent;
 
+import android.net.Uri;
+
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.AsyncTask;
@@ -58,6 +60,7 @@ import com.futcore.restaurant.models.ManCertPlace;
 
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 //public class IndexFragment extends Fragment implements OnClickListener
@@ -106,11 +109,44 @@ public class RecoFragment extends SherlockFragment implements OnClickListener, L
         for(int i=0; i<5;i++){
             LinearLayout itemBlock = (LinearLayout) getActivity().getLayoutInflater().inflate(R.layout.item_block, null);
 
+            itemBlock.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent callIntent = new Intent(Intent.ACTION_CALL);
+                        callIntent.setData(Uri.parse("tel:18516211115"));
+                        startActivity(callIntent);
+                    }
+                });
+            
+
             TextView itemTitle = (TextView)itemBlock.findViewById(R.id.price);
+            ImageView itemImage = (ImageView)itemBlock.findViewById(R.id.testBanner);
+            itemImage.setImageResource(R.drawable.spiderspider);
+            
             itemTitle.setText("$20.00");
             
             pipe2.addView(itemBlock);
         }
+
+        for(int i=0; i<5;i++){
+            LinearLayout itemBlock = (LinearLayout) getActivity().getLayoutInflater().inflate(R.layout.item_block, null);
+
+            itemBlock.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent callIntent = new Intent(Intent.ACTION_CALL);
+                        callIntent.setData(Uri.parse("tel:18516211115"));
+                        startActivity(callIntent);
+                    }
+                });
+
+            TextView itemTitle = (TextView)itemBlock.findViewById(R.id.price);
+            
+            itemTitle.setText("$20.00");
+            
+            pipe1.addView(itemBlock);
+        }
+        
         //        pipe2.addView();
 
         return mView;
