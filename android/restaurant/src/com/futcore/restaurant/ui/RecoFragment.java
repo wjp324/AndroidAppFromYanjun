@@ -189,7 +189,6 @@ public class RecoFragment extends SherlockFragment implements OnClickListener, L
     }
 
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.reco, menu);
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {

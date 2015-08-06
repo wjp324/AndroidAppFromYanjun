@@ -95,6 +95,8 @@ public class OngoingFragment extends SherlockFragment implements OnClickListener
     private Button saveBut;
     private EditText nameEdit;
 
+    private int ACTIVITY_NEW_EVENT = 0;
+
     public static OngoingFragment newInstance() {
         OngoingFragment fragment = new OngoingFragment();
         //        fragment.mContent = content;
@@ -168,7 +170,22 @@ public class OngoingFragment extends SherlockFragment implements OnClickListener
     }
     
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.reco, menu);
     }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        Intent i;
+        switch (item.getItemId()) {
+        case R.id.new_item_event:
+            //            i = new Intent(getActivity(), NewEventItemActivity.class);
+            i = new Intent(getActivity(), NewOngoingActivity.class);
+            startActivityForResult(i, ACTIVITY_NEW_EVENT);
+            break;
+        }
+        return false;
+    }
+    
 
     // HTTP GET request
     /*	private void sendGet() throws Exception {

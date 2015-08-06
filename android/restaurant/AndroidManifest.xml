@@ -181,6 +181,10 @@
         android:name=".ui.NewItemActivity"
         android:configChanges="orientation|keyboardHidden|screenSize" />
 
+    <activity
+        android:name=".ui.NewOngoingActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize" />
+
     <!-- Posts activities -->
     <activity
         android:name=".ui.posts.AddCategoryActivity"

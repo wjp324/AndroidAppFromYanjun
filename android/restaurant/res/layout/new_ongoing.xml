@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:background="#f5f5f5"
+    android:paddingRight="8dp" >
+
+  <!--TextView
+      android:id="@+id/l_section1"
+      style="@style/formTitle"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1" 
+      android:gravity="center_vertical"
+      android:padding="8dp"
+      android:text="@string/login_title" /-->
+  
+  <EditText
+      android:id="@+id/itemname"
+      style="@style/formEdit"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="30dp"
+      android:hint="@string/item_name"
+      android:inputType="textCapSentences|textAutoCorrect"/>
+
+  <EditText
+      android:id="@+id/itemprice"
+      style="@style/formEdit"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/item_price"
+      android:inputType="number"
+      />
+
+  
+  <LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      >
+    <Button
+	android:id="@+id/cancelItem"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:singleLine="true"
+	android:textStyle="bold"
+	android:layout_marginRight ="15dp"
+	android:layout_weight="1" 
+	android:background="#aaa"
+	style="@style/formButton"
+	android:text="@string/cancel" />
+
+    <Button
+	android:id="@+id/saveItem"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:singleLine="true"
+	android:textStyle="bold"
+	style="@style/formButton"
+	android:layout_weight="1" 
+	android:text="@string/save" 
+	android:background="@color/g_g"
+	/>
+  </LinearLayout>
+
+</LinearLayout>
