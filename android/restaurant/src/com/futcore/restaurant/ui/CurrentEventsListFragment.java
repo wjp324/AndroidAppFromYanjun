@@ -238,7 +238,8 @@ public class CurrentEventsListFragment extends PullToRefreshListFragment {
             ManWish twish2 = new ManWish(new Integer(3), "eBay T-shirt", new Date(), null, (byte)0);
             ManWish twish3 = new ManWish(new Integer(4), "Big Monitor", new Date(), null, (byte)0);
             ManWish twish4 = new ManWish(new Integer(5), "我要桃子", new Date(), null, (byte)0);
-            ManWish twish5 = new ManWish(new Integer(6), "我喜欢美女", new Date(), null, (byte)0);
+            ManWish twish5 = new ManWish(new Integer(6), "免费的我都喜欢！", new Date(), null, (byte)0);
+            //            ManWish twish5 = new ManWish(new Integer(6), "我喜欢美女", new Date(), null, (byte)0);
             ManWish twish6 = new ManWish(new Integer(7), "Google Glass", new Date(), null, (byte)0);
             ManWish twish7 = new ManWish(new Integer(8), "Nexus 2015!", new Date(), null, (byte)0);
             ManWish twish8 = new ManWish(new Integer(9), "Benz Car", new Date(), null, (byte)0);
