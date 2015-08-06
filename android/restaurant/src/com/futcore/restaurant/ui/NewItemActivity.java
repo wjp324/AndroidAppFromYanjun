@@ -268,8 +268,8 @@ public class NewItemActivity extends WPActionBarActivity implements OnClickListe
         switch(id){
         case R.id.saveItem:
             {
-                mLocationHelper.getLocation(NewItemActivity.this, locationResult);
-                AlertUtil.showAlert(NewItemActivity.this, R.string.required_fields, String.valueOf(mCurrentLocation.getLatitude())+" "+String.valueOf(mCurrentLocation.getLongitude())+" acc:"+String.valueOf(mCurrentLocation.getAccuracy()));
+                //                mLocationHelper.getLocation(NewItemActivity.this, locationResult);
+                //                AlertUtil.showAlert(NewItemActivity.this, R.string.required_fields, String.valueOf(mCurrentLocation.getLatitude())+" "+String.valueOf(mCurrentLocation.getLongitude())+" acc:"+String.valueOf(mCurrentLocation.getAccuracy()));
                 finish();
             }
             break;

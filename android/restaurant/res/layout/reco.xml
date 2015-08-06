@@ -1,105 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    >
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" 
+	    android:background="#F4F4F4">
 
   <LinearLayout
-      android:id="@+id/pipe"
-      android:layout_width="fill_parent"
-      android:layout_height="fill_parent"
-      android:orientation="horizontal">
-    
-    <LinearLayout
-      android:id="@+id/pipe1"
+      xmlns:android="http://schemas.android.com/apk/res/android"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:orientation="vertical"
-      android:layout_weight="1"
       >
+
+    <LinearLayout
+	android:id="@+id/pipe"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal">
+      
       <LinearLayout
-	  android:id="@+id/testcon1"
+	  android:id="@+id/pipe1"
 	  android:layout_width="fill_parent"
 	  android:layout_height="wrap_content"
 	  android:orientation="vertical"
-          android:background="@drawable/thumb_border"
-          android:layout_marginLeft="5dp"
-          android:layout_marginRight="5dp"
-          android:layout_marginTop="5dp"
 	  android:layout_weight="1"
 	  >
-	<ImageView
-            android:id="@+id/testBanner"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
-            android:layout_marginLeft="7dp"
-            android:layout_marginRight="7dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginBottom="7dp"
-            android:src="@drawable/spider_420" />    
-        <TextView
-            android:id="@+id/average"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp" 
-            android:textSize="17sp" 
-            android:textColor="#444"
-            android:layout_marginLeft="7dp"
-            android:layout_marginRight="7dp"
-	    android:textStyle="bold"
-            android:text="Free Peach" />
-
 	<LinearLayout
-	    android:id="@+id/pricecon"
+	    android:id="@+id/testcon1"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
-            android:layout_marginLeft="7dp"
-            android:layout_marginRight="7dp"
-            android:layout_marginBottom="7dp"
-            android:layout_marginTop="7dp"
-	    android:orientation="horizontal">
-
-          <TextView
-              android:id="@+id/price"
+	    android:orientation="vertical"
+            android:background="@drawable/thumb_border"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+	    android:layout_weight="1"
+	    >
+	  <ImageView
+              android:id="@+id/testBanner"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
-	      android:layout_weight="1"
+              android:scaleType="fitCenter"
+              android:layout_marginLeft="7dp"
+              android:layout_marginRight="7dp"
+              android:layout_marginTop="7dp"
+              android:layout_marginBottom="7dp"
+              android:src="@drawable/spider_420" />    
+          <TextView
+              android:id="@+id/average"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="6dp" 
               android:textSize="17sp" 
-              android:textColor="#0654b9"
+              android:textColor="#444"
+              android:layout_marginLeft="7dp"
+              android:layout_marginRight="7dp"
 	      android:textStyle="bold"
-              android:text="$100.00" />
+              android:text="Free Peach" />
 
-          <TextView
-              android:id="@+id/price"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-	      android:layout_weight="1"
-              android:textSize="15sp" 
-              android:textColor="#999"
-	      android:gravity="right"
-              android:text="10m" />
+	  <LinearLayout
+	      android:id="@+id/pricecon"
+	      android:layout_width="fill_parent"
+	      android:layout_height="wrap_content"
+              android:layout_marginLeft="7dp"
+              android:layout_marginRight="7dp"
+              android:layout_marginBottom="7dp"
+              android:layout_marginTop="7dp"
+	      android:orientation="horizontal">
+
+            <TextView
+		android:id="@+id/price"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:textSize="17sp" 
+		android:textColor="#0654b9"
+		android:textStyle="bold"
+		android:text="$100.00" />
+
+            <TextView
+		android:id="@+id/price"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:textSize="15sp" 
+		android:textColor="#999"
+		android:gravity="right"
+		android:text="10m" />
+	  </LinearLayout>
+
+	</LinearLayout>
+
       </LinearLayout>
 
+      <LinearLayout
+	  android:id="@+id/pipe2"
+	  android:layout_width="fill_parent"
+	  android:layout_height="wrap_content"
+	  android:paddingLeft="3dp"
+	  android:paddingRight="6dp"
+	  android:paddingTop="6dp"
+	  android:layout_weight="1"
+	  android:orientation="vertical"
+	  >
       </LinearLayout>
+
+      
 
     </LinearLayout>
 
-    <LinearLayout
-      android:id="@+id/pipe2"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:layout_weight="1"
-      android:orientation="vertical"
-	>
-    </LinearLayout>
-
-    
 
   </LinearLayout>
-
-
-</LinearLayout>
+</ScrollView>

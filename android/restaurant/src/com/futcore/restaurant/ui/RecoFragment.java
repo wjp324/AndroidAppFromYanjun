@@ -56,6 +56,10 @@ import com.google.gson.JsonParseException;
 import com.futcore.restaurant.models.ManCertPlace;
 
 
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.LinearLayout;
+
 //public class IndexFragment extends Fragment implements OnClickListener
 public class RecoFragment extends SherlockFragment implements OnClickListener, LocationListener
 {
@@ -69,6 +73,10 @@ public class RecoFragment extends SherlockFragment implements OnClickListener, L
     private LocationHelper mLocationHelper;
 
     private int ACTIVITY_NEW_EVENT = 0;
+
+
+    protected LinearLayout pipe1;
+    protected LinearLayout pipe2;
     
     public static RecoFragment newInstance() {
         RecoFragment fragment = new RecoFragment();
@@ -82,6 +90,30 @@ public class RecoFragment extends SherlockFragment implements OnClickListener, L
 
         getLocationProvider();
         //        mNum = getArguments() != null ? getArguments().getInt("num") : 0;
+    }
+
+    //    public void onCreate(Bundle savedInstanceState)
+    public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle state){
+        setHasOptionsMenu(true);
+        Typeface font = Typeface.createFromAsset( getActivity().getAssets(), "fontawesome-webfont.ttf" );
+        
+        mView = inflater.inflate(R.layout.reco, parent, false);
+
+        pipe1 = (LinearLayout)mView.findViewById(R.id.pipe1);
+        pipe2 = (LinearLayout)mView.findViewById(R.id.pipe2);
+
+
+        for(int i=0; i<5;i++){
+            LinearLayout itemBlock = (LinearLayout) getActivity().getLayoutInflater().inflate(R.layout.item_block, null);
+
+            TextView itemTitle = (TextView)itemBlock.findViewById(R.id.price);
+            itemTitle.setText("$20.00");
+            
+            pipe2.addView(itemBlock);
+        }
+        //        pipe2.addView();
+
+        return mView;
     }
 
     private void getLocationProvider() {
@@ -122,15 +154,6 @@ public class RecoFragment extends SherlockFragment implements OnClickListener, L
         };
     
         
-    //    public void onCreate(Bundle savedInstanceState)
-    public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle state){
-        setHasOptionsMenu(true);
-        Typeface font = Typeface.createFromAsset( getActivity().getAssets(), "fontawesome-webfont.ttf" );
-        
-        mView = inflater.inflate(R.layout.reco, parent, false);
-
-        return mView;
-    }
 
     public void onLocationChanged(Location location) {
         AlertUtil.showAlert(getActivity(), R.string.required_fields, R.string.url_username_password_required);
