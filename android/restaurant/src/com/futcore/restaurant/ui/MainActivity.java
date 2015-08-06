@@ -474,7 +474,7 @@ public class MainActivity extends WPActionBarActivity implements OnClickListener
         return image;        
 	}
 
-    static final int REQUEST_TAKE_PHOTO = 100;
+    static final int REQUEST_TAKE_PHOTO = 1;
 
     private void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -499,7 +499,6 @@ public class MainActivity extends WPActionBarActivity implements OnClickListener
             }
         }
     }    
-    
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -522,12 +521,13 @@ public class MainActivity extends WPActionBarActivity implements OnClickListener
                 Uri imageUri1 = data.getData();
                 AlertUtil.showAlert(this, R.string.required_fields, String.valueOf(imageUri1));
                 break;
-                //            case ACTIVITY_REQUEST_CODE_TAKE_PHOTO:
-            case REQUEST_TAKE_PHOTO:
+            case ACTIVITY_REQUEST_CODE_TAKE_PHOTO:
+                //            case REQUEST_TAKE_PHOTO:
                 Intent i = new Intent(this, NewItemActivity.class);
                 //                Uri imageUri2 = data.getData();
                 //                AlertUtil.showAlert(this, R.string.required_fields, String.valueOf(imageUri2));
                 //        startActivityForResult();
+                i.putExtra("imgdir", mCurrentPhotoPath);
                 startActivityForResult(i, ACTIVITY_NEW_ITEM);
                 break;
             }

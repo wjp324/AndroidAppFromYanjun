@@ -263,6 +263,7 @@
               android:layout_width="77dp"
               android:layout_height="15dp"
               android:layout_centerVertical="true"
+	      android:layout_gravity="center"
               android:scaleType="centerCrop"
               android:layout_marginLeft="6dp"
               android:layout_marginTop="2dp"

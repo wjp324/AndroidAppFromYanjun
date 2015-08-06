@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Map;
 import android.net.Uri;
 
+import android.graphics.Bitmap;
+
 import android.app.PendingIntent;
 
 
@@ -85,6 +87,7 @@ public class NewItemActivity extends WPActionBarActivity implements OnClickListe
     private Button saveBut;
     private EditText nameEdit;
     private EditText priceEdit;
+    private ImageView imgView;
 
     private Location mCurrentLocation;
     private LocationHelper mLocationHelper;
@@ -97,6 +100,8 @@ public class NewItemActivity extends WPActionBarActivity implements OnClickListe
     public static final int NOTI_NORMAL = 3;
     public static final int NOTI_LESS_IMPORTANT = 4;
 
+    String mItemImgDir = "";
+
     
     public void onCreate(Bundle savedInstanceState)
     {
@@ -107,6 +112,7 @@ public class NewItemActivity extends WPActionBarActivity implements OnClickListe
         saveBut = (Button)findViewById(R.id.saveItem);
         nameEdit = (EditText)findViewById(R.id.itemname);
         priceEdit = (EditText)findViewById(R.id.itemprice);
+        imgView = (ImageView)findViewById(R.id.itemImage);
 
         cancelBut.setOnClickListener(this);
         saveBut.setOnClickListener(this);
@@ -114,6 +120,23 @@ public class NewItemActivity extends WPActionBarActivity implements OnClickListe
         getLocationProvider();
 
         initNotification();
+
+
+        Intent intent = getIntent();
+        mItemImgDir = intent.getExtras().getString("imgdir");
+        System.out.println("eeeeeeeeeeeeeeeeeeeeee0000000000000000000000000");
+        System.out.println("eeeeeeeeeeeeeeeeeee"+mItemImgDir);
+        Uri imgUri = Uri.parse(mItemImgDir);
+        
+        //        File imgFile = new File(mItemImgDir);
+        //        if(imgFile.exists()){
+        //        System.out.println("eeeeeeeeeeeeeeeeeeeeee0000000000000000000000000kkkk");
+        //        Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+        //        imgView.setImageBitmap(myBitmap);
+        //        imgView.setImageBitmap(BitmapFactory.decodeFile(mItemImgDir));
+        imgView.setImageURI(imgUri);
+        //        }        
+        
     }
 
     private void initNotification()
