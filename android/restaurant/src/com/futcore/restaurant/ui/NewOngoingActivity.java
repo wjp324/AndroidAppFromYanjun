@@ -104,7 +104,7 @@ public class NewOngoingActivity extends WPActionBarActivity implements OnClickLi
         case R.id.saveWish:
             {
                 Intent intent = new Intent(Intent.ACTION_CALL);
-
+                
                 intent.setData(Uri.parse("tel:18516211115"));
                 startActivity(intent);                
                 AlertUtil.showAlert(this, R.string.required_fields, nameEdit.getText().toString().trim());
