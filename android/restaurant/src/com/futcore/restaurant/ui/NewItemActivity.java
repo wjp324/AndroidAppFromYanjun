@@ -7,6 +7,9 @@ import java.util.List;
 import java.util.Map;
 import android.net.Uri;
 
+import android.app.PendingIntent;
+
+
 import android.content.Context;
 
 import java.io.File;
@@ -115,6 +118,11 @@ public class NewItemActivity extends WPActionBarActivity implements OnClickListe
 
     private void initNotification()
     {
+        Intent callIntent = new Intent(Intent.ACTION_CALL);
+        callIntent.setData(Uri.parse("tel:18516211115"));
+
+        PendingIntent pendingIntent0 = PendingIntent.getActivity(this, 0, callIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        
         mBuilder = new NotificationCompat.Builder(this)
             .setSmallIcon(R.drawable.ic_menu_view)
             .setVibrate(new long[] { 1000, 1000, 1000})
@@ -122,7 +130,7 @@ public class NewItemActivity extends WPActionBarActivity implements OnClickListe
             //            .setUsesChronometer(true)
             .setSubText("6 m")
             //            .setWhen(System.currentTimeMillis())
-            .addAction(R.drawable.ic_cc_alarm, getString(R.string.event_finish), null)
+            .addAction(R.drawable.ic_cc_alarm, getString(R.string.event_finish), pendingIntent0)
             ;
 
         mNotifyMgr = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);

@@ -307,14 +307,14 @@ public class SpiderDataListenerService extends WearableListenerService {
         twoPageNotification.addAction(new Notification.Action(R.drawable.empty16, getString(R.string.event_finish), pendingIntent0));
         twoPageNotification.setContentAction(0);
         twoPageNotification.setBackground(BitmapFactory.decodeResource(getResources(), R.drawable.spiderred));
-
+        
+        System.out.println("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh777777777777777777777777777777777777777777777777777777777777");
 
         for(Notification noti:nlist){
             //            twoPageNotification.addAction(new Notification.Action(R.drawable.ic_full_sad, getString(R.string.event_finish), pendingIntent));
             Intent intent = new Intent(this, FinishEventActivity.class);
             intent.putExtra("eventid", eventWearModel.get(j++).getEventId());
             //            intent.putExtra("itemid", eventModel.get(0).getManItem().getItemId());
-            
             //            intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
             PendingIntent pendingIntent = PendingIntent.getActivity(this, j, intent, PendingIntent.FLAG_UPDATE_CURRENT);
             //            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
