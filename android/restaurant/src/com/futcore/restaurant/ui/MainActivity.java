@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import android.net.Uri;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import java.io.File;
 
@@ -65,6 +67,13 @@ import com.joanzapata.android.iconify.Iconify.IconValue;
 
 public class MainActivity extends WPActionBarActivity implements OnClickListener
 {
+	private static final String JPEG_FILE_PREFIX = "IMG_";
+	private static final String JPEG_FILE_SUFFIX = ".jpg";
+
+	private String mCurrentPhotoPath;
+    
+
+    
     protected LinearLayout tab1;
     protected LinearLayout tab2;
     protected LinearLayout tab3;
@@ -340,7 +349,8 @@ public class MainActivity extends WPActionBarActivity implements OnClickListener
             break;
         case R.id.tab4:
             {
-                launchCamera();
+                dispatchTakePictureIntent();
+                //                launchCamera();
                 ////////
                 //               toPage2();
             }
@@ -443,41 +453,53 @@ public class MainActivity extends WPActionBarActivity implements OnClickListener
     }
 
 
-    private void launchCamera() {
-        String state = android.os.Environment.getExternalStorageState();
-        if (!state.equals(android.os.Environment.MEDIA_MOUNTED)) {
-            AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(MainActivity.this);
-            dialogBuilder.setTitle(getResources().getText(R.string.sdcard_title));
-            dialogBuilder.setMessage(getResources().getText(R.string.sdcard_message));
-            dialogBuilder.setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int whichButton) {
-                    dialog.dismiss();
-                }
-            });
-            dialogBuilder.setCancelable(true);
-            dialogBuilder.create().show();
-        } else {
-            String dcimFolderName = Environment.DIRECTORY_DCIM;
-            if (dcimFolderName == null)
-                dcimFolderName = "DCIM";
-            mMediaCapturePath = Environment.getExternalStorageDirectory() + File.separator + dcimFolderName + File.separator + "Camera"
-                    + File.separator + "wp-" + System.currentTimeMillis() + ".jpg";
-            Intent takePictureFromCameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            takePictureFromCameraIntent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(mMediaCapturePath)));
 
-            // make sure the directory we plan to store the recording in exists
-            File directory = new File(mMediaCapturePath).getParentFile();
-            if (!directory.exists() && !directory.mkdirs()) {
-                try {
-                    throw new IOException("Path to file could not be created.");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+	private File createImageFile() throws IOException {
+
+        // Create an image file name
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String imageFileName = "JPEG_" + timeStamp + "_";
+        //        File storageDir = Environment.getExternalStoragePublicDirectory(
+        //                                                                        Environment.DIRECTORY_PICTURES);
+
+        File storageDir = new File("/storage/emulated/legacy/yanjtest");
+        File image = File.createTempFile(
+                                         imageFileName,  /* prefix */
+                                         ".jpg",         /* suffix */
+                                         storageDir      /* directory */
+                                         );
+
+        // Save a file: path for use with ACTION_VIEW intents
+        mCurrentPhotoPath = "file:" + image.getAbsolutePath();
+        return image;        
+	}
+
+    static final int REQUEST_TAKE_PHOTO = 100;
+
+    private void dispatchTakePictureIntent() {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        // Ensure that there's a camera activity to handle the intent
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            // Create the File where the photo should go
+            File photoFile = null;
+            try {
+                photoFile = createImageFile();
+            } catch (IOException ex) {
+                // Error occurred while creating the File
+                //                ...
             }
-            mCurrentActivityRequest = ACTIVITY_REQUEST_CODE_TAKE_PHOTO;
-            startActivityForResult(takePictureFromCameraIntent, ACTIVITY_REQUEST_CODE_TAKE_PHOTO);
+            // Continue only if the File was successfully created
+            if (photoFile != null) {
+                System.out.println("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk11111000000099");
+                System.out.println("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"+mCurrentPhotoPath);
+                
+                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT,
+                                           Uri.fromFile(photoFile));
+                startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
+            }
         }
-    }
+    }    
+    
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -486,7 +508,8 @@ public class MainActivity extends WPActionBarActivity implements OnClickListener
             return;
         }
 
-        if (data != null || ((requestCode == ACTIVITY_REQUEST_CODE_TAKE_PHOTO || requestCode == ACTIVITY_REQUEST_CODE_TAKE_VIDEO))) {
+        //        if (data != null || ((requestCode == ACTIVITY_REQUEST_CODE_TAKE_PHOTO || requestCode == ACTIVITY_REQUEST_CODE_TAKE_VIDEO))) {
+        if (data != null || ((requestCode == ACTIVITY_REQUEST_CODE_TAKE_PHOTO))) {
             Bundle extras;
 
             switch (requestCode) {
@@ -499,7 +522,8 @@ public class MainActivity extends WPActionBarActivity implements OnClickListener
                 Uri imageUri1 = data.getData();
                 AlertUtil.showAlert(this, R.string.required_fields, String.valueOf(imageUri1));
                 break;
-            case ACTIVITY_REQUEST_CODE_TAKE_PHOTO:
+                //            case ACTIVITY_REQUEST_CODE_TAKE_PHOTO:
+            case REQUEST_TAKE_PHOTO:
                 Intent i = new Intent(this, NewItemActivity.class);
                 //                Uri imageUri2 = data.getData();
                 //                AlertUtil.showAlert(this, R.string.required_fields, String.valueOf(imageUri2));
