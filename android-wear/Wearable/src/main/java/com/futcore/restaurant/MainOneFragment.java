@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import android.support.wearable.view.WearableListView;
 import android.content.Context;
 
+import android.app.ActivityManager;
+import android.app.ActivityManager.RunningServiceInfo;
+
 import android.app.Service;
 import android.app.PendingIntent;
 import android.app.AlarmManager;
@@ -75,7 +78,14 @@ public class MainOneFragment extends Fragment
                 public void onClick(View v) {
                     Intent intent = new Intent(getActivity(), SendEventNotiService.class);
                     getActivity().startService(intent);
+
+                    if(!isMyServiceRunning(LongMonitorService.class)){
+                        Intent intent1 = new Intent(getActivity(), LongMonitorService.class);
+                        getActivity().startService(intent1);
+                    }
+
                     getActivity().finish();
+                    
                 }
             });
 
@@ -115,6 +125,16 @@ public class MainOneFragment extends Fragment
         return currentTime+timeplus;
         //        return new Date().getTime()/
         //        return new Date().getTime()
+    }
+
+    private boolean isMyServiceRunning(Class<?> serviceClass) {
+        ActivityManager manager = (ActivityManager) getActivity().getSystemService(Context.ACTIVITY_SERVICE);
+        for (RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
+            if (serviceClass.getName().equals(service.service.getClassName())) {
+                return true;
+            }
+        }
+        return false;
     }
     
 }

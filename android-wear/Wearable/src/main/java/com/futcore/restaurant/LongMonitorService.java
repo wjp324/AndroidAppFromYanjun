@@ -6,6 +6,8 @@ import android.app.Service;
 
 import android.app.PendingIntent;
 
+import android.net.Uri;
+
 import android.content.Intent;
 import android.content.IntentSender;
 import android.app.IntentService;
@@ -17,6 +19,12 @@ import android.os.HandlerThread;
 import android.os.IBinder;
 import android.os.Process;
 import android.os.Bundle;
+
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
+
 
 import com.futcore.restaurant.models.ManItem;
 import com.futcore.restaurant.models.ManUser;
@@ -63,7 +71,7 @@ import android.os.SystemClock;
 import android.app.AlarmManager;
 
 
-public class LongMonitorService extends Service
+public class LongMonitorService extends Service implements SensorEventListener
 {
     private static DatabaseHelper helper;
     private DatabaseHelper databaseHelper = null;
@@ -79,6 +87,9 @@ public class LongMonitorService extends Service
     private List<ManEventWear> lEventWearModel = new ArrayList<ManEventWear>();
 
     private List<ManEventWear> efeEventWearModel = new ArrayList<ManEventWear>();
+
+
+
     
 
     Notification.Builder mBuilder = null;
@@ -100,6 +111,20 @@ public class LongMonitorService extends Service
 
     private ScheduledExecutorService mAlertExecutor;
     private ScheduledFuture<?> mAlertFuture;
+
+    
+
+    private SensorManager mSensorManager;
+    private Sensor mSensor;
+    private long mLastTime = 0;
+    private boolean mUp = false;
+
+    private int mType;
+
+
+    private static final long TIME_THRESHOLD_NS = 2000000000; // in nanoseconds (= 2sec)
+    private static final float GRAVITY_THRESHOLD = 7.0f;
+    
 
     private DatabaseHelper getHelper() {
         if (databaseHelper == null) {
@@ -165,6 +190,20 @@ public class LongMonitorService extends Service
         super.onCreate();
         getDao();
         initNotification();
+
+        //sensors
+        mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY);
+
+        System.out.println("fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff111qqq");
+
+        if (mSensorManager.registerListener(this, mSensor,
+                SensorManager.SENSOR_DELAY_NORMAL)) {
+            //            if (Log.isLoggable(TAG, Log.DEBUG)) {
+            //                Log.d(TAG, "Successfully registered for the sensor updates");
+            //            }
+        }
+        
         
         // Start up the thread runing the service.  Note that we create a
         // separate thread because the service normally runs in the process's
@@ -222,6 +261,8 @@ public class LongMonitorService extends Service
     
     public void onDestroy() {
         System.out.println("ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddkkkkkkkkkkkkkkkkkkkkkkkk111111");
+        System.out.println("ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddkkkkkkkkkkkkkkkkkkkkkkkk111111");
+        mSensorManager.unregisterListener(this);
         super.onDestroy();
         //        mRefreshRecoFuture.cancel(true);
         //        mRefreshPlanFuture.cancel(true);
@@ -448,6 +489,95 @@ public class LongMonitorService extends Service
             e.printStackTrace();
         }
     }
+
+
+
+
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        //        System.out.println("fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff22222222222222222222222222");
+        //        detectJump(event.values[0], event.timestamp);
+        detectJump(event.values[1], event.timestamp);
+        //        detectJump1(event.values[1], event.timestamp);
+        //        detectJump2(event.values[2], event.timestamp);
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+    }
+
+    private void detectJump(float xValue, long timestamp) {
+        //        System.out.println("fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff22222222222223333");
+        if ((Math.abs(xValue) > GRAVITY_THRESHOLD)) {
+            if(timestamp - mLastTime < TIME_THRESHOLD_NS && mUp != (xValue > 0)) {
+                onJumpDetected(!mUp);
+            }
+            mUp = xValue > 0;
+            mLastTime = timestamp;
+        }
+    }
+
+    private void onJumpDetected(boolean up) {
+        System.out.println("fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2222222225555555555");
+        // we only count a pair of up and down as one successful movement
+        if (up) {
+            return;
+        }
+        //        mJumpCounter++;
+        //        setCounter(mJumpCounter);
+        detectRotate();
+        //        renewTimer();
+    }
+
+    private void detectRotate()
+    {
+        System.out.println("fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2222666666666666666666666666");
+        //confirmFinish();
+        //        chooseEvent(mEstDurSec);
+        System.out.println("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz==========================");
+        /*        Intent callIntent = new Intent(Intent.ACTION_CALL);
+        callIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        //        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);         
+        callIntent.setData(Uri.parse("tel:18516211115"));
+        startActivity(callIntent);
+        */
+
+        //        sendNotification("Go home", 2000, NOTI_NORMAL);
+
+        NotificationCompat.Builder mBuilder =
+            new NotificationCompat.Builder(this)
+            .setSmallIcon(R.drawable.spider_icon)
+            .setContentTitle("Go Home!")
+            .setContentText("Today is Friday");
+
+        int mNotificationId1 = 001;
+        NotificationManager mNotifyMgr1 = 
+            (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        mNotifyMgr1.notify(mNotificationId1, mBuilder.build());        
+    }
+
+
+    /*    @Override
+    protected void onResume() {
+        super.onResume();
+        if (mSensorManager.registerListener(this, mSensor,
+                SensorManager.SENSOR_DELAY_NORMAL)) {
+            //            if (Log.isLoggable(TAG, Log.DEBUG)) {
+            //                Log.d(TAG, "Successfully registered for the sensor updates");
+            //            }
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mSensorManager.unregisterListener(this);
+        //        if (Log.isLoggable(TAG, Log.DEBUG)) {
+        //            Log.d(TAG, "Unregistered for sensor events");
+        //        }
+    }
+    */
+    
     
 }
 

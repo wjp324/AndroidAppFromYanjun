@@ -105,8 +105,7 @@ public class RecoFragment extends SherlockFragment implements OnClickListener, L
         pipe1 = (LinearLayout)mView.findViewById(R.id.pipe1);
         pipe2 = (LinearLayout)mView.findViewById(R.id.pipe2);
 
-
-        for(int i=0; i<5;i++){
+        for(int i=0; i<3;i++){
             LinearLayout itemBlock = (LinearLayout) getActivity().getLayoutInflater().inflate(R.layout.item_block, null);
 
             itemBlock.setOnClickListener(new OnClickListener() {
@@ -117,35 +116,70 @@ public class RecoFragment extends SherlockFragment implements OnClickListener, L
                         startActivity(callIntent);
                     }
                 });
-            
 
-            TextView itemTitle = (TextView)itemBlock.findViewById(R.id.price);
+
+            TextView itemTitle = (TextView)itemBlock.findViewById(R.id.average);
+            TextView itemDist = (TextView)itemBlock.findViewById(R.id.dist);
+            TextView itemPrice = (TextView)itemBlock.findViewById(R.id.price);
             ImageView itemImage = (ImageView)itemBlock.findViewById(R.id.testBanner);
-            itemImage.setImageResource(R.drawable.spiderspider);
+
+            if(i==0){
+                itemTitle.setText("免费桃子谁要！");
+                //                itemImage.setImageResource(R.drawable.i22);
+                itemDist.setText("5m");
+            }
+            else if(i==1){
+                itemTitle.setText("eBay T-shirt size S");
+                itemImage.setImageResource(R.drawable.i22);
+                itemDist.setText("8m");
+                itemPrice.setText("$0.90");
+            }
+            else if(i==2){
+                itemTitle.setText("Good Fan");
+                itemImage.setImageResource(R.drawable.i55);
+                itemDist.setText("3m");
+                itemPrice.setText("$0.00");
+            }
             
-            itemTitle.setText("$20.00");
+            pipe1.addView(itemBlock);
+        }
+
+        for(int i=0; i<2;i++){
+            LinearLayout itemBlock = (LinearLayout) getActivity().getLayoutInflater().inflate(R.layout.item_block, null);
+
+            itemBlock.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent callIntent = new Intent(Intent.ACTION_CALL);
+                        callIntent.setData(Uri.parse("tel:18516211115"));
+                        startActivity(callIntent);
+                    }
+                });
+
+            TextView itemTitle = (TextView)itemBlock.findViewById(R.id.average);
+            TextView itemDist = (TextView)itemBlock.findViewById(R.id.dist);
+            TextView itemPrice = (TextView)itemBlock.findViewById(R.id.price);
+            ImageView itemImage = (ImageView)itemBlock.findViewById(R.id.testBanner);
+
+            
+            if(i==0){
+                itemTitle.setText("Very Cute");
+                itemImage.setImageResource(R.drawable.i33);
+                itemDist.setText("12m");
+                itemPrice.setText("$2.00");
+            }
+            else if(i==1){
+                itemTitle.setText("It's free");
+                itemImage.setImageResource(R.drawable.i44);
+                itemDist.setText("15m");
+                itemPrice.setText("$0.00");
+            }
+            
+            //            itemTitle.setText("$20.00");
             
             pipe2.addView(itemBlock);
         }
 
-        for(int i=0; i<5;i++){
-            LinearLayout itemBlock = (LinearLayout) getActivity().getLayoutInflater().inflate(R.layout.item_block, null);
-
-            itemBlock.setOnClickListener(new OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent callIntent = new Intent(Intent.ACTION_CALL);
-                        callIntent.setData(Uri.parse("tel:18516211115"));
-                        startActivity(callIntent);
-                    }
-                });
-
-            TextView itemTitle = (TextView)itemBlock.findViewById(R.id.price);
-            
-            itemTitle.setText("$20.00");
-            
-            pipe1.addView(itemBlock);
-        }
         
         //        pipe2.addView();
 
